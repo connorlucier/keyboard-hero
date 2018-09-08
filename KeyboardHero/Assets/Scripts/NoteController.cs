@@ -31,44 +31,66 @@ public class NoteController : MonoBehaviour {
         statsController = GameObject.FindWithTag("Stats").GetComponent<StatsController>();
     }
 
-    void Update () {
-        SpawnNote();
+    void Update ()
+    {
+        HandleMisinputs();
+        HandleNoteSpawning();
     }
 
     void OnTriggerStay (Collider other)
     {
-        if (Input.GetKey(keybind) && other.gameObject.tag == "Note")
+        if (other.gameObject.tag == "Note" && Input.GetKey(keybind))
         {
             Destroy(other.gameObject);
-
             statsController.NoteHitUpdate();
         }
     }
 
-    private void SpawnNote()
+    void OnTriggerExit (Collider other)
+    {
+        if (other.gameObject.tag == "Note")
+        {
+            Destroy(other.gameObject);
+            statsController.NoteMissUpdate();
+        }
+    }
+
+    private void HandleMisinputs()
+    {
+        // TODO broken
+        //if (Input.anyKeyDown && !Input.GetKeyDown(keybind))
+        //{
+        //    statsController.NoteMissUpdate();
+        //}
+    }
+
+    private void HandleNoteSpawning()
     {
         if (timeElapsed >= spawnTime)
         {
-            var noteBlock = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            noteBlock.tag = "Note";
-            noteBlock.transform.localScale = new Vector3(3 * noteSize, noteSize, noteSize);
-            noteBlock.transform.position = new Vector3(transform.position.x, noteSpawnY, noteSpawnZ);
-            noteBlock.AddComponent<Rigidbody>();
-
-            // TODO give note appropriate color
-
-            var rigidBody = noteBlock.GetComponent<Rigidbody>();
-
-            rigidBody.useGravity = false;
-            rigidBody.velocity = new Vector3(0, -noteSpeed, 0);
-
-            timeElapsed = 0;
-            spawnTime = Random.Range(1, 5);
+            SpawnNote();
         }
 
         else
         {
             timeElapsed += Time.deltaTime;
         }
+    }
+
+    private void SpawnNote()
+    {
+        var noteBlock = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        noteBlock.tag = "Note";
+        noteBlock.transform.localScale = new Vector3(3 * noteSize, noteSize, noteSize);
+        noteBlock.transform.position = new Vector3(transform.position.x, noteSpawnY, noteSpawnZ);
+        noteBlock.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
+
+        var rigidBody = noteBlock.AddComponent<Rigidbody>();
+
+        rigidBody.useGravity = false;
+        rigidBody.velocity = new Vector3(0, -noteSpeed, 0);
+
+        timeElapsed = 0;
+        spawnTime = Random.Range(1, 5);
     }
 }

@@ -789,12 +789,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6280755bbc6a434489c99b85cd70fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notesHit: 0
-  totalNotes: 0
-  score: 0
-  streak: 0
-  multiplier: 0
-  accuracy: 0
 --- !u!1001 &668847342
 Prefab:
   m_ObjectHideFlags: 0
@@ -1110,12 +1104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6280755bbc6a434489c99b85cd70fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notesHit: 0
-  totalNotes: 0
-  score: 0
-  streak: 0
-  multiplier: 0
-  accuracy: 0
 --- !u!1001 &828042121
 Prefab:
   m_ObjectHideFlags: 0
@@ -2226,7 +2214,6 @@ GameObject:
   - component: {fileID: 1374471944}
   - component: {fileID: 1374471943}
   - component: {fileID: 1374471942}
-  - component: {fileID: 1374471946}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -2301,17 +2288,6 @@ Transform:
   m_Father: {fileID: 845610113}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1374471946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1374471941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 246e5a84e8834d24ea977297d6eecdd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1556440415
 Prefab:
   m_ObjectHideFlags: 0
