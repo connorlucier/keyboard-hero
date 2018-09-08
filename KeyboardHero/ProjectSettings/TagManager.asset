@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Note
+  - Score
+  - Streak
+  - Accuracy
+  - Stats
   layers:
   - Default
   - TransparentFX
