@@ -9,6 +9,7 @@ TagManager:
   - Streak
   - Accuracy
   - Stats
+  - Notehead
   layers:
   - Default
   - TransparentFX

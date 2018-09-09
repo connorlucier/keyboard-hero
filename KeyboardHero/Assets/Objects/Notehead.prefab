@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 114315493919842552}
   m_Layer: 0
   m_Name: Notehead
-  m_TagString: Untagged
+  m_TagString: Notehead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,8 +56,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1916365137012348}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.5, y: -4, z: 0.672}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -3.5, y: -4, z: 0.672}
   m_LocalScale: {x: 0.63668996, y: 0.039790016, z: 0.5760502}
   m_Children:
   - {fileID: 224696171814172950}
@@ -187,9 +187,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteSize: 0.2
+  noteSpeed: 1.5
   noteSpawnY: 3.35
   noteSpawnZ: -0.625
-  noteSpeed: 1.5
   keybind: 113
 --- !u!114 &114843863974335884
 MonoBehaviour:

@@ -6,35 +6,29 @@ public class NoteController : MonoBehaviour {
     float noteSize;
 
     [SerializeField]
+    float noteSpeed;
+
+    [SerializeField]
     float noteSpawnY;
 
     [SerializeField]
     float noteSpawnZ;
 
     [SerializeField]
-    float noteSpeed;
-
-    [SerializeField]
     KeyCode keybind;
-
-    private float timeElapsed;
-
-    private float spawnTime;
 
     private StatsController statsController;
 
+    private float playTimer;
+
     void Start ()
     {
-        timeElapsed = 0;
-        spawnTime = Random.Range(1, 5);
-
         statsController = GameObject.FindWithTag("Stats").GetComponent<StatsController>();
     }
 
     void Update ()
     {
         HandleMisinputs();
-        HandleNoteSpawning();
     }
 
     void OnTriggerStay (Collider other)
@@ -55,29 +49,17 @@ public class NoteController : MonoBehaviour {
         }
     }
 
+    public string GetKeybind()
+    {
+        return keybind.ToString();
+    }
+
     private void HandleMisinputs()
     {
-        // TODO broken
-        //if (Input.anyKeyDown && !Input.GetKeyDown(keybind))
-        //{
-        //    statsController.NoteMissUpdate();
-        //}
+        // TODO if this key is hit and no note is in trigger volume, send miss update
     }
 
-    private void HandleNoteSpawning()
-    {
-        if (timeElapsed >= spawnTime)
-        {
-            SpawnNote();
-        }
-
-        else
-        {
-            timeElapsed += Time.deltaTime;
-        }
-    }
-
-    private void SpawnNote()
+    public void SpawnNote()
     {
         var noteBlock = GameObject.CreatePrimitive(PrimitiveType.Cube);
         noteBlock.tag = "Note";
@@ -89,8 +71,5 @@ public class NoteController : MonoBehaviour {
 
         rigidBody.useGravity = false;
         rigidBody.velocity = new Vector3(0, -noteSpeed, 0);
-
-        timeElapsed = 0;
-        spawnTime = Random.Range(1, 5);
     }
 }

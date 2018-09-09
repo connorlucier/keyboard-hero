@@ -45,9 +45,7 @@ public class StatsController : MonoBehaviour {
 
         UpdateAccuracy();
         UpdateStatsText();
-    }
-
-    
+    }    
 
     public void NoteHitUpdate()
     {
