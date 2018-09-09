@@ -7,9 +7,14 @@ public class SongController : MonoBehaviour {
     [SerializeField]
     TextAsset songFile;
 
+    [SerializeField]
+    float noteSpawnTime;
+
     private string[] notes;
 
     private List<NoteController> noteControllers;
+
+    private bool songComplete;
 
     private int lineNumber;
 
@@ -18,6 +23,7 @@ public class SongController : MonoBehaviour {
 	void Start ()
     {
         noteControllers = new List<NoteController>();
+        songComplete = false;
         lineNumber = 0;
         timer = 0;
 
@@ -31,24 +37,34 @@ public class SongController : MonoBehaviour {
 
     private void Update()
     {
-        if(lineNumber < notes.Length && timer > 1)
+        PlaySong();
+    }
+
+    private void PlaySong()
+    {
+        if (!songComplete)
         {
-            PlayNextSongLine();
-            timer = 0;
-        }
-        else if (lineNumber == notes.Length)
-        {
-            SongComplete();
-        }
-        else
-        {
-            timer += Time.deltaTime;
+            if (lineNumber < notes.Length && timer > noteSpawnTime)
+            {
+                PlayNextSongLine();
+                timer = 0;
+            }
+            else if (!songComplete)
+            {
+                timer += Time.deltaTime;
+            }
+            else
+            {
+                SongComplete();
+            }
         }
     }
 
-    private static void SongComplete()
+    private void SongComplete()
     {
-        print("Song over");
+        songComplete = true;
+
+        // TODO return to the song selection menu
     }
 
     private void PlayNextSongLine()
