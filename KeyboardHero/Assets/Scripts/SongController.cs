@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 using System.Collections.Generic;
+using System.Collections;
 
 public class SongController : MonoBehaviour {
 
@@ -14,8 +16,6 @@ public class SongController : MonoBehaviour {
 
     private List<NoteController> noteControllers;
 
-    private bool songComplete;
-
     private int lineNumber;
 
     private float timer;
@@ -23,7 +23,6 @@ public class SongController : MonoBehaviour {
 	void Start ()
     {
         noteControllers = new List<NoteController>();
-        songComplete = false;
         lineNumber = 0;
         timer = 0;
 
@@ -42,29 +41,36 @@ public class SongController : MonoBehaviour {
 
     private void PlaySong()
     {
-        if (!songComplete)
+        if (lineNumber < notes.Length)
         {
-            if (lineNumber < notes.Length && timer > noteSpawnTime)
+            if (timer > noteSpawnTime)
             {
                 PlayNextSongLine();
                 timer = 0;
             }
-            else if (!songComplete)
+            else
             {
                 timer += Time.deltaTime;
             }
-            else
-            {
-                SongComplete();
-            }
+        }
+        else
+        {
+            SongComplete();
         }
     }
 
     private void SongComplete()
     {
-        songComplete = true;
+        // TODO create text to alert player that song is over
 
-        // TODO return to the song selection menu
+        // TODO create song selection menu to return to
+        StartCoroutine(ReturnToMenu());
+    }
+
+    private IEnumerator ReturnToMenu()
+    {
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene(0);
     }
 
     private void PlayNextSongLine()
