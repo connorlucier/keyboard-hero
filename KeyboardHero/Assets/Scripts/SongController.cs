@@ -53,8 +53,8 @@ public class SongController : MonoBehaviour {
                 timer += Time.deltaTime;
             }
         }
-        else
-        {
+
+        else {
             SongComplete();
         }
     }
@@ -62,15 +62,13 @@ public class SongController : MonoBehaviour {
     private void SongComplete()
     {
         // TODO create text to alert player that song is over
-
-        // TODO create song selection menu to return to
         StartCoroutine(ReturnToMenu());
     }
 
     private IEnumerator ReturnToMenu()
     {
         yield return new WaitForSeconds(4);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     private void PlayNextSongLine()
