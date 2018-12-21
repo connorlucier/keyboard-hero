@@ -31,6 +31,11 @@ public class SongController : MonoBehaviour {
             noteControllers.Add(noteHead.GetComponent<NoteController>());
         }
 
+        if (PlayerPrefs.HasKey("song"))
+        {
+            songFile = Resources.Load<TextAsset>(PlayerPrefs.GetString("song"));
+        }
+
         notes = songFile.text.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
     }
 
