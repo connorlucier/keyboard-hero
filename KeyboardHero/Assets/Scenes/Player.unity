@@ -628,7 +628,6 @@ GameObject:
   - component: {fileID: 577476438}
   - component: {fileID: 577476437}
   - component: {fileID: 577476436}
-  - component: {fileID: 577476440}
   m_Layer: 0
   m_Name: Score
   m_TagString: Score
@@ -821,17 +820,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 577476434}
   m_Mesh: {fileID: 0}
---- !u!114 &577476440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 577476434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6280755bbc6a434489c99b85cd70fdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &668847342
 Prefab:
   m_ObjectHideFlags: 0

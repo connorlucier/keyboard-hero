@@ -61,7 +61,9 @@ public class SongController : MonoBehaviour {
 
     private void SongComplete()
     {
-        // TODO create text to alert player that song is over
+        // TODO save high score if higher
+
+        // TODO create scene to give player an overview of how they did
         StartCoroutine(ReturnToMenu());
     }
 
