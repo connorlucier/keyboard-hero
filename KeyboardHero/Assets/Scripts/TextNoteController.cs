@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class NoteController : MonoBehaviour {
+public class TextNoteController : MonoBehaviour {
 
     [SerializeField]
     float noteSize;

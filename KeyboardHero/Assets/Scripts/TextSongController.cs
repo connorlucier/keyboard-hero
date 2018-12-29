@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 
-public class SongController : MonoBehaviour {
+public class TextSongController : MonoBehaviour {
 
     [SerializeField]
     TextAsset songFile;
@@ -14,7 +14,7 @@ public class SongController : MonoBehaviour {
 
     private string[] notes;
 
-    private List<NoteController> noteControllers;
+    private List<TextNoteController> noteControllers;
 
     private int lineNumber;
 
@@ -22,13 +22,13 @@ public class SongController : MonoBehaviour {
 
 	void Start ()
     {
-        noteControllers = new List<NoteController>();
+        noteControllers = new List<TextNoteController>();
         lineNumber = 0;
         timer = 0;
 
         foreach (var noteHead in GameObject.FindGameObjectsWithTag("Notehead"))
         {
-            noteControllers.Add(noteHead.GetComponent<NoteController>());
+            noteControllers.Add(noteHead.GetComponent<TextNoteController>());
         }
 
         if (PlayerPrefs.HasKey("song"))
