@@ -23,6 +23,7 @@ public class SongSelectMenuController : MonoBehaviour {
         {
             // Create an entry for every song
             var song = Instantiate(songPrefab);
+            bool isMidiFile = false;
             song.transform.SetParent(menuObject.transform, false);
             song.transform.position += i++ * Vector3.down * spacing;
 
@@ -30,16 +31,33 @@ public class SongSelectMenuController : MonoBehaviour {
 
             // Play selected song on click
             var fileName = Directory.GetFiles(songDir).Where(x => x.EndsWith(".txt")).FirstOrDefault();
+
+            if (fileName == null)
+            {
+                fileName = Directory.GetFiles(songDir).Where(x => x.EndsWith(".mid")).FirstOrDefault();
+                isMidiFile = true;
+            }
+
             fileName = fileName.Substring(fileName.IndexOf("Songs"));
-            fileName = fileName.Remove(fileName.IndexOf(".txt"));
-            song.GetComponent<Button>().onClick.AddListener(delegate () { PlaySong(fileName); });
+            fileName = fileName.Remove(fileName.Length - 4);
+
+            song.GetComponent<Button>().onClick.AddListener(delegate () { PlaySong(fileName, isMidiFile); });
         }
     }
 
-    public void PlaySong(string fileName)
+    public void PlaySong(string fileName, bool isMidiFile)
     {
         PlayerPrefs.SetString("song", fileName);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        if (isMidiFile)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+            
     }
 
     public void GoBack()
