@@ -9,8 +9,7 @@ using TMPro;
 
 public class SongSelectMenuController : MonoBehaviour {
 
-    [SerializeField]
-    int spacing;
+    public int spacing = 100;
 
     void Start()
     {
@@ -34,12 +33,14 @@ public class SongSelectMenuController : MonoBehaviour {
 
             if (fileName == null)
             {
-                fileName = Directory.GetFiles(songDir).Where(x => x.EndsWith(".mid")).FirstOrDefault();
+                fileName = Directory.GetFiles(songDir).Where(x => x.EndsWith(".mid") || x.EndsWith(".MID")).FirstOrDefault();
                 isMidiFile = true;
             }
-
-            fileName = fileName.Substring(fileName.IndexOf("Songs"));
-            fileName = fileName.Remove(fileName.Length - 4);
+            else
+            {
+                fileName = fileName.Substring(fileName.IndexOf("Songs"));
+                fileName = fileName.Remove(fileName.Length - 4);
+            }
 
             song.GetComponent<Button>().onClick.AddListener(delegate () { PlaySong(fileName, isMidiFile); });
         }
