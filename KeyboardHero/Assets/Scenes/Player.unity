@@ -152,7 +152,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 6763768}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -210,7 +210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 40
+  note: 40
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &24976827
 GameObject:
@@ -251,7 +253,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 24976827}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -309,7 +311,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 35
+  note: 35
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &48870353
 GameObject:
@@ -350,7 +354,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 48870353}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -408,7 +412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 45
+  note: 45
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &99532089
 GameObject:
@@ -654,7 +660,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 110590575}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -712,7 +718,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 95
+  note: 95
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &141061157
 GameObject:
@@ -753,7 +761,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 141061157}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -811,7 +819,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 66
+  note: 66
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &183667631
 GameObject:
@@ -852,7 +862,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 183667631}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -910,7 +920,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 89
+  note: 89
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &189971656
 GameObject:
@@ -951,7 +963,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 189971656}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1009,7 +1021,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 69
+  note: 69
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &191063755
 GameObject:
@@ -1050,7 +1064,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 191063755}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1108,7 +1122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 46
+  note: 46
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &202349557
 GameObject:
@@ -1149,7 +1165,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 202349557}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1207,7 +1223,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 29
+  note: 29
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &218644597
 GameObject:
@@ -1248,7 +1266,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 218644597}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1306,7 +1324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 26
+  note: 26
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1001 &259582386
 Prefab:
@@ -1359,9 +1379,37 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0052262703
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65703735466533092, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_IsPrefabAsset: 0
+--- !u!83 &294017868
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 48000
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!1 &298816626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1449,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 298816626}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1459,7 +1507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 81
+  note: 81
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &302396946
 GameObject:
@@ -1500,7 +1550,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 302396946}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1558,7 +1608,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 33
+  note: 33
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &306671838
 GameObject:
@@ -1599,7 +1651,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 306671838}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1657,7 +1709,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 31
+  note: 31
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1001 &329054730
 Prefab:
@@ -1714,7 +1768,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.00522627
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65703735466533092, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &329054731 stripped
@@ -1761,7 +1816,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 339679541}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1819,7 +1874,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 104
+  note: 104
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &354820850
 GameObject:
@@ -1860,7 +1917,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 354820850}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1918,7 +1975,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 91
+  note: 91
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &378456551
 GameObject:
@@ -2060,7 +2119,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.00522627
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65703735466533092, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &378571119 stripped
@@ -2107,7 +2167,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 404180337}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2165,7 +2225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 85
+  note: 85
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &410844764
 GameObject:
@@ -2411,7 +2473,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 428490583}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2469,7 +2531,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 77
+  note: 77
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &445673418
 GameObject:
@@ -2730,7 +2794,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 451703129}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2788,7 +2852,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 30
+  note: 30
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1001 &546255743
 Prefab:
@@ -2845,7 +2911,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.00522627
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65703735466533092, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &546255744 stripped
@@ -2892,7 +2959,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 565045385}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2950,7 +3017,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 82
+  note: 82
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &565817780
 GameObject:
@@ -2991,7 +3060,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 565817780}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -3049,7 +3118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 49
+  note: 49
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &579945353
 GameObject:
@@ -3295,7 +3366,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 584481358}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -3353,7 +3424,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 60
+  note: 60
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &588734686
 GameObject:
@@ -3394,7 +3467,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 588734686}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -3452,7 +3525,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 59
+  note: 59
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &601922967
 GameObject:
@@ -3493,7 +3568,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 601922967}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -3551,7 +3626,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 71
+  note: 71
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &604393890
 GameObject:
@@ -3592,7 +3669,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604393890}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -3650,7 +3727,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 63
+  note: 63
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &609031232
 GameObject:
@@ -3691,7 +3770,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 609031232}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -3749,7 +3828,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 94
+  note: 94
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &626618482
 GameObject:
@@ -3856,7 +3937,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 640769652}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -3914,7 +3995,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 73
+  note: 73
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &650609439
 GameObject:
@@ -3955,7 +4038,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 650609439}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -4013,7 +4096,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 90
+  note: 90
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1001 &653387994
 Prefab:
@@ -4070,7 +4155,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.00522627
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65703735466533092, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &653387995 stripped
@@ -4269,7 +4355,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: e5eefe22657889e48b790c6ee4526e2a,
     type: 2}
-  m_audioClip: {fileID: 1543629911}
+  m_audioClip: {fileID: 294017868}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4377,8 +4463,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045e068a7f5e98b4d9ed97de401bb997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm_: 95
-  pause_: 0
+  bpm_: 120
+  pause_: 1
 --- !u!1 &702223127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4418,7 +4504,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 702223127}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -4476,7 +4562,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 43
+  note: 43
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &741187105
 GameObject:
@@ -4517,7 +4605,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 741187105}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -4575,7 +4663,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 101
+  note: 101
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &756761107
 GameObject:
@@ -4616,7 +4706,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756761107}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -4674,7 +4764,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 107
+  note: 107
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &765350009
 GameObject:
@@ -4715,7 +4807,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 765350009}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -4773,7 +4865,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 39
+  note: 39
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &800302013
 GameObject:
@@ -4814,7 +4908,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 800302013}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -4872,7 +4966,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 76
+  note: 76
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1001 &822163528
 Prefab:
@@ -4956,7 +5052,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 832707494}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -5014,7 +5110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 21
+  note: 21
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1001 &844749499
 Prefab:
@@ -5071,7 +5169,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.00522627
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65703735466533092, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &844749500 stripped
@@ -5118,7 +5217,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 866148011}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -5176,7 +5275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 105
+  note: 105
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!4 &902679902 stripped
 Transform:
@@ -5222,7 +5323,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 930451146}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -5280,7 +5381,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 34
+  note: 34
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &931912860
 GameObject:
@@ -5321,7 +5424,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 931912860}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -5379,7 +5482,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 88
+  note: 88
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &960478955
 GameObject:
@@ -5500,7 +5605,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 979972423}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -5558,7 +5663,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 58
+  note: 58
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &979997043
 GameObject:
@@ -5599,7 +5706,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 979997043}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -5657,7 +5764,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 36
+  note: 36
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &999442981
 GameObject:
@@ -5698,7 +5807,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 999442981}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -5756,7 +5865,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 79
+  note: 79
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1005082840
 GameObject:
@@ -5797,7 +5908,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1005082840}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -5855,7 +5966,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 80
+  note: 80
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1001 &1009542642
 Prefab:
@@ -5917,7 +6030,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.031668015
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65080885756598226, guid: fec1d86094ae8fc46882ac7233fc3b8d, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fec1d86094ae8fc46882ac7233fc3b8d, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1009542643 stripped
@@ -5980,7 +6094,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.00522627
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65703735466533092, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1030536559 stripped
@@ -6027,7 +6142,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1037774399}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6085,7 +6200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 37
+  note: 37
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1067251105
 GameObject:
@@ -6126,7 +6243,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1067251105}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6184,7 +6301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 48
+  note: 48
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1071464045
 GameObject:
@@ -6225,7 +6344,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1071464045}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6283,7 +6402,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 47
+  note: 47
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1095138804
 GameObject:
@@ -6324,7 +6445,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1095138804}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6382,7 +6503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 42
+  note: 42
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1119014461
 GameObject:
@@ -6423,7 +6546,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1119014461}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6481,7 +6604,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 74
+  note: 74
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1122829125
 GameObject:
@@ -6522,7 +6647,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1122829125}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6580,7 +6705,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 86
+  note: 86
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1132660174
 GameObject:
@@ -6621,7 +6748,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1132660174}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6679,7 +6806,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 41
+  note: 41
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1149398584
 GameObject:
@@ -6720,7 +6849,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1149398584}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6778,7 +6907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 102
+  note: 102
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1169095693
 GameObject:
@@ -6819,7 +6950,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1169095693}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6877,7 +7008,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 32
+  note: 32
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1173678752
 GameObject:
@@ -6918,7 +7051,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173678752}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6976,7 +7109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 50
+  note: 50
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1175136281
 GameObject:
@@ -7017,7 +7152,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1175136281}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -7075,7 +7210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 96
+  note: 96
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1220143659
 GameObject:
@@ -7116,7 +7253,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1220143659}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -7174,7 +7311,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 64
+  note: 64
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1222068958
 GameObject:
@@ -7215,7 +7354,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1222068958}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -7273,7 +7412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 97
+  note: 97
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1228490019
 GameObject:
@@ -7314,7 +7455,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1228490019}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -7372,7 +7513,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 62
+  note: 62
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1247674549
 GameObject:
@@ -7413,7 +7556,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1247674549}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -7471,7 +7614,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 23
+  note: 23
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1254668978
 GameObject:
@@ -7512,7 +7657,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1254668978}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -7570,7 +7715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 78
+  note: 78
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1272133775
 GameObject:
@@ -7816,7 +7963,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1274348978}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -7874,7 +8021,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 67
+  note: 67
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1282357420
 GameObject:
@@ -7915,7 +8064,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1282357420}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -7973,7 +8122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 61
+  note: 61
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1302731690
 GameObject:
@@ -8014,7 +8165,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1302731690}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -8072,7 +8223,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 24
+  note: 24
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1338098356
 GameObject:
@@ -8113,7 +8266,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1338098356}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -8171,7 +8324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 108
+  note: 108
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1349832838
 GameObject:
@@ -8212,7 +8367,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1349832838}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -8270,7 +8425,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 68
+  note: 68
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1378439615
 GameObject:
@@ -8311,7 +8468,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1378439615}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -8369,7 +8526,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 51
+  note: 51
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1398898152
 GameObject:
@@ -8410,7 +8569,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1398898152}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -8468,7 +8627,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 28
+  note: 28
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1412738211
 GameObject:
@@ -8509,7 +8670,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412738211}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -8567,7 +8728,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 87
+  note: 87
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1420952130
 GameObject:
@@ -8638,7 +8801,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1442747873}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -8696,7 +8859,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 106
+  note: 106
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1001 &1456349888
 Prefab:
@@ -8896,7 +9061,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1464093426}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -8954,7 +9119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 93
+  note: 93
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1509587933
 GameObject:
@@ -8995,7 +9162,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1509587933}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9053,7 +9220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 44
+  note: 44
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1519113298
 GameObject:
@@ -9094,7 +9263,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1519113298}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9152,7 +9321,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 53
+  note: 53
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1532054125
 GameObject:
@@ -9193,7 +9364,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1532054125}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9251,35 +9422,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 100
+  note: 100
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
---- !u!83 &1543629911
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 48000
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
 --- !u!1 &1565294015
 GameObject:
   m_ObjectHideFlags: 0
@@ -9319,7 +9465,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1565294015}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9377,7 +9523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 57
+  note: 57
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1600580850
 GameObject:
@@ -9418,7 +9566,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1600580850}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9476,7 +9624,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 70
+  note: 70
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1705900055
 GameObject:
@@ -9517,7 +9667,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1705900055}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9575,7 +9725,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 65
+  note: 65
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1706744893
 GameObject:
@@ -9616,7 +9768,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1706744893}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9674,7 +9826,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 25
+  note: 25
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1727567960
 GameObject:
@@ -9715,7 +9869,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1727567960}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9773,7 +9927,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 84
+  note: 84
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1731641261
 GameObject:
@@ -9814,7 +9970,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1731641261}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9872,7 +10028,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 54
+  note: 54
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1746274911
 GameObject:
@@ -9913,7 +10071,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1746274911}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9971,7 +10129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 75
+  note: 75
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1764199302
 GameObject:
@@ -10012,7 +10172,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1764199302}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10070,7 +10230,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 99
+  note: 99
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1790251690
 GameObject:
@@ -10111,7 +10273,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1790251690}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10169,7 +10331,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 98
+  note: 98
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1800955692
 GameObject:
@@ -10210,7 +10374,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1800955692}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10268,7 +10432,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 72
+  note: 72
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1829792919
 GameObject:
@@ -10347,7 +10513,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1832400208}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10405,7 +10571,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 103
+  note: 103
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1845733726
 GameObject:
@@ -10446,7 +10614,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1845733726}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10504,7 +10672,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 52
+  note: 52
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &1898675051
 GameObject:
@@ -10545,7 +10715,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1898675051}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10603,7 +10773,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 56
+  note: 56
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1944673631
 GameObject:
@@ -10644,7 +10816,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1944673631}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10702,7 +10874,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 92
+  note: 92
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &1992627964
 GameObject:
@@ -10743,7 +10917,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1992627964}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10801,7 +10975,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 55
+  note: 55
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &2005585629
 GameObject:
@@ -10842,7 +11018,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2005585629}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10900,7 +11076,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 22
+  note: 22
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &2018105563
 GameObject:
@@ -10941,7 +11119,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2018105563}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10999,7 +11177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 83
+  note: 83
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1001 &2062747354
 Prefab:
@@ -11056,7 +11236,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.00522627
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65703735466533092, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &2062747355 stripped
@@ -11119,7 +11300,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.00522627
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65703735466533092, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &2064719325 stripped
@@ -11166,7 +11348,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2110773581}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -11224,7 +11406,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 38
+  note: 38
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 1
 --- !u!1 &2116161261
 GameObject:
@@ -11265,7 +11449,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2116161261}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -11323,7 +11507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d64ef022c4fd84496c87fd836bbdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteNumber: 27
+  note: 27
+  spawnHeight: 1.9
+  beatUnitConversion: 0.4
   isWhiteKey: 0
 --- !u!1 &2120225058
 GameObject:
