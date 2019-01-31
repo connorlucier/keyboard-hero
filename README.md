@@ -2,22 +2,19 @@
 A fun, competitive desktop game built in Unity to help players learn piano songs using a MIDI keyboard.
 
 ## Current State
-At the moment, the game does not support MIDI keyboard interaction. The current state of the game includes the following features:
-- Computer keyboard player input
-- Text file song input
-- Basic Main Menu
+The game is currently in development. The specific features being worked on are listed below.
 
 ## Features in Development
-- MIDI Keyboard player input (pending acquisition of MIDI keyboard for testing)
-- MIDI file song input
+- Fine-tuning note spawning
+- Score, streak and accuracy logic
 - Local high score tracking
-- Global high score tracking
-- Global song database
-- Simple new song import method
+- Game customization options
 
 ## Future Features to Explore
-- Adaptive scaling for song player based on size of keyboard
-- Song creator inside game
+- Easy song importation and metadata generation
+- Dynamic scaling for song player based on size of keyboard
+- In-game song creation
 - Sharing capabilities for custom-built songs
-- Online and local multiplayer
+- Multiplayer modes
+- Website for sharing songs and posting high scores
 - More to come...
