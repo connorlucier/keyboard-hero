@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class OptionsMenuController : MonoBehaviour {
 
-    // Use this for initialization
     void Start()
     {
         var noteSpeed = GameObject.FindGameObjectWithTag("Note Speed Slider");
@@ -12,8 +11,12 @@ public class OptionsMenuController : MonoBehaviour {
         var noteColors = GameObject.FindGameObjectWithTag("Note Colors Dropdown");
         var noteColorsDropdown = noteColors.GetComponent<Dropdown>();
 
+        var keyColors = GameObject.FindGameObjectWithTag("Key Colors Dropdown");
+        var keyColorsSelector = keyColors.GetComponent<Dropdown>();
+
         noteSpeedSlider.value = PlayerPrefs.GetFloat("noteSpeed", 1.0f);
         noteColorsDropdown.value = PlayerPrefs.GetInt("noteColor", 0);
+        keyColorsSelector.value = PlayerPrefs.GetInt("multicolorKeys", 0);
     }
 
     public void SetNoteSpeed(float val)
@@ -33,5 +36,10 @@ public class OptionsMenuController : MonoBehaviour {
             PlayerPrefs.SetInt("multicolorNotes", 0);
             PlayerPrefs.SetInt("noteColor", option);
         }
+    }
+
+    public void SetKeyColors(int option)
+    {
+        PlayerPrefs.SetInt("multicolorKeys", option);
     }
 }

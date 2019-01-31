@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class StatsController : MonoBehaviour {
 
+    [Range(4,10)]
+    public int maxMultiplier = 8;
+
     private int notesHit;
 
     private int totalNotes;
@@ -34,16 +37,16 @@ public class StatsController : MonoBehaviour {
         totalNotes = 0;
         multiplier = 1;
         accuracy = 100.0;
+
+        UpdateStatsText();
     }
 
     public void NoteMissUpdate()
     {
         streak = 0;
         multiplier = 1;
-
         totalNotes++;
 
-        UpdateAccuracy();
         UpdateStatsText();
     }    
 
@@ -53,16 +56,10 @@ public class StatsController : MonoBehaviour {
         streak++;
         notesHit++;
         totalNotes++;
-        multiplier = 1 + streak / 10;
+        multiplier = Mathf.Min(1 + streak / 10, maxMultiplier);
+        accuracy = Math.Round(notesHit / totalNotes * 100.0, 2);
 
-
-        UpdateAccuracy();
         UpdateStatsText();
-    }
-
-    private void UpdateAccuracy()
-    {
-        accuracy = Math.Round((double)notesHit / totalNotes * 100.0, 2);
     }
 
     private void UpdateStatsText()

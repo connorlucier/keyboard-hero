@@ -8,12 +8,17 @@ using IniParser;
 
 public class MidiSongController : MonoBehaviour {
 
-    private HelmSequencer helmSequencer;
-    private AudioHelmClock helmClock;
+    [Range(1,3)]
+    public float noteSpawnHeight = 2.5f; 
+
+    public AudioHelmClock helmClock;
+    public HelmSequencer helmSequencer;
+
     private List<MidiNoteController> noteControllers;
     private MidiFile midiFile;
 
-	// Use this for initialization
+    private float songDelay;
+
 	void Start () {
 
         var songFile = PlayerPrefs.GetString("song");
@@ -23,31 +28,36 @@ public class MidiSongController : MonoBehaviour {
 
         midiFile = gameObject.AddComponent<MidiFile>();
         midiFile.LoadMidiData(songFile);
-
-        noteControllers = FindObjectsOfType<MidiNoteController>().ToList();
-        
-        helmClock = GetComponent<AudioHelmClock>();
-        helmSequencer = GetComponent<HelmSequencer>();
         helmSequencer.Clear();
         helmSequencer.ReadMidiFile(midiFile);
         helmSequencer.currentIndex = 0;
 
         helmClock.bpm = float.Parse(songData["song"]["bpm"]);
+        songDelay = noteSpawnHeight * (4 * helmClock.bpm / 60) / PlayerPrefs.GetFloat("noteSpeed");
+
+        noteControllers = FindObjectsOfType<MidiNoteController>().ToList();
+        foreach (var nc in noteControllers)
+        {
+            nc.SetSpawnHeight(noteSpawnHeight);
+        }
+
+        foreach (var n in helmSequencer.GetAllNotes())
+        {
+            n.start += songDelay * 2;
+            n.end += songDelay * 2;
+        }
+
         helmClock.pause = false;
     }
 
-    // Update is called once per frame
     void Update () {
-
         if (midiFile.midiData.notes.Count > 0)
         {
-            var next = midiFile.midiData.notes.First();
-            var controller = noteControllers.Where(x => x.note == next.note).FirstOrDefault();
-
-            if (controller != null && helmSequencer.currentIndex >= next.start - 3)
+            var nextNotesToSpawn = midiFile.midiData.notes.Where(n => helmSequencer.currentIndex >= n.start + songDelay).ToList();
+            foreach (var next in nextNotesToSpawn)
             {
-                controller.SpawnNote(next);
-                midiFile.midiData.notes.RemoveAt(0);
+                SpawnNote(next);
+                midiFile.midiData.notes.Remove(next);
             }
         }
 
@@ -57,9 +67,19 @@ public class MidiSongController : MonoBehaviour {
         }
 	}
 
+    private void SpawnNote(Note next)
+    {
+        var controller = noteControllers.Where(x => x.note == next.note).FirstOrDefault();
+
+        if (controller != null)
+        {
+            controller.CreateNote(next);
+        }
+    }
+
     private IEnumerator ReturnToMenu()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(6);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 }

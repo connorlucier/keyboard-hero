@@ -1,22 +1,37 @@
 ﻿using UnityEngine;
 using MidiJack;
 using AudioHelm;
+using System.Linq;
+using System.Collections.Generic;
 
 public class MidiNoteController : MonoBehaviour {
 
     [Range(21, 108)]
     public int note = 60;
 
-    [Range(0, 3)]
-    public float spawnHeight = 2.0f;
-
     [Range(0, 1)]
-    public float beatUnitConversion;
+    public float beatUnitConversion = 1.0f;
+
+    public AudioHelmClock clock;
+
+    public StatsController statsController;
 
     public bool isWhiteKey = true;
 
-	// Update is called once per frame
-	void Update ()
+    private GameObject notePrefab;
+
+    private List<Material> materials;
+
+    private float spawnHeight = 2.5f;
+
+    void Start ()
+    {
+        notePrefab = Resources.Load<GameObject>("Physical/Note");
+        materials = Resources.LoadAll<Material>("Materials/Note Colors/").ToList();
+        GetComponent<Renderer>().material.color = Color.red;
+    }
+
+    void Update ()
     {
         UpdateKeyColor();
     }
@@ -25,129 +40,215 @@ public class MidiNoteController : MonoBehaviour {
     {
         if (int.Parse(other.tag) == note)
         {
-            Destroy(other.gameObject);
+            Destroy(other.gameObject.transform.parent.gameObject);
         }
+    }
+
+    public void CreateNote(Note n)
+    {
+        var noteObject = Instantiate(notePrefab);
+        var cube = noteObject.transform.GetChild(0).gameObject;
+
+        var noteDuration = 60 * (n.end - n.start) / (4 * clock.bpm);
+        var noteSpeed = PlayerPrefs.GetFloat("noteSpeed", 3.25f);
+        var noteScale = noteDuration * noteSpeed * beatUnitConversion;
+
+        noteObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, noteScale, gameObject.transform.localScale.z);
+        noteObject.transform.position = gameObject.transform.position + new Vector3(-0.5f * gameObject.transform.localScale.x, spawnHeight, -0.05f);
+        cube.tag = note.ToString();
+
+        SetDefaultNoteMaterial(cube, n.note);
+
+        var noteRigidBody = noteObject.AddComponent<Rigidbody>();
+        noteRigidBody.useGravity = false;
+        noteRigidBody.constraints =
+            RigidbodyConstraints.FreezeRotation
+            | RigidbodyConstraints.FreezePositionZ
+            | RigidbodyConstraints.FreezePositionX;
+
+        noteRigidBody.AddForce(Vector3.down * noteSpeed, ForceMode.VelocityChange);
+    }
+
+    public void SetSpawnHeight(float newHeight)
+    {
+        spawnHeight = newHeight;
     }
 
     private void UpdateKeyColor()
     {
         if (MidiMaster.GetKey(note) > 0.0f)
         {
-            GetComponent<Renderer>().material.color = Color.grey;
-        }
-        else if (isWhiteKey)
-        {
-            GetComponent<Renderer>().material.color = Color.white;
+            GetComponent<Renderer>().material.color = Color.red;
         }
         else
         {
-            GetComponent<Renderer>().material.color = Color.black;
+            SetDefaultKeyMaterial();
         }
     }
 
-    public void SpawnNote(Note n)
+    private void SetDefaultNoteMaterial(GameObject obj, int note)
     {
-        var cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        var noteDuration = (n.end - n.start) * beatUnitConversion;
-        var noteSpeed = -PlayerPrefs.GetFloat("noteSpeed", 3.25f);
-        var noteScale = gameObject.transform.localScale;
+        Material mat;
 
-        cube.transform.localScale = new Vector3(noteScale.x, noteDuration, noteScale.z);
-        cube.transform.position = gameObject.transform.position + new Vector3(0, spawnHeight + cube.transform.localScale.y / 2.0f, -0.05f);
-        cube.tag = note.ToString();
-
-        SetNoteColor(cube, n.note);
-
-        var cubeRigidBody = cube.AddComponent<Rigidbody>();
-        cubeRigidBody.useGravity = false;
-        cubeRigidBody.constraints = 
-            RigidbodyConstraints.FreezeRotation
-            | RigidbodyConstraints.FreezePositionZ
-            | RigidbodyConstraints.FreezePositionX;
-
-        cubeRigidBody.AddForce(new Vector3(0, noteSpeed, 0), ForceMode.VelocityChange);
-    }
-
-    private void SetNoteColor(GameObject cube, int note)
-    {
         if (PlayerPrefs.GetInt("multicolorNotes") == 1)
         {
-            var c = new Color();
             switch (note % 12)
             {
                 case 0: // C
-                    c = Color.red;
+                    mat = materials.Where(m => m.name == "Red").FirstOrDefault();
                     break;
                 case 1: // C# / Db
-                    c = new Color(255, 29, 0);
+                    mat = materials.Where(m => m.name == "Red Orange").FirstOrDefault();
                     break;
                 case 2: // D
-                    c = new Color(255, 76, 0);
+                    mat = materials.Where(m => m.name == "Orange").FirstOrDefault();
                     break;
                 case 3: // D# / Eb
-                    c = new Color(255, 131, 0);
+                    mat = materials.Where(m => m.name == "Gold").FirstOrDefault();
                     break;
                 case 4: // E
-                    c = Color.yellow;
+                    mat = materials.Where(m => m.name == "Yellow").FirstOrDefault();
                     break;
                 case 5: // F
-                    c = Color.green;
+                    mat = materials.Where(m => m.name == "Light Green").FirstOrDefault();
                     break;
                 case 6: // F# / Gb
-                    c = Color.cyan;
+                    mat = materials.Where(m => m.name == "Green").FirstOrDefault();
                     break;
                 case 7: // G
-                    c = new Color(0, 182, 255);
+                    mat = materials.Where(m => m.name == "Light Blue").FirstOrDefault();
                     break;
                 case 8: // G# / Ab
-                    c = new Color(0, 127, 255);
+                    mat = materials.Where(m => m.name == "Blue").FirstOrDefault();
                     break;
                 case 9: // A
-                    c = Color.blue;
+                    mat = materials.Where(m => m.name == "Indigo").FirstOrDefault();
                     break;
                 case 10: // A# / Bb
-                    c = new Color(114, 0, 255);
+                    mat = materials.Where(m => m.name == "Purple").FirstOrDefault();
                     break;
                 case 11: // B
-                    c = Color.magenta;
+                    mat = materials.Where(m => m.name == "Pink").FirstOrDefault();
                     break;
                 default:
+                    mat = materials.Where(m => m.name == "White").FirstOrDefault();
                     break;
             }
 
-            cube.gameObject.GetComponent<Renderer>().material.color = c;
+            obj.GetComponent<Renderer>().material = mat;
         }
 
         else
         {
-            Color c = new Color();
             switch (PlayerPrefs.GetInt("noteColor"))
             {
-                default:
                 case 1:
-                    c = Color.red;
+                    mat = materials.Where(m => m.name == "Red").FirstOrDefault();
                     break;
                 case 2:
-                    c = Color.yellow;
+                    mat = materials.Where(m => m.name == "Red Orange").FirstOrDefault();
                     break;
                 case 3:
-                    c = Color.green;
+                    mat = materials.Where(m => m.name == "Orange").FirstOrDefault();
                     break;
                 case 4:
-                    c = Color.blue;
+                    mat = materials.Where(m => m.name == "Gold").FirstOrDefault();
                     break;
                 case 5:
-                    c = Color.cyan;
+                    mat = materials.Where(m => m.name == "Yellow").FirstOrDefault();
                     break;
                 case 6:
-                    c = Color.magenta;
+                    mat = materials.Where(m => m.name == "Light Green").FirstOrDefault();
                     break;
                 case 7:
-                    c = Color.grey;
+                    mat = materials.Where(m => m.name == "Green").FirstOrDefault();
+                    break;
+                case 8:
+                    mat = materials.Where(m => m.name == "Light Blue").FirstOrDefault();
+                    break;
+                case 9:
+                    mat = materials.Where(m => m.name == "Blue").FirstOrDefault();
+                    break;
+                case 10:
+                    mat = materials.Where(m => m.name == "Indigo").FirstOrDefault();
+                    break;
+                case 11:
+                    mat = materials.Where(m => m.name == "Purple").FirstOrDefault();
+                    break;
+                case 12:
+                    mat = materials.Where(m => m.name == "Pink").FirstOrDefault();
+                    break;
+                default:
+                    mat = materials.Where(m => m.name == "White").FirstOrDefault();
                     break;
             }
 
-            cube.gameObject.GetComponent<Renderer>().material.color = c;
+            obj.GetComponent<Renderer>().material = mat;
+        }
+    }
+
+    private void SetDefaultKeyMaterial()
+    {
+        if (PlayerPrefs.GetInt("multicolorKeys") == 1)
+        {
+            Material mat;
+            switch (note % 12)
+            {
+                case 0: // C
+                    mat = materials.Where(m => m.name == "Red").FirstOrDefault();
+                    break;
+                case 1: // C# / Db
+                    mat = materials.Where(m => m.name == "Red Orange").FirstOrDefault();
+                    break;
+                case 2: // D
+                    mat = materials.Where(m => m.name == "Orange").FirstOrDefault();
+                    break;
+                case 3: // D# / Eb
+                    mat = materials.Where(m => m.name == "Gold").FirstOrDefault();
+                    break;
+                case 4: // E
+                    mat = materials.Where(m => m.name == "Yellow").FirstOrDefault();
+                    break;
+                case 5: // F
+                    mat = materials.Where(m => m.name == "Light Green").FirstOrDefault();
+                    break;
+                case 6: // F# / Gb
+                    mat = materials.Where(m => m.name == "Green").FirstOrDefault();
+                    break;
+                case 7: // G
+                    mat = materials.Where(m => m.name == "Light Blue").FirstOrDefault();
+                    break;
+                case 8: // G# / Ab
+                    mat = materials.Where(m => m.name == "Blue").FirstOrDefault();
+                    break;
+                case 9: // A
+                    mat = materials.Where(m => m.name == "Indigo").FirstOrDefault();
+                    break;
+                case 10: // A# / Bb
+                    mat = materials.Where(m => m.name == "Purple").FirstOrDefault();
+                    break;
+                case 11: // B
+                    mat = materials.Where(m => m.name == "Pink").FirstOrDefault();
+                    break;
+                default:
+                    mat = materials.Where(m => m.name == "White").FirstOrDefault();
+                    break;
+            }
+
+            GetComponent<Renderer>().material = mat;
+        }
+
+        else
+        {
+            switch (isWhiteKey)
+            {
+                case true:
+                    GetComponent<Renderer>().material = materials.Where(m => m.name == "White").FirstOrDefault();
+                    break;
+                case false:
+                    GetComponent<Renderer>().material = materials.Where(m => m.name == "Black").FirstOrDefault();
+                    break;
+            }
         }
     }
 }

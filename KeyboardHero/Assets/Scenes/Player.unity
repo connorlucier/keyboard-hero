@@ -139,7 +139,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 6763768}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0300002, y: 0.841, z: 0.006000012}
+  m_LocalPosition: {x: -1.615, y: 0.34999985, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -211,8 +211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 40
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &24976827
 GameObject:
@@ -240,7 +241,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 24976827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4500003, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -2.035, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -312,8 +313,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 35
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &48870353
 GameObject:
@@ -341,7 +343,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 48870353}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6100003, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -1.195, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -413,8 +415,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 45
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &99532089
 GameObject:
@@ -647,7 +650,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 110590575}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.4499998, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 2.865, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -719,8 +722,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 95
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &141061157
 GameObject:
@@ -748,7 +752,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 141061157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.137, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 0.45182, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -820,8 +824,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 66
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &183667631
 GameObject:
@@ -849,7 +854,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 183667631}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0300002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 2.4450004, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -921,8 +926,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 89
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &189971656
 GameObject:
@@ -950,7 +956,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 189971656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.34999982, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 0.76500005, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -1022,8 +1028,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 69
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &191063755
 GameObject:
@@ -1051,7 +1058,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 191063755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5445, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -1.2296801, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -1123,8 +1130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 46
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &202349557
 GameObject:
@@ -1152,7 +1160,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 202349557}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8700004, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -2.4550002, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -1224,8 +1232,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 29
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &218644597
 GameObject:
@@ -1253,7 +1262,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 218644597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.15, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -2.735, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -1325,8 +1334,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 26
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1001 &259582386
 Prefab:
@@ -1383,7 +1393,7 @@ Prefab:
     - {fileID: 65703735466533092, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b276068bd14524748bae21093a830b86, type: 2}
   m_IsPrefabAsset: 0
---- !u!83 &294017868
+--- !u!83 &293728409
 AudioClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1436,7 +1446,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 298816626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.33, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 1.7450002, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -1508,8 +1518,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 81
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &302396946
 GameObject:
@@ -1537,7 +1548,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 302396946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5900002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -2.175, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -1609,8 +1620,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 33
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &306671838
 GameObject:
@@ -1638,7 +1650,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 306671838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.73, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -2.3149998, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -1710,8 +1722,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 31
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1001 &329054730
 Prefab:
@@ -1803,7 +1816,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 339679541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.218, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 3.53282, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -1875,8 +1888,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 104
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &354820850
 GameObject:
@@ -1904,7 +1918,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 354820850}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.17, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 2.5850003, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -1976,8 +1990,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 91
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &378456551
 GameObject:
@@ -2008,7 +2023,7 @@ Transform:
   m_LocalScale: {x: 8, y: 4.818938, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &378456553
 BoxCollider:
@@ -2154,7 +2169,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 404180337}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6769997, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 1.9918197, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -2226,8 +2241,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 85
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &410844764
 GameObject:
@@ -2460,7 +2476,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 428490583}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0500001, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 1.4650003, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -2532,8 +2548,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 77
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &445673418
 GameObject:
@@ -2567,6 +2584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6280755bbc6a434489c99b85cd70fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxMultiplier: 8
 --- !u!114 &445673420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2748,7 +2766,7 @@ RectTransform:
   - {fileID: 579945354}
   - {fileID: 1272133776}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2781,7 +2799,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 451703129}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7975, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -2.4826798, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -2853,8 +2871,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 30
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1001 &546255743
 Prefab:
@@ -2946,7 +2965,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 565045385}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3954998, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 1.7103198, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -3018,8 +3037,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 82
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &565817780
 GameObject:
@@ -3047,7 +3067,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 565817780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2580001, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -0.9431802, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -3119,8 +3139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 49
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &579945353
 GameObject:
@@ -3353,7 +3374,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 584481358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3500002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 0.065, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -3425,8 +3446,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 60
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &588734686
 GameObject:
@@ -3454,7 +3476,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 588734686}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4900002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -0.07499999, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -3526,8 +3548,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 59
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &601922967
 GameObject:
@@ -3555,7 +3578,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 601922967}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4899999, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 0.9050001, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -3627,8 +3650,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 71
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &604393890
 GameObject:
@@ -3656,7 +3680,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604393890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14350004, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 0.17131993, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -3728,8 +3752,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 63
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &609031232
 GameObject:
@@ -3757,7 +3782,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 609031232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3719997, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 2.6868198, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -3829,8 +3854,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 94
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &626618482
 GameObject:
@@ -3924,7 +3950,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 640769652}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.70049965, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 1.0153196, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -3996,8 +4022,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 73
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &650609439
 GameObject:
@@ -4025,7 +4052,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 650609439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0955, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 2.41032, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -4097,8 +4124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 90
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1001 &653387994
 Prefab:
@@ -4169,278 +4197,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1170736078158438, guid: 6839a3da011759d45b4a0d7748ca32b5,
     type: 2}
   m_PrefabInternal: {fileID: 822163528}
---- !u!114 &698721811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 698721810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03c2100a494de423e9975762c775cfac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  noteOnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  noteOffEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  beatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+BeatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  length: 4
-  currentIndex: -1
-  loop: 0
-  allNotes:
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  scrollPosition: {x: 0, y: 535}
-  autoScroll: 1
-  division: 1
-  zoom: 0.3
-  channel: 0
---- !u!114 &698721812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 698721810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 981c2862dc2a4474b9d748a52426fab6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  synthesizerMixerGroup: {fileID: 0}
-  spatializerMixerGroup: {fileID: 0}
---- !u!82 &698721813
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 698721810}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: e5eefe22657889e48b790c6ee4526e2a,
-    type: 2}
-  m_audioClip: {fileID: 294017868}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 0
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &698721814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4452,19 +4208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05587fa63985dfe4b879a33a21c9e7c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &698721815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 698721810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 045e068a7f5e98b4d9ed97de401bb997, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bpm_: 120
-  pause_: 1
+  noteSpawnHeight: 2.8
+  helmClock: {fileID: 1205115144}
+  helmSequencer: {fileID: 1642459140}
 --- !u!1 &702223127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4491,7 +4237,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 702223127}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7500001, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -1.3349999, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -4563,8 +4309,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 43
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &741187105
 GameObject:
@@ -4592,7 +4339,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 741187105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.0099998, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 3.425, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -4664,8 +4411,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 101
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &756761107
 GameObject:
@@ -4693,7 +4441,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756761107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.4299998, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 3.845, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -4765,8 +4513,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 107
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &765350009
 GameObject:
@@ -4794,7 +4543,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 765350009}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1015, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -1.7866801, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -4866,8 +4615,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 39
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &800302013
 GameObject:
@@ -4895,7 +4645,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 800302013}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.90999997, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 1.3250002, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -4967,8 +4717,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 76
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1001 &822163528
 Prefab:
@@ -5009,6 +4760,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1170736078158438, guid: 6839a3da011759d45b4a0d7748ca32b5, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170736078158438, guid: 6839a3da011759d45b4a0d7748ca32b5, type: 2}
+      propertyPath: m_Name
+      value: Song Controller
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114320617541854054, guid: 6839a3da011759d45b4a0d7748ca32b5, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6839a3da011759d45b4a0d7748ca32b5, type: 2}
@@ -5039,7 +4798,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 832707494}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5700002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -3.155, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -5111,8 +4870,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 21
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1001 &844749499
 Prefab:
@@ -5204,7 +4964,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 866148011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.29, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 3.7050002, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -5276,8 +5036,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 105
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!4 &902679902 stripped
 Transform:
@@ -5310,7 +5071,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 930451146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.521, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -2.2061799, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -5382,8 +5143,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 34
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &931912860
 GameObject:
@@ -5411,7 +5173,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 931912860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.89, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 2.3050003, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -5483,8 +5245,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 88
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &960478955
 GameObject:
@@ -5507,8 +5270,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 960478955}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00000020862, y: 0.00000017881, z: -0.0000000074506}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 832707495}
@@ -5592,7 +5355,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 979972423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5629999, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -0.24817991, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -5664,8 +5427,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 58
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &979997043
 GameObject:
@@ -5693,7 +5457,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 979997043}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3100004, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -1.8950002, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -5765,8 +5529,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 36
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &999442981
 GameObject:
@@ -5794,7 +5559,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 999442981}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1899999, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 1.6050001, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -5866,8 +5631,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 79
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1005082840
 GameObject:
@@ -5895,7 +5661,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1005082840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2569999, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 1.5718198, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -5967,8 +5733,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 80
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1001 &1009542642
 Prefab:
@@ -6129,7 +5896,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1037774399}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2395, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -1.9246801, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -6201,8 +5968,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 37
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1067251105
 GameObject:
@@ -6230,7 +5998,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1067251105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3300002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -0.91499996, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -6302,8 +6070,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 48
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1071464045
 GameObject:
@@ -6331,7 +6100,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1071464045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4700001, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -1.055, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -6403,8 +6172,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 47
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1095138804
 GameObject:
@@ -6432,7 +6202,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1095138804}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.821, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -1.50618, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -6504,8 +6274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 42
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1119014461
 GameObject:
@@ -6533,7 +6304,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1119014461}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7700001, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 1.1850003, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -6605,8 +6376,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 74
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1122829125
 GameObject:
@@ -6634,7 +6406,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1122829125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7499999, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 2.1650002, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -6706,8 +6478,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 86
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1132660174
 GameObject:
@@ -6735,7 +6508,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1132660174}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8900002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -1.475, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -6807,8 +6580,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 41
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1149398584
 GameObject:
@@ -6836,7 +6610,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1149398584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.08, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 3.39482, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -6908,8 +6682,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 102
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1169095693
 GameObject:
@@ -6937,7 +6712,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1169095693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.6595, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -2.3446798, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -7009,8 +6784,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 32
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1173678752
 GameObject:
@@ -7038,7 +6814,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173678752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1900002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -0.775, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -7110,8 +6886,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 50
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1175136281
 GameObject:
@@ -7139,7 +6916,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1175136281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5900002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 3.0050004, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -7211,9 +6988,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 96
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
+--- !u!1 &1205115143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205115145}
+  - component: {fileID: 1205115144}
+  m_Layer: 0
+  m_Name: Clock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1205115144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205115143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045e068a7f5e98b4d9ed97de401bb997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bpm_: 120
+  pause_: 1
+--- !u!4 &1205115145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205115143}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1220143659
 GameObject:
   m_ObjectHideFlags: 0
@@ -7240,7 +7060,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1220143659}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0700002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 0.345, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -7312,8 +7132,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 64
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1222068958
 GameObject:
@@ -7341,7 +7162,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1222068958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6614995, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 2.9763196, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -7413,8 +7234,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 97
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1228490019
 GameObject:
@@ -7442,7 +7264,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1228490019}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.21000022, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 0.20499998, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -7514,8 +7336,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 62
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1247674549
 GameObject:
@@ -7543,7 +7366,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1247674549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.4300003, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -3.015, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -7615,8 +7438,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 23
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1254668978
 GameObject:
@@ -7644,7 +7468,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1254668978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.119, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 1.4338199, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -7716,8 +7540,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 78
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1272133775
 GameObject:
@@ -7950,7 +7775,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1274348978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2099998, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 0.625, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -8022,8 +7847,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 67
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1282357420
 GameObject:
@@ -8051,7 +7877,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1282357420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.28150004, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 0.03331995, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -8123,8 +7949,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 61
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1302731690
 GameObject:
@@ -8152,7 +7979,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1302731690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.29, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -2.8749998, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -8224,8 +8051,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 24
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1338098356
 GameObject:
@@ -8253,7 +8081,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1338098356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5699997, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 3.985, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -8325,8 +8153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 108
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1349832838
 GameObject:
@@ -8354,7 +8183,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1349832838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.27500004, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 0.58982, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -8426,8 +8255,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 68
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1378439615
 GameObject:
@@ -8455,7 +8285,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1378439615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1200001, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -0.8051802, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -8527,8 +8357,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 51
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1398898152
 GameObject:
@@ -8556,7 +8387,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1398898152}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.0100002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -2.595, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -8628,8 +8459,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 28
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1412738211
 GameObject:
@@ -8657,7 +8489,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412738211}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8149997, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 2.1298199, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -8729,8 +8561,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 87
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1420952130
 GameObject:
@@ -8754,13 +8587,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1420952130}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.117, z: -0.5}
+  m_LocalPosition: {x: -0.415, y: 0.608, z: -0.524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 960478956}
   - {fileID: 2120225059}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1442747873
 GameObject:
@@ -8788,7 +8621,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1442747873}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3564997, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 3.6713197, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -8860,8 +8693,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 106
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1001 &1456349888
 Prefab:
@@ -9019,6 +8853,10 @@ Prefab:
       propertyPath: m_Name
       value: Title
       objectReference: {fileID: 0}
+    - target: {fileID: 1866835136332518, guid: 6941715161c2b124aaeee405f289426f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6941715161c2b124aaeee405f289426f, type: 2}
   m_IsPrefabAsset: 0
@@ -9048,7 +8886,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1464093426}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.31, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 2.7250001, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -9120,8 +8958,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 93
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1509587933
 GameObject:
@@ -9149,7 +8988,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1509587933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.683, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -1.36818, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -9221,8 +9060,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 44
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1519113298
 GameObject:
@@ -9250,7 +9090,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1519113298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9100002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -0.495, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -9322,8 +9162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 53
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1532054125
 GameObject:
@@ -9351,7 +9192,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1532054125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.87, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 3.285, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -9423,8 +9264,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 100
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1565294015
 GameObject:
@@ -9452,7 +9294,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1565294015}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6300002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -0.21499997, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -9524,8 +9366,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 57
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1600580850
 GameObject:
@@ -9553,7 +9396,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1600580850}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4135, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 0.72832, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -9625,9 +9468,439 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 70
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
+--- !u!1 &1642459139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1642459143}
+  - component: {fileID: 1642459142}
+  - component: {fileID: 1642459141}
+  - component: {fileID: 1642459140}
+  m_Layer: 0
+  m_Name: Sequencer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1642459140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642459139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03c2100a494de423e9975762c775cfac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noteOnEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  noteOffEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  beatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: AudioHelm.Sequencer+BeatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  length: 16
+  currentIndex: -1
+  loop: 0
+  allNotes:
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes:
+    - note_: 72
+      start_: 0
+      end_: 2
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 73
+      start_: 2
+      end_: 4
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 74
+      start_: 4
+      end_: 6
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 75
+      start_: 6
+      end_: 8
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 76
+      start_: 8
+      end_: 10
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 77
+      start_: 10
+      end_: 12
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 78
+      start_: 12
+      end_: 14
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 79
+      start_: 0
+      end_: 2
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+    - note_: 79
+      start_: 14
+      end_: 16
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 80
+      start_: 2
+      end_: 4
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+    - note_: 80
+      start_: 16
+      end_: 18
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 81
+      start_: 4
+      end_: 6
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 82
+      start_: 6
+      end_: 8
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 83
+      start_: 8
+      end_: 10
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 84
+      start_: 10
+      end_: 12
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 85
+      start_: 12
+      end_: 14
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes:
+    - note_: 86
+      start_: 14
+      end_: 16
+      velocity_: 0.8
+      parent: {fileID: 1642459140}
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  - notes: []
+  scrollPosition: {x: 0, y: 240}
+  autoScroll: 1
+  division: 1
+  zoom: 0
+  channel: 0
+--- !u!114 &1642459141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642459139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981c2862dc2a4474b9d748a52426fab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  synthesizerMixerGroup: {fileID: 0}
+  spatializerMixerGroup: {fileID: 0}
+--- !u!82 &1642459142
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642459139}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: e5eefe22657889e48b790c6ee4526e2a,
+    type: 2}
+  m_audioClip: {fileID: 293728409}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1642459143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642459139}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1704436141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1704436143}
+  - component: {fileID: 1704436142}
+  m_Layer: 0
+  m_Name: Stats Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1704436142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1704436141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6280755bbc6a434489c99b85cd70fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMultiplier: 8
+--- !u!4 &1704436143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1704436141}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1705900055
 GameObject:
   m_ObjectHideFlags: 0
@@ -9654,7 +9927,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1705900055}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.069999814, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 0.485, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -9726,8 +9999,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 65
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1706744893
 GameObject:
@@ -9755,7 +10029,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1706744893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.216, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -2.90118, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -9827,8 +10101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 25
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1727567960
 GameObject:
@@ -9856,7 +10131,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1727567960}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.61, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 2.0250003, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -9928,8 +10203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 84
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1731641261
 GameObject:
@@ -9957,7 +10233,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1731641261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8394999, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -0.5246799, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -10029,8 +10305,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 54
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1746274911
 GameObject:
@@ -10058,7 +10335,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1746274911}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.83849967, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 1.1533196, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -10130,8 +10407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 75
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1764199302
 GameObject:
@@ -10159,7 +10437,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1764199302}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.7994995, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 3.1143196, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -10231,8 +10509,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 99
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1790251690
 GameObject:
@@ -10260,7 +10539,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1790251690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.73, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 3.1450002, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -10332,8 +10611,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 98
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1800955692
 GameObject:
@@ -10361,7 +10641,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1800955692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.63, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 1.0450002, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -10433,8 +10713,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 72
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1829792919
 GameObject:
@@ -10472,7 +10753,7 @@ Transform:
   - {fileID: 844749500}
   - {fileID: 1030536559}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1832400208
 GameObject:
@@ -10500,7 +10781,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1832400208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.15, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 3.5650003, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -10572,8 +10853,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 103
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1845733726
 GameObject:
@@ -10601,7 +10883,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1845733726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0500002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -0.635, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -10673,8 +10955,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 52
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &1898675051
 GameObject:
@@ -10702,7 +10985,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1898675051}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7014999, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -0.3866799, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -10774,8 +11057,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 56
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1944673631
 GameObject:
@@ -10803,7 +11087,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1944673631}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.2335, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: 2.54832, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -10875,8 +11159,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 92
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &1992627964
 GameObject:
@@ -10904,7 +11189,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1992627964}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7700002, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -0.35500002, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -10976,8 +11261,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 55
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &2005585629
 GameObject:
@@ -11005,7 +11291,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2005585629}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.501, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -3.1861799, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663019, y: 0.38563514, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -11077,8 +11363,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 22
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &2018105563
 GameObject:
@@ -11106,7 +11393,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2018105563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4699999, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: 1.8850001, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -11178,8 +11465,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 83
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1001 &2062747354
 Prefab:
@@ -11335,7 +11623,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2110773581}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.17, y: 0.84100014, z: 0.006000012}
+  m_LocalPosition: {x: -1.7549999, y: 0.34999996, z: 0.030000009}
   m_LocalScale: {x: 0.13, y: 0.7, z: 0.06}
   m_Children: []
   m_Father: {fileID: 960478956}
@@ -11407,8 +11695,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 38
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 1
 --- !u!1 &2116161261
 GameObject:
@@ -11436,7 +11725,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2116161261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.078, y: 0.999, z: -0.013000011}
+  m_LocalPosition: {x: -2.76318, y: 0.19281995, z: 0.029999975}
   m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
@@ -11508,8 +11797,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 27
-  spawnHeight: 1.9
-  beatUnitConversion: 0.4
+  beatUnitConversion: 0.9
+  clock: {fileID: 1205115144}
+  statsController: {fileID: 1704436142}
   isWhiteKey: 0
 --- !u!1 &2120225058
 GameObject:
@@ -11532,8 +11822,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2120225058}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.10018, y: 0.31518, z: -0.00099999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2005585630}
