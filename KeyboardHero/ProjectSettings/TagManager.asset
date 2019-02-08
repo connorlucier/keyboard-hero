@@ -7,7 +7,6 @@ TagManager:
   - Score
   - Streak
   - Accuracy
-  - Stats
   - Note
   - Notehead
   - 21
@@ -101,6 +100,8 @@ TagManager:
   - Note Speed Slider
   - Note Colors Dropdown
   - Key Colors Dropdown
+  - Stats Controller
+  - Song
   layers:
   - Default
   - TransparentFX

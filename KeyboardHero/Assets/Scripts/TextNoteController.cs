@@ -17,18 +17,13 @@ public class TextNoteController : MonoBehaviour {
     [SerializeField]
     KeyCode keybind;
 
-    private StatsController statsController;
+    public TextStatsController statsController;
 
     private float playTimer;
 
-    void Start ()
-    {
-        statsController = GameObject.FindWithTag("Stats").GetComponent<StatsController>();
-    }
-
     void Update ()
     {
-        HandleMisinputs();
+        HandleInput();
     }
 
     void OnTriggerStay (Collider other)
@@ -54,7 +49,7 @@ public class TextNoteController : MonoBehaviour {
         return keybind.ToString();
     }
 
-    private void HandleMisinputs()
+    private void HandleInput()
     {
         // TODO if this key is hit and no note is in trigger volume, send miss update
     }

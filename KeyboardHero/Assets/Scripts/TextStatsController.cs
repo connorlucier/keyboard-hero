@@ -2,10 +2,13 @@
 using TMPro;
 using UnityEngine;
 
-public class StatsController : MonoBehaviour {
+public class TextStatsController : MonoBehaviour {
 
-    [Range(4,10)]
+    [Range(4, 10)]
     public int maxMultiplier = 8;
+
+    [Range(0, 250)]
+    public int scoreDensity = 100;
 
     private int notesHit;
 
@@ -24,7 +27,7 @@ public class StatsController : MonoBehaviour {
     private TextMeshPro streakText;
 
     private TextMeshPro accuracyText;
-    
+
     void Start ()
     {
         scoreText = GameObject.FindWithTag("Score").GetComponent<TextMeshPro>();
@@ -48,15 +51,15 @@ public class StatsController : MonoBehaviour {
         totalNotes++;
 
         UpdateStatsText();
-    }    
+    }
 
     public void NoteHitUpdate()
     {
-        score += multiplier * 100;
+        score += multiplier * scoreDensity;
         streak++;
         notesHit++;
         totalNotes++;
-        multiplier = Mathf.Min(1 + streak / 10, maxMultiplier);
+        multiplier = Math.Min(1 + streak / 10, maxMultiplier);
         accuracy = Math.Round(notesHit / totalNotes * 100.0, 2);
 
         UpdateStatsText();

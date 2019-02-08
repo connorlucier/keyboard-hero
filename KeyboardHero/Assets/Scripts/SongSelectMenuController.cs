@@ -1,5 +1,5 @@
 ﻿using IniParser;
-using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
@@ -11,14 +11,16 @@ public class SongSelectMenuController : MonoBehaviour {
 
     public int spacing = 100;
 
+    private Dictionary<GameObject, string> songsDict = new Dictionary<GameObject, string>();
+
     void Start()
     {
-        var songs = Directory.GetDirectories("Assets/Resources/Songs").ToList();
+        var songDirs = Directory.GetDirectories("Assets/Resources/Songs").ToList();
         var songPrefab = Resources.Load<GameObject>("UI/Song");
         var menuObject = GameObject.Find("Song Select Menu");
 
         int i = 0;
-        foreach (var songDir in songs)
+        foreach (var songDir in songDirs)
         {
             // Create an entry for every song
             var song = Instantiate(songPrefab);
@@ -26,6 +28,7 @@ public class SongSelectMenuController : MonoBehaviour {
             song.transform.SetParent(menuObject.transform, false);
             song.transform.position += i++ * Vector3.down * spacing;
 
+            songsDict.Add(song, songDir);
             PopulateFields(song, songDir);
 
             // Play selected song on click
@@ -89,7 +92,6 @@ public class SongSelectMenuController : MonoBehaviour {
                     break;
 
                 case "Score":
-                    // TODO stored locally after song completion, not in this .ini file
                     field.GetComponent<TextMeshProUGUI>().text = songData["score"]["highscore"];
                     break;
 

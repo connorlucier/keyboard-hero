@@ -6,45 +6,51 @@ using System.Collections.Generic;
 
 public class MidiNoteController : MonoBehaviour {
 
-    [Range(21, 108)]
-    public int note = 60;
-
     [Range(0, 1)]
     public float beatUnitConversion = 1.0f;
 
     public AudioHelmClock clock;
 
-    public StatsController statsController;
+    public MidiStatsController statsController;
 
-    public bool isWhiteKey = true;
+    private int note;
+
+    private bool noteHit;
 
     private GameObject notePrefab;
+    private Material noteMaterial;
 
-    private List<Material> materials;
-
-    private float spawnHeight = 2.5f;
-
-    void Start ()
+    void Start()
     {
+        note = gameObject.GetComponent<MidiKeyController>().note;
         notePrefab = Resources.Load<GameObject>("Physical/Note");
-        materials = Resources.LoadAll<Material>("Materials/Note Colors/").ToList();
-        GetComponent<Renderer>().material.color = Color.red;
+        SetNoteMaterial();
     }
 
-    void Update ()
+    void OnTriggerEnter(Collider other)
     {
-        UpdateKeyColor();
+        noteHit = false;
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        HandleInput();
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (int.Parse(other.tag) == note)
+        if (note == int.Parse(other.tag))
         {
+            if (!noteHit)
+                statsController.NoteMissUpdate();
+
             Destroy(other.gameObject.transform.parent.gameObject);
         }
     }
 
-    public void CreateNote(Note n)
+    public int Note() { return note; }
+
+    public void CreateNote(Note n, float spawnHeight)
     {
         var noteObject = Instantiate(notePrefab);
         var cube = noteObject.transform.GetChild(0).gameObject;
@@ -53,11 +59,11 @@ public class MidiNoteController : MonoBehaviour {
         var noteSpeed = PlayerPrefs.GetFloat("noteSpeed", 3.25f);
         var noteScale = noteDuration * noteSpeed * beatUnitConversion;
 
-        noteObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, noteScale, gameObject.transform.localScale.z);
-        noteObject.transform.position = gameObject.transform.position + new Vector3(-0.5f * gameObject.transform.localScale.x, spawnHeight, -0.05f);
+        noteObject.transform.localScale = new Vector3(0.95f * gameObject.transform.localScale.x, noteScale, gameObject.transform.localScale.z);
+        noteObject.transform.position = gameObject.transform.position + new Vector3(-0.475f * gameObject.transform.localScale.x, spawnHeight, -0.05f);
         cube.tag = note.ToString();
 
-        SetDefaultNoteMaterial(cube, n.note);
+        cube.GetComponent<Renderer>().material = noteMaterial;
 
         var noteRigidBody = noteObject.AddComponent<Rigidbody>();
         noteRigidBody.useGravity = false;
@@ -69,25 +75,23 @@ public class MidiNoteController : MonoBehaviour {
         noteRigidBody.AddForce(Vector3.down * noteSpeed, ForceMode.VelocityChange);
     }
 
-    public void SetSpawnHeight(float newHeight)
+    private void HandleInput()
     {
-        spawnHeight = newHeight;
-    }
-
-    private void UpdateKeyColor()
-    {
-        if (MidiMaster.GetKey(note) > 0.0f)
+        if (!noteHit && MidiMaster.GetKeyDown(note))
         {
-            GetComponent<Renderer>().material.color = Color.red;
+            statsController.NoteHitUpdate();
+            noteHit = true;
         }
-        else
+
+        else if (noteHit && MidiMaster.GetKey(note) > 0.0f)
         {
-            SetDefaultKeyMaterial();
+            statsController.NoteContinueUpdate();
         }
     }
 
-    private void SetDefaultNoteMaterial(GameObject obj, int note)
+    private void SetNoteMaterial()
     {
+        List<Material> materials = Resources.LoadAll<Material>("Materials/Note Colors/").ToList();
         Material mat;
 
         if (PlayerPrefs.GetInt("multicolorNotes") == 1)
@@ -135,7 +139,7 @@ public class MidiNoteController : MonoBehaviour {
                     break;
             }
 
-            obj.GetComponent<Renderer>().material = mat;
+            noteMaterial = mat;
         }
 
         else
@@ -183,72 +187,7 @@ public class MidiNoteController : MonoBehaviour {
                     break;
             }
 
-            obj.GetComponent<Renderer>().material = mat;
-        }
-    }
-
-    private void SetDefaultKeyMaterial()
-    {
-        if (PlayerPrefs.GetInt("multicolorKeys") == 1)
-        {
-            Material mat;
-            switch (note % 12)
-            {
-                case 0: // C
-                    mat = materials.Where(m => m.name == "Red").FirstOrDefault();
-                    break;
-                case 1: // C# / Db
-                    mat = materials.Where(m => m.name == "Red Orange").FirstOrDefault();
-                    break;
-                case 2: // D
-                    mat = materials.Where(m => m.name == "Orange").FirstOrDefault();
-                    break;
-                case 3: // D# / Eb
-                    mat = materials.Where(m => m.name == "Gold").FirstOrDefault();
-                    break;
-                case 4: // E
-                    mat = materials.Where(m => m.name == "Yellow").FirstOrDefault();
-                    break;
-                case 5: // F
-                    mat = materials.Where(m => m.name == "Light Green").FirstOrDefault();
-                    break;
-                case 6: // F# / Gb
-                    mat = materials.Where(m => m.name == "Green").FirstOrDefault();
-                    break;
-                case 7: // G
-                    mat = materials.Where(m => m.name == "Light Blue").FirstOrDefault();
-                    break;
-                case 8: // G# / Ab
-                    mat = materials.Where(m => m.name == "Blue").FirstOrDefault();
-                    break;
-                case 9: // A
-                    mat = materials.Where(m => m.name == "Indigo").FirstOrDefault();
-                    break;
-                case 10: // A# / Bb
-                    mat = materials.Where(m => m.name == "Purple").FirstOrDefault();
-                    break;
-                case 11: // B
-                    mat = materials.Where(m => m.name == "Pink").FirstOrDefault();
-                    break;
-                default:
-                    mat = materials.Where(m => m.name == "White").FirstOrDefault();
-                    break;
-            }
-
-            GetComponent<Renderer>().material = mat;
-        }
-
-        else
-        {
-            switch (isWhiteKey)
-            {
-                case true:
-                    GetComponent<Renderer>().material = materials.Where(m => m.name == "White").FirstOrDefault();
-                    break;
-                case false:
-                    GetComponent<Renderer>().material = materials.Where(m => m.name == "Black").FirstOrDefault();
-                    break;
-            }
+            noteMaterial = mat;
         }
     }
 }
