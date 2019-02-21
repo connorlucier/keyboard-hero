@@ -112,6 +112,6 @@ public class MidiSongController : MonoBehaviour {
     {
         SaveSongStats();
         yield return new WaitForSeconds(6);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

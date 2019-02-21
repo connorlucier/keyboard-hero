@@ -9,6 +9,7 @@ using TMPro;
 
 public class SongSelectMenuController : MonoBehaviour {
 
+    [Range(100,200)]
     public int spacing = 100;
 
     private Dictionary<GameObject, string> songsDict = new Dictionary<GameObject, string>();
@@ -22,46 +23,24 @@ public class SongSelectMenuController : MonoBehaviour {
         int i = 0;
         foreach (var songDir in songDirs)
         {
-            // Create an entry for every song
             var song = Instantiate(songPrefab);
-            bool isMidiFile = false;
             song.transform.SetParent(menuObject.transform, false);
             song.transform.position += i++ * Vector3.down * spacing;
 
             songsDict.Add(song, songDir);
             PopulateFields(song, songDir);
 
-            // Play selected song on click
-            var fileName = Directory.GetFiles(songDir).Where(x => x.EndsWith(".txt")).FirstOrDefault();
+            
+            var fileName = Directory.GetFiles(songDir).Where(x => x.EndsWith(".mid") || x.EndsWith(".MID")).FirstOrDefault();
 
-            if (fileName == null)
-            {
-                fileName = Directory.GetFiles(songDir).Where(x => x.EndsWith(".mid") || x.EndsWith(".MID")).FirstOrDefault();
-                isMidiFile = true;
-            }
-            else
-            {
-                fileName = fileName.Substring(fileName.IndexOf("Songs"));
-                fileName = fileName.Remove(fileName.Length - 4);
-            }
-
-            song.GetComponent<Button>().onClick.AddListener(delegate () { PlaySong(fileName, isMidiFile); });
+            song.GetComponent<Button>().onClick.AddListener(delegate () { PlaySong(fileName); });
         }
     }
 
-    public void PlaySong(string fileName, bool isMidiFile)
+    public void PlaySong(string fileName)
     {
         PlayerPrefs.SetString("song", fileName);
-
-        if (isMidiFile)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-        }
-        else
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-            
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);          
     }
 
     public void GoBack()
@@ -98,10 +77,10 @@ public class SongSelectMenuController : MonoBehaviour {
                 case "Stars":
                     var img = field.GetComponent<Image>();
                     var color = img.color;
+                    color.a = 1.0f;
 
                     if (int.Parse(songData["score"]["highscore"]) > 0) {
                         img.sprite = Resources.Load<Sprite>("Images/" + songData["score"]["stars"] + "_star");
-                        color.a = 1.0f;
                         img.color = color;
                     }
                     break;

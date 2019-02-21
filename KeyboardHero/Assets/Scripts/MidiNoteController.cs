@@ -60,7 +60,7 @@ public class MidiNoteController : MonoBehaviour {
         var noteScale = noteDuration * noteSpeed * beatUnitConversion;
 
         noteObject.transform.localScale = new Vector3(0.95f * gameObject.transform.localScale.x, noteScale, gameObject.transform.localScale.z);
-        noteObject.transform.position = gameObject.transform.position + new Vector3(-0.475f * gameObject.transform.localScale.x, spawnHeight, -0.05f);
+        noteObject.transform.position = gameObject.transform.position + new Vector3(-0.475f * gameObject.transform.localScale.x, spawnHeight, 0);
         cube.tag = note.ToString();
 
         cube.GetComponent<Renderer>().material = noteMaterial;

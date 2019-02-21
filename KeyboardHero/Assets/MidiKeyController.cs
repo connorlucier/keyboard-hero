@@ -114,9 +114,9 @@ public class MidiKeyController : MonoBehaviour {
         var clock = FindObjectOfType<AudioHelmClock>();
 
         var noteSpeed = PlayerPrefs.GetFloat("noteSpeed", 3.25f);
-        var hitWindow = noteSpeed * hitWindowBeats * (60 / clock.bpm) * (isWhiteKey ? 1.0f : noteScaleRatio);
+        var hitWindow = noteSpeed * hitWindowBeats * (60 / clock.bpm) * (isWhiteKey ? 1 : noteScaleRatio);
 
         collider.center = new Vector3(0, 0.5f, 0);
-        collider.size = new Vector3(0, hitWindow, 1);
+        collider.size = new Vector3(1, hitWindow, 1);
     }
 }
