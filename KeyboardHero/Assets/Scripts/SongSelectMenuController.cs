@@ -96,7 +96,14 @@ public class SongSelectMenuController : MonoBehaviour {
                     break;
 
                 case "Stars":
-                    field.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/" + songData["score"]["stars"] + "_star");
+                    var img = field.GetComponent<Image>();
+                    var color = img.color;
+
+                    if (int.Parse(songData["score"]["highscore"]) > 0) {
+                        img.sprite = Resources.Load<Sprite>("Images/" + songData["score"]["stars"] + "_star");
+                        color.a = 1.0f;
+                        img.color = color;
+                    }
                     break;
 
                 default:

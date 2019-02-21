@@ -1,14 +1,17 @@
-﻿using System;
+﻿using AudioHelm;
+using System;
 using TMPro;
 using UnityEngine;
 
 public class MidiStatsController : MonoBehaviour {
 
+    public AudioHelmClock clock;
+
     [Range(4, 10)]
     public int maxMultiplier = 8;
 
-    [Range(0, 250)]
-    public int scoreDensity = 100;
+    [Range(0, 1000)]
+    public int scoreDensity = 1000;
 
     private long notesHit;
     private long totalNotes;
@@ -53,7 +56,7 @@ public class MidiStatsController : MonoBehaviour {
 
     public void NoteHitUpdate()
     {
-        score += multiplier * scoreDensity;
+        score += (int) (multiplier * scoreDensity * Time.deltaTime / (60 / clock.bpm));
         notesHit++;
         totalNotes++;
         streak++;
@@ -65,7 +68,7 @@ public class MidiStatsController : MonoBehaviour {
 
     public void NoteContinueUpdate()
     {
-        score += multiplier * scoreDensity;
+        score += (int) (multiplier * scoreDensity * Time.deltaTime / (60 / clock.bpm));
         UpdateStatsText();
     }
 

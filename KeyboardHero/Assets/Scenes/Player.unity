@@ -156,8 +156,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &6763771
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 40
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &24976827
 GameObject:
@@ -270,8 +271,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &24976830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -340,6 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 35
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &48870353
 GameObject:
@@ -384,8 +386,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &48870356
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -454,6 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 45
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &99532089
 GameObject:
@@ -703,8 +706,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &110590578
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -773,6 +776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 95
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &141061157
 GameObject:
@@ -801,8 +805,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 141061157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.45182, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 0.45182, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 18
@@ -817,8 +821,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &141061160
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -887,6 +891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 66
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &183667631
 GameObject:
@@ -931,8 +936,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &183667634
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1001,6 +1006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 89
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &189971656
 GameObject:
@@ -1045,8 +1051,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &189971659
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1115,6 +1121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 69
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &191063755
 GameObject:
@@ -1143,8 +1150,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 191063755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2296801, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -1.2296801, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 10
@@ -1159,8 +1166,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &191063758
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1229,6 +1236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 46
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &202349557
 GameObject:
@@ -1273,8 +1281,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &202349560
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1343,6 +1351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 29
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &218644597
 GameObject:
@@ -1387,8 +1396,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &218644600
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1457,6 +1466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 26
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1001 &259582386
 Prefab:
@@ -1556,8 +1566,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &298816629
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1626,6 +1636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 81
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &302396946
 GameObject:
@@ -1670,8 +1681,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &302396949
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1740,6 +1751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 33
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &306671838
 GameObject:
@@ -1784,8 +1796,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &306671841
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1854,6 +1866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 31
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1001 &329054730
 Prefab:
@@ -1946,8 +1959,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 339679541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.53282, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 3.53282, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 34
@@ -1962,8 +1975,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &339679544
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2032,6 +2045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 104
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &354820850
 GameObject:
@@ -2076,8 +2090,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &354820853
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2146,6 +2160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 91
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &378456551
 GameObject:
@@ -2323,8 +2338,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 404180337}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9918197, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 1.9918197, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 26
@@ -2339,8 +2354,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &404180340
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2409,6 +2424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 85
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &410844764
 GameObject:
@@ -2658,8 +2674,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &428490586
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2728,6 +2744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 77
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &445673418
 GameObject:
@@ -2761,6 +2778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6280755bbc6a434489c99b85cd70fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clock: {fileID: 0}
   maxMultiplier: 8
   scoreDensity: 100
 --- !u!114 &445673420
@@ -2978,8 +2996,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 451703129}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4826798, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -2.4826798, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 3
@@ -2994,8 +3012,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &451703132
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3064,6 +3082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 30
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1001 &546255743
 Prefab:
@@ -3156,8 +3175,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 565045385}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7103198, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 1.7103198, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 25
@@ -3172,8 +3191,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &565045388
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3242,6 +3261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 82
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &565817780
 GameObject:
@@ -3270,8 +3290,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 565817780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9431802, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -0.9431802, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 11
@@ -3286,8 +3306,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &565817783
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3356,6 +3376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 49
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &579945353
 GameObject:
@@ -3605,8 +3626,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &584481361
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3675,6 +3696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 60
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &588734686
 GameObject:
@@ -3719,8 +3741,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &588734689
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3789,6 +3811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 59
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &601922967
 GameObject:
@@ -3833,8 +3856,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &601922970
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3903,6 +3926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 71
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &604393890
 GameObject:
@@ -3931,8 +3955,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604393890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.17131993, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 0.17131993, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 17
@@ -3947,8 +3971,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &604393893
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4017,6 +4041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 63
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &609031232
 GameObject:
@@ -4045,8 +4070,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 609031232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6868198, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 2.6868198, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 30
@@ -4061,8 +4086,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &609031235
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4131,6 +4156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 94
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &626618482
 GameObject:
@@ -4225,8 +4251,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 640769652}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0153196, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 1.0153196, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 21
@@ -4241,8 +4267,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &640769655
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4311,6 +4337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 73
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &650609439
 GameObject:
@@ -4339,8 +4366,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 650609439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.41032, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 2.41032, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 28
@@ -4355,8 +4382,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &650609442
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4425,6 +4452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 90
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1001 &653387994
 Prefab:
@@ -4507,7 +4535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteSpawnHeight: 2.8
-  latency: 1.5
+  latency: 1.4
   helmClock: {fileID: 1205115144}
   helmSequencer: {fileID: 1642459140}
 --- !u!1 &702223127
@@ -4553,8 +4581,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &702223130
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4623,6 +4651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 43
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &741187105
 GameObject:
@@ -4667,8 +4696,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &741187108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4737,6 +4766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 101
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &756761107
 GameObject:
@@ -4781,8 +4811,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &756761110
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4851,6 +4881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 107
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &765350009
 GameObject:
@@ -4879,8 +4910,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 765350009}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7866801, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -1.7866801, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 7
@@ -4895,8 +4926,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &765350012
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4965,6 +4996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 39
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &800302013
 GameObject:
@@ -5009,8 +5041,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &800302016
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5079,6 +5111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 76
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1001 &822163528
 Prefab:
@@ -5174,8 +5207,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &832707497
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5244,6 +5277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 21
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1001 &844749499
 Prefab:
@@ -5352,8 +5386,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &866148014
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5422,6 +5456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 105
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!4 &902679902 stripped
 Transform:
@@ -5455,8 +5490,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 930451146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2061799, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -2.2061799, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 5
@@ -5471,8 +5506,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &930451149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5541,6 +5576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 34
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &931912860
 GameObject:
@@ -5585,8 +5621,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &931912863
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5655,6 +5691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 88
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &960478955
 GameObject:
@@ -5763,8 +5800,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 979972423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24817991, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -0.24817991, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 15
@@ -5779,8 +5816,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &979972426
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5849,6 +5886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 58
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &979997043
 GameObject:
@@ -5893,8 +5931,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &979997046
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5963,6 +6001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 36
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &999442981
 GameObject:
@@ -6007,8 +6046,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &999442984
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6077,6 +6116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 79
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1005082840
 GameObject:
@@ -6105,8 +6145,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1005082840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5718198, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 1.5718198, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 24
@@ -6121,8 +6161,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1005082843
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6191,6 +6231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 80
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1001 &1009542642
 Prefab:
@@ -6352,8 +6393,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1037774399}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9246801, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -1.9246801, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 6
@@ -6368,8 +6409,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1037774402
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6438,6 +6479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 37
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1067251105
 GameObject:
@@ -6482,8 +6524,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1067251108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6552,6 +6594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 48
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1071464045
 GameObject:
@@ -6596,8 +6639,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1071464048
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6666,6 +6709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 47
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1095138804
 GameObject:
@@ -6694,8 +6738,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1095138804}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.50618, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -1.50618, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 8
@@ -6710,8 +6754,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1095138807
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6780,6 +6824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 42
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1119014461
 GameObject:
@@ -6824,8 +6869,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1119014464
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6894,6 +6939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 74
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1122829125
 GameObject:
@@ -6938,8 +6984,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1122829128
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7008,6 +7054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 86
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1132660174
 GameObject:
@@ -7052,8 +7099,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1132660177
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7122,6 +7169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 41
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1149398584
 GameObject:
@@ -7150,8 +7198,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1149398584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.39482, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 3.39482, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 33
@@ -7166,8 +7214,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1149398587
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7236,6 +7284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 102
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1169095693
 GameObject:
@@ -7264,8 +7313,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1169095693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3446798, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -2.3446798, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 4
@@ -7280,8 +7329,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1169095696
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7350,6 +7399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 32
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1173678752
 GameObject:
@@ -7394,8 +7444,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1173678755
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7464,6 +7514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 50
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1175136281
 GameObject:
@@ -7508,8 +7559,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1175136284
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7578,6 +7629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 96
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1205115143
 GameObject:
@@ -7664,8 +7716,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1220143662
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7734,6 +7786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 64
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1222068958
 GameObject:
@@ -7762,8 +7815,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1222068958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.9763196, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 2.9763196, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 31
@@ -7778,8 +7831,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1222068961
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7848,6 +7901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 97
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1228490019
 GameObject:
@@ -7892,8 +7946,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1228490022
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7962,6 +8016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 62
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1247674549
 GameObject:
@@ -8006,8 +8061,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1247674552
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8076,6 +8131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 23
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1254668978
 GameObject:
@@ -8104,8 +8160,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1254668978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4338199, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 1.4338199, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 23
@@ -8120,8 +8176,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1254668981
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8190,6 +8246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 78
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1272133775
 GameObject:
@@ -8439,8 +8496,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1274348981
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8509,6 +8566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 67
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1282357420
 GameObject:
@@ -8537,8 +8595,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1282357420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03331995, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 0.03331995, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 16
@@ -8553,8 +8611,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1282357423
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8623,6 +8681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 61
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1302731690
 GameObject:
@@ -8667,8 +8726,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1302731693
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8737,6 +8796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 24
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1338098356
 GameObject:
@@ -8781,8 +8841,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1338098359
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8851,6 +8911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 108
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1349832838
 GameObject:
@@ -8879,8 +8940,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1349832838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.58982, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 0.58982, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 19
@@ -8895,8 +8956,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1349832841
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8965,34 +9026,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 68
+  hitWindowBeats: 0.5
   isWhiteKey: 0
---- !u!83 &1354587281
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 48000
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
 --- !u!1 &1378439615
 GameObject:
   m_ObjectHideFlags: 0
@@ -9020,8 +9055,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1378439615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8051802, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -0.8051802, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 12
@@ -9036,8 +9071,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1378439618
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9106,6 +9141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 51
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1398898152
 GameObject:
@@ -9150,8 +9186,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1398898155
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9220,6 +9256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 28
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1412738211
 GameObject:
@@ -9248,8 +9285,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412738211}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1298199, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 2.1298199, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 27
@@ -9264,8 +9301,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1412738214
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9334,6 +9371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 87
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1420952130
 GameObject:
@@ -9392,8 +9430,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1442747873}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.6713197, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 3.6713197, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 35
@@ -9408,8 +9446,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1442747876
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9478,6 +9516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 106
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1001 &1456349888
 Prefab:
@@ -9685,8 +9724,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1464093429
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9755,6 +9794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 93
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1509587933
 GameObject:
@@ -9783,8 +9823,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1509587933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.36818, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -1.36818, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 9
@@ -9799,8 +9839,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1509587936
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9869,6 +9909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 44
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1519113298
 GameObject:
@@ -9913,8 +9954,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1519113301
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9983,6 +10024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 53
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1532054125
 GameObject:
@@ -10027,8 +10069,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1532054128
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10097,6 +10139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 100
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1565294015
 GameObject:
@@ -10141,8 +10184,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1565294018
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10211,6 +10254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 57
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1600580850
 GameObject:
@@ -10239,8 +10283,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1600580850}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.72832, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 0.72832, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 20
@@ -10255,8 +10299,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1600580853
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10325,6 +10369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 70
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1642459139
 GameObject:
@@ -10615,7 +10660,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: e5eefe22657889e48b790c6ee4526e2a,
     type: 2}
-  m_audioClip: {fileID: 1354587281}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -10741,8 +10786,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6280755bbc6a434489c99b85cd70fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clock: {fileID: 1205115144}
   maxMultiplier: 8
-  scoreDensity: 100
+  scoreDensity: 1000
 --- !u!4 &1704436143
 Transform:
   m_ObjectHideFlags: 0
@@ -10799,8 +10845,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1705900058
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10869,6 +10915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 65
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1706744893
 GameObject:
@@ -10897,8 +10944,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1706744893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.90118, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -2.90118, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 1
@@ -10913,8 +10960,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1706744896
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10983,6 +11030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 25
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1727567960
 GameObject:
@@ -11027,8 +11075,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1727567963
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11097,6 +11145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 84
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1731641261
 GameObject:
@@ -11125,8 +11174,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1731641261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5246799, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -0.5246799, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 13
@@ -11141,8 +11190,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1731641264
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11211,6 +11260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 54
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1746274911
 GameObject:
@@ -11239,8 +11289,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1746274911}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1533196, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 1.1533196, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 22
@@ -11255,8 +11305,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1746274914
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11325,6 +11375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 75
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1764199302
 GameObject:
@@ -11353,8 +11404,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1764199302}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.1143196, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 3.1143196, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 32
@@ -11369,8 +11420,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1764199305
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11439,6 +11490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 99
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1790251690
 GameObject:
@@ -11483,8 +11535,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1790251693
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11553,6 +11605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 98
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1800955692
 GameObject:
@@ -11597,8 +11650,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1800955695
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11667,6 +11720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 72
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1829792919
 GameObject:
@@ -11749,8 +11803,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1832400211
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11819,6 +11873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 103
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1845733726
 GameObject:
@@ -11863,8 +11918,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1845733729
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11933,6 +11988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 52
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &1898675051
 GameObject:
@@ -11961,8 +12017,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1898675051}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3866799, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -0.3866799, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 14
@@ -11977,8 +12033,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1898675054
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12047,6 +12103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 56
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1944673631
 GameObject:
@@ -12075,8 +12132,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1944673631}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.54832, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: 2.54832, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 29
@@ -12091,8 +12148,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1944673634
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12161,6 +12218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 92
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &1992627964
 GameObject:
@@ -12205,8 +12263,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1992627967
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12275,6 +12333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 55
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &2005585629
 GameObject:
@@ -12303,8 +12362,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2005585629}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.1861799, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663019, y: 0.38563514, z: 0.06}
+  m_LocalPosition: {x: -3.1861799, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 0
@@ -12319,8 +12378,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2005585632
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12389,6 +12448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 22
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &2018105563
 GameObject:
@@ -12433,8 +12493,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2018105566
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12503,6 +12563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 83
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1001 &2062747354
 Prefab:
@@ -12675,8 +12736,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2110773584
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12745,6 +12806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 38
+  hitWindowBeats: 0.5
   isWhiteKey: 1
 --- !u!1 &2116161261
 GameObject:
@@ -12773,8 +12835,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2116161261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.76318, y: 0.19281995, z: 0.029999975}
-  m_LocalScale: {x: 0.06663, y: 0.38564, z: 0.06}
+  m_LocalPosition: {x: -2.76318, y: 0.185, z: 0.029999975}
+  m_LocalScale: {x: 0.0675, y: 0.4, z: 0.06}
   m_Children: []
   m_Father: {fileID: 2120225059}
   m_RootOrder: 2
@@ -12789,8 +12851,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.721, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2116161264
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12859,6 +12921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: 27
+  hitWindowBeats: 0.5
   isWhiteKey: 0
 --- !u!1 &2120225058
 GameObject:

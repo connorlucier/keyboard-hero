@@ -1,27 +1,30 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using MidiJack;
+using AudioHelm;
 
 public class MidiKeyController : MonoBehaviour {
 
     [Range(21, 108)]
     public int note = 60;
 
+    [Range(0, 1)]
+    public float hitWindowBeats;
+
     public bool isWhiteKey;
+
+    private float noteScaleRatio = 1.75f;
 
     private Material defaultMaterial;
     private Material pressedMaterial;
-
-	// Use this for initialization
+    
 	void Start()
     {
         SetKeyMaterials();
+        SetHitWindow();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (MidiMaster.GetKey(note) > 0.0f)
@@ -103,5 +106,17 @@ public class MidiKeyController : MonoBehaviour {
 
         pressedMaterial = materials.Where(x => x.name == "Grey").FirstOrDefault();
         gameObject.GetComponent<Renderer>().material = defaultMaterial;
+    }
+
+    private void SetHitWindow()
+    {
+        var collider = gameObject.GetComponent<BoxCollider>();
+        var clock = FindObjectOfType<AudioHelmClock>();
+
+        var noteSpeed = PlayerPrefs.GetFloat("noteSpeed", 3.25f);
+        var hitWindow = noteSpeed * hitWindowBeats * (60 / clock.bpm) * (isWhiteKey ? 1.0f : noteScaleRatio);
+
+        collider.center = new Vector3(0, 0.5f, 0);
+        collider.size = new Vector3(0, hitWindow, 1);
     }
 }
