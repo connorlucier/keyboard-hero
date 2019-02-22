@@ -30,6 +30,7 @@ public class MidiNoteController : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         noteHit = false;
+        HandleInput();
     }
 
     void OnTriggerStay(Collider other)
@@ -77,7 +78,7 @@ public class MidiNoteController : MonoBehaviour {
 
     private void HandleInput()
     {
-        if (!noteHit && MidiMaster.GetKeyDown(note))
+        if (!noteHit && MidiMaster.GetKey(note) > 0.0f) // TODO how to balance?
         {
             statsController.NoteHitUpdate();
             noteHit = true;
