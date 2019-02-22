@@ -6,11 +6,10 @@ The game is currently in development. The specific features being worked on are 
 
 ## Features in Development
 - Fine-tuning note spawning
-- Score, streak and accuracy logic
-- Local high score tracking
 - Game customization options
 
 ## Future Features to Explore
+- Practice Mode (allow player to slow down song while playing)
 - Easy song importation and metadata generation
 - Dynamic scaling for song player based on size of keyboard
 - In-game song creation
