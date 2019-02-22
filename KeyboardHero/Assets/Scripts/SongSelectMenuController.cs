@@ -9,37 +9,32 @@ using TMPro;
 
 public class SongSelectMenuController : MonoBehaviour {
 
+    public GameObject menu;
+
     [Range(100,200)]
     public int spacing = 100;
-
-    private Dictionary<GameObject, string> songsDict = new Dictionary<GameObject, string>();
 
     void Start()
     {
         var songDirs = Directory.GetDirectories("Assets/Resources/Songs").ToList();
         var songPrefab = Resources.Load<GameObject>("UI/Song");
-        var menuObject = GameObject.Find("Song Select Menu");
 
         int i = 0;
         foreach (var songDir in songDirs)
         {
             var song = Instantiate(songPrefab);
-            song.transform.SetParent(menuObject.transform, false);
+            song.transform.SetParent(menu.transform, false);
             song.transform.position += i++ * Vector3.down * spacing;
 
-            songsDict.Add(song, songDir);
             PopulateFields(song, songDir);
 
-            
-            var fileName = Directory.GetFiles(songDir).Where(x => x.EndsWith(".mid") || x.EndsWith(".MID")).FirstOrDefault();
-
-            song.GetComponent<Button>().onClick.AddListener(delegate () { PlaySong(fileName); });
+            song.GetComponent<Button>().onClick.AddListener(delegate () { PlaySong(songDir); });
         }
     }
 
-    public void PlaySong(string fileName)
+    public void PlaySong(string songDir)
     {
-        PlayerPrefs.SetString("song", fileName);
+        PlayerPrefs.SetString("songDir", songDir);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);          
     }
 

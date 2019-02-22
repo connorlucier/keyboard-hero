@@ -350,8 +350,9 @@ GameObject:
   - component: {fileID: 489881333}
   - component: {fileID: 489881332}
   - component: {fileID: 489881331}
+  - component: {fileID: 489881335}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Song Selection Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,6 +437,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &489881335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 489881330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c567f1c24d691c4e8d8112f82056261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1481973102}
+  spacing: 115
 --- !u!1 &598176258
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,7 +984,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1481973104}
+      objectReference: {fileID: 489881335}
     - target: {fileID: 114967030748028870, guid: 45e18444106b4de408ef9cc28510139f,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1429,9 +1443,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1481973103}
-  - component: {fileID: 1481973104}
   m_Layer: 5
-  m_Name: Song Select Menu
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1456,18 +1469,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00001568, y: -103.25}
   m_SizeDelta: {x: 1762, y: 791.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1481973104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1481973102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c567f1c24d691c4e8d8112f82056261, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spacing: 115
 --- !u!1 &1852937761
 GameObject:
   m_ObjectHideFlags: 0

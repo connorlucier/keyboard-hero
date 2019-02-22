@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 using AudioHelm;
 using IniParser;
 using IniParser.Model;
+using System.IO;
 using System;
+using UnityEditor;
 
 public class MidiSongController : MonoBehaviour {
 
@@ -30,15 +32,22 @@ public class MidiSongController : MonoBehaviour {
 
 	void Start()
     {
-        var songFile = PlayerPrefs.GetString("song");
-        var songDir = songFile.Remove(songFile.LastIndexOf('\\'));
+        string songDir = PlayerPrefs.GetString("songDir");
+        iniFile = songDir + "/song.ini";
 
         parser = new FileIniDataParser();
-        iniFile = songDir + "/song.ini";
         songData = parser.ReadFile(iniFile);
+
+        // TODO figure out if song has already been adjusted. If an adjusted MIDI exists, use it.
+        string songFile = Directory.GetFiles(songDir).Where(x => x.EndsWith(".mid") || x.EndsWith(".MID")).FirstOrDefault();
+
+        // TODO if not, make adjustments and save adjusted copy.
 
         midiFile = gameObject.AddComponent<MidiFile>();
         midiFile.LoadMidiData(songFile);
+
+        int adjustment = FindSmallestSubdivision(midiFile);
+        AdjustMidiFile(midiFile, adjustment);
 
         noteControllers = FindObjectsOfType<MidiNoteController>().ToList();
 
@@ -46,13 +55,13 @@ public class MidiSongController : MonoBehaviour {
         helmSequencer.ReadMidiFile(midiFile);
         helmSequencer.currentIndex = 0;
 
-        helmClock.bpm = float.Parse(songData["song"]["bpm"]);
+        helmClock.bpm = float.Parse(songData["song"]["bpm"]) * adjustment;
         songDelay = noteSpawnHeight * (4 * helmClock.bpm / 60) / PlayerPrefs.GetFloat("noteSpeed");
 
         foreach (var n in helmSequencer.GetAllNotes())
         {
-            n.start += songDelay * 2 - latency;
-            n.end += songDelay * 2 - latency;
+            n.start += (songDelay * 2 - latency);
+            n.end += (songDelay * 2 - latency);
         }
 
         helmClock.pause = false;
@@ -84,6 +93,53 @@ public class MidiSongController : MonoBehaviour {
         {
             controller.CreateNote(next, noteSpawnHeight);
         }
+    }
+
+    private int FindSmallestSubdivision(MidiFile midiFile)
+    {
+        if (bool.Parse(songData["song"]["isAdjusted"]))
+            return int.Parse(songData["song"]["adjustment"]);
+
+        int result = 1;
+        float div = 1.0f;
+
+        foreach (Note note in midiFile.midiData.notes)
+        {
+            float duration = note.end - note.start;
+
+            int tmp = 1;
+            while (duration < div)
+            {
+                div /= 2;
+                tmp *= 2;
+            }
+
+            result = Math.Max(result, tmp);
+        }
+
+        return result;
+    }
+
+    private void AdjustMidiFile(MidiFile midiFile, int adjustment)
+    {
+        var adjustedNotes = midiFile.midiData.notes;
+
+        foreach (var note in adjustedNotes)
+        {
+            note.start *= adjustment;
+            note.end *= adjustment;
+        }
+
+        midiFile.midiData.notes = adjustedNotes;
+
+        songData["song"]["isAdjusted"] = "true";
+        songData["song"]["adjustment"] = adjustment.ToString();
+
+        parser.WriteFile(iniFile, songData);
+
+        // TODO save changes to notes...?
+        //string songFile = "";
+        //FileUtil.CopyFileOrDirectory(songFile, songFile.Substring(0, songFile.IndexOf(".")) + "_adjusted.MID");
     }
 
     private void SaveSongStats()
