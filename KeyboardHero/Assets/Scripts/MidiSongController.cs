@@ -8,22 +8,20 @@ using IniParser;
 using IniParser.Model;
 using System.IO;
 using System;
-using UnityEditor;
 
 public class MidiSongController : MonoBehaviour {
 
     [Range(1,3)]
     public float noteSpawnHeight = 2.5f;
 
-    [Range(0,2)]
-    public float latency = 0.5f;
-
     public AudioHelmClock helmClock;
     public HelmSequencer helmSequencer;
 
     private List<MidiNoteController> noteControllers;
+    private List<Note> notes;
     private MidiFile midiFile;
 
+    private int adjustment;
     private float songDelay;
 
     private string iniFile;
@@ -46,40 +44,51 @@ public class MidiSongController : MonoBehaviour {
         midiFile = gameObject.AddComponent<MidiFile>();
         midiFile.LoadMidiData(songFile);
 
-        int adjustment = FindSmallestSubdivision(midiFile);
+        adjustment = FindSmallestSubdivision(midiFile);
         AdjustMidiFile(midiFile, adjustment);
+
+        helmClock.bpm = float.Parse(songData["song"]["bpm"]) * adjustment;
+        PlayerPrefs.SetFloat("bpm", helmClock.bpm);
+
+        songDelay = Mathf.Floor(noteSpawnHeight / PlayerPrefs.GetFloat("noteSpeed", 3.25f) * (4 * helmClock.bpm / 60));
+
+        foreach (var n in midiFile.midiData.notes)
+        {
+            n.start += songDelay;
+            n.end += songDelay;
+        }
 
         noteControllers = FindObjectsOfType<MidiNoteController>().ToList();
 
-        helmSequencer.Clear();
+        if (noteControllers.First() != null)
+            noteControllers.First().statsController.scoreDensity /= adjustment;
+
+        helmSequencer.length += (int)songDelay;
         helmSequencer.ReadMidiFile(midiFile);
         helmSequencer.currentIndex = 0;
 
-        helmClock.bpm = float.Parse(songData["song"]["bpm"]) * adjustment;
-        songDelay = noteSpawnHeight * (4 * helmClock.bpm / 60) / PlayerPrefs.GetFloat("noteSpeed");
-
-        foreach (var n in helmSequencer.GetAllNotes())
-        {
-            n.start += (songDelay * 2 - latency);
-            n.end += (songDelay * 2 - latency);
-        }
-
+        notes = helmSequencer.GetAllNotes();
         helmClock.pause = false;
     }
 
     void Update()
     {
-        if (midiFile.midiData.notes.Count > 0)
+        if (PlayerPrefs.GetInt("practiceMode") == 1)
         {
-            var nextNotesToSpawn = midiFile.midiData.notes.Where(n => helmSequencer.currentIndex >= n.start + songDelay).ToList();
+            songDelay = Mathf.Ceil(noteSpawnHeight / PlayerPrefs.GetFloat("noteSpeed", 3.25f) * (4 * helmClock.bpm / 60));
+        }
+
+        if (notes.Count > 0)
+        {
+            var nextNotesToSpawn = notes.Where(n => helmSequencer.currentIndex + songDelay >= n.start).ToList();
             foreach (var next in nextNotesToSpawn)
             {
                 SpawnNote(next);
-                midiFile.midiData.notes.Remove(next);
+                notes.Remove(next);
             }
         }
 
-        else if (helmSequencer.currentIndex >= helmSequencer.length - 1)
+        else if (GameObject.FindGameObjectsWithTag("Note").Length == 0)
         {
             StartCoroutine(ReturnToMenu());
         }
@@ -87,7 +96,7 @@ public class MidiSongController : MonoBehaviour {
 
     private void SpawnNote(Note next)
     {
-        var controller = noteControllers.Where(x => x.Note() == next.note).FirstOrDefault();
+        var controller = noteControllers.Where(c => c.Note() == next.note).FirstOrDefault();
 
         if (controller != null)
         {
@@ -107,14 +116,11 @@ public class MidiSongController : MonoBehaviour {
         {
             float duration = note.end - note.start;
 
-            int tmp = 1;
             while (duration < div)
             {
                 div /= 2;
-                tmp *= 2;
+                result *= 2;
             }
-
-            result = Math.Max(result, tmp);
         }
 
         return result;
@@ -122,24 +128,16 @@ public class MidiSongController : MonoBehaviour {
 
     private void AdjustMidiFile(MidiFile midiFile, int adjustment)
     {
-        var adjustedNotes = midiFile.midiData.notes;
-
-        foreach (var note in adjustedNotes)
+        foreach (var note in midiFile.midiData.notes)
         {
             note.start *= adjustment;
             note.end *= adjustment;
         }
 
-        midiFile.midiData.notes = adjustedNotes;
-
         songData["song"]["isAdjusted"] = "true";
         songData["song"]["adjustment"] = adjustment.ToString();
 
         parser.WriteFile(iniFile, songData);
-
-        // TODO save changes to notes...?
-        //string songFile = "";
-        //FileUtil.CopyFileOrDirectory(songFile, songFile.Substring(0, songFile.IndexOf(".")) + "_adjusted.MID");
     }
 
     private void SaveSongStats()
@@ -166,8 +164,9 @@ public class MidiSongController : MonoBehaviour {
 
     private IEnumerator ReturnToMenu()
     {
+        PlayerPrefs.DeleteKey("bpm");
         SaveSongStats();
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

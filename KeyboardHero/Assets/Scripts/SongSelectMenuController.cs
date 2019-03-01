@@ -1,5 +1,4 @@
 ﻿using IniParser;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
@@ -16,7 +15,8 @@ public class SongSelectMenuController : MonoBehaviour {
 
     void Start()
     {
-        var songDirs = Directory.GetDirectories("Assets/Resources/Songs").ToList();
+        var songsDirectory = PlayerPrefs.GetString("songsDirectory");
+        var songDirs = Directory.GetDirectories(songsDirectory).ToList();
         var songPrefab = Resources.Load<GameObject>("UI/Song");
 
         int i = 0;

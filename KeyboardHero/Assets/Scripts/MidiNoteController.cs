@@ -6,15 +6,10 @@ using System.Collections.Generic;
 
 public class MidiNoteController : MonoBehaviour {
 
-    [Range(0, 1)]
-    public float beatUnitConversion = 1.0f;
-
     public AudioHelmClock clock;
-
     public MidiStatsController statsController;
 
     private int note;
-
     private bool noteHit;
 
     private GameObject notePrefab;
@@ -29,13 +24,17 @@ public class MidiNoteController : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        noteHit = false;
-        HandleInput();
+        if (note == int.Parse(other.tag))
+        {
+            noteHit = false;
+            HandleInput();
+        }
     }
 
     void OnTriggerStay(Collider other)
     {
-        HandleInput();
+        if (note == int.Parse(other.tag))
+            HandleInput();
     }
 
     void OnTriggerExit(Collider other)
@@ -58,12 +57,14 @@ public class MidiNoteController : MonoBehaviour {
 
         var noteDuration = 60 * (n.end - n.start) / (4 * clock.bpm);
         var noteSpeed = PlayerPrefs.GetFloat("noteSpeed", 3.25f);
-        var noteScale = noteDuration * noteSpeed * beatUnitConversion;
+        var noteScale = noteDuration * noteSpeed;
+
+        var keyOffset = 0.5f * gameObject.transform.localScale.y;
 
         noteObject.transform.localScale = new Vector3(0.95f * gameObject.transform.localScale.x, noteScale, gameObject.transform.localScale.z);
-        noteObject.transform.position = gameObject.transform.position + new Vector3(-0.475f * gameObject.transform.localScale.x, spawnHeight, 0);
-        cube.tag = note.ToString();
+        noteObject.transform.position = gameObject.transform.position + new Vector3(-0.475f * gameObject.transform.localScale.x, spawnHeight + keyOffset, 0);
 
+        cube.tag = note.ToString();
         cube.GetComponent<Renderer>().material = noteMaterial;
 
         var noteRigidBody = noteObject.AddComponent<Rigidbody>();
@@ -73,7 +74,7 @@ public class MidiNoteController : MonoBehaviour {
             | RigidbodyConstraints.FreezePositionZ
             | RigidbodyConstraints.FreezePositionX;
 
-        noteRigidBody.AddForce(Vector3.down * noteSpeed, ForceMode.VelocityChange);
+        noteRigidBody.velocity = Vector3.down * noteSpeed;
     }
 
     private void HandleInput()
