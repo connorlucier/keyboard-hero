@@ -10,7 +10,6 @@ public class MidiNoteController : MonoBehaviour {
     public MidiStatsController statsController;
 
     private int note;
-    private bool noteHit;
 
     private GameObject notePrefab;
     private Material noteMaterial;
@@ -25,23 +24,20 @@ public class MidiNoteController : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         if (note == int.Parse(other.tag))
-        {
-            noteHit = false;
-            HandleInput();
-        }
+            HandleInput(other.gameObject);
     }
 
     void OnTriggerStay(Collider other)
     {
         if (note == int.Parse(other.tag))
-            HandleInput();
+            HandleInput(other.gameObject);
     }
 
     void OnTriggerExit(Collider other)
     {
         if (note == int.Parse(other.tag))
         {
-            if (!noteHit)
+            if (!other.gameObject.GetComponent<NoteHitController>().noteHit)
                 statsController.NoteMissUpdate();
 
             Destroy(other.gameObject.transform.parent.gameObject);
@@ -77,14 +73,14 @@ public class MidiNoteController : MonoBehaviour {
         noteRigidBody.velocity = Vector3.down * noteSpeed;
     }
 
-    private void HandleInput()
+    private void HandleInput(GameObject obj)
     {
         if (MidiMaster.GetKey(note) > 0.0f)
         {
-            if (!noteHit)
+            if (!obj.GetComponent<NoteHitController>().noteHit)
             {
                 statsController.NoteHitUpdate();
-                noteHit = true;
+                obj.GetComponent<NoteHitController>().noteHit = true;
             }
             else statsController.NoteContinueUpdate();
         }

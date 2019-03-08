@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class MidiStatsController : MonoBehaviour {
 
-    public AudioHelmClock clock;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI streakText;
     public TextMeshProUGUI accuracyText;
+
+    public AudioHelmClock clock;
 
     [Range(4, 10)]
     public int maxMultiplier = 8;
@@ -22,6 +23,7 @@ public class MidiStatsController : MonoBehaviour {
     private long streak;
 
     private double accuracy;
+    private float bpm;
 
     private int multiplier;
     
@@ -29,6 +31,7 @@ public class MidiStatsController : MonoBehaviour {
     {
         ResetStats();
         UpdateStatsText();
+        bpm = clock.bpm;
     }
 
     private void ResetStats()
@@ -53,7 +56,7 @@ public class MidiStatsController : MonoBehaviour {
 
     public void NoteHitUpdate()
     {
-        score += (int) (multiplier * scoreDensity * Time.deltaTime / (60 / clock.bpm));
+        score += (int) (multiplier * scoreDensity * Time.deltaTime / (60 / bpm));
         notesHit++;
         totalNotes++;
         streak++;
@@ -65,7 +68,7 @@ public class MidiStatsController : MonoBehaviour {
 
     public void NoteContinueUpdate()
     {
-        score += (int) (multiplier * scoreDensity * Time.deltaTime / (60 / clock.bpm));
+        score += (int) (multiplier * scoreDensity * Time.deltaTime / (60 / bpm));
         UpdateStatsText();
     }
 

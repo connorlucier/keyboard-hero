@@ -4,24 +4,25 @@ using UnityEngine;
 public class PracticeModeController : MonoBehaviour {
 
     public GameObject practiceModeUI;
-    public GameObject stats;
     public AudioHelmClock clock;
+    public MidiStatsController statsController;
+    
+    private float bpm;
 
-	void Start () {
+
+	void Start ()
+    {
         if (PlayerPrefs.GetInt("practiceMode") == 1)
         {
             practiceModeUI.SetActive(true);
-            stats.SetActive(false);
+            statsController.scoreDensity = 0;
         }
-        else
-        {
-            practiceModeUI.SetActive(false);
-            stats.SetActive(true);
-        }
-	}
+
+        bpm = clock.bpm;
+    }
 
     public void ChangeSongBpm(float multiplier)
     {
-        clock.bpm = PlayerPrefs.GetFloat("bpm") * multiplier;
+        clock.bpm = bpm * multiplier;
     }
 }

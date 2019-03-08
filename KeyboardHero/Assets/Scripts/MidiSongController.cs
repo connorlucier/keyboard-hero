@@ -46,7 +46,6 @@ public class MidiSongController : MonoBehaviour {
         adjustment = FindSmallestSubdivision();
 
         clock.bpm = float.Parse(songData["song"]["bpm"]) * adjustment;
-        PlayerPrefs.SetFloat("bpm", clock.bpm);
 
         songDelay = Mathf.RoundToInt(noteSpawnHeight / PlayerPrefs.GetFloat("noteSpeed", 3.25f) * (4 * clock.bpm / 60));
 
@@ -200,14 +199,16 @@ public class MidiSongController : MonoBehaviour {
 
     private IEnumerator StartSong()
     {
-        yield return new WaitForSeconds(1);
+        int seconds = PlayerPrefs.GetInt("practiceMode") + 1;
+        yield return new WaitForSeconds(seconds);
         clock.pause = false;
     }
 
     private IEnumerator ReturnToMenu()
     {
-        PlayerPrefs.DeleteKey("bpm");
-        SaveSongStats();
+        if (PlayerPrefs.GetInt("practiceMode") == 0)
+            SaveSongStats();
+
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
