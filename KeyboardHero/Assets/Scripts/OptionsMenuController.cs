@@ -17,11 +17,13 @@ public class OptionsMenuController : MonoBehaviour {
         noteColorsDropdown.value = PlayerPrefs.GetInt("noteColor", 0);
         keyColorsDropdown.value = PlayerPrefs.GetInt("multicolorKeys", 0);
 
-        if (PlayerPrefs.GetInt("firstRun") == 1)
+        if (PlayerPrefs.GetInt("optionsInitialized") == 0)
         {
+            Debug.Log("Options not set, initializing to default values.");
             SetNoteSpeed(noteSpeedSlider.value);
             SetNoteColors(noteColorsDropdown.value);
             SetKeyColors(keyColorsDropdown.value);
+            PlayerPrefs.SetInt("optionsInitialized", 1);
         }
     }
 

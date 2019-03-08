@@ -6,9 +6,9 @@ using UnityEngine;
 public class MidiStatsController : MonoBehaviour {
 
     public AudioHelmClock clock;
-    public GameObject scoreObject;
-    public GameObject streakObject;
-    public GameObject accuracyObject;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI streakText;
+    public TextMeshProUGUI accuracyText;
 
     [Range(4, 10)]
     public int maxMultiplier = 8;
@@ -24,25 +24,21 @@ public class MidiStatsController : MonoBehaviour {
     private double accuracy;
 
     private int multiplier;
-
-    private TextMeshProUGUI scoreText;
-    private TextMeshProUGUI streakText;
-    private TextMeshProUGUI accuracyText;
     
     void Start()
     {
-        scoreText = scoreObject.GetComponent<TextMeshProUGUI>();
-        streakText = streakObject.GetComponent<TextMeshProUGUI>();
-        accuracyText = accuracyObject.GetComponent<TextMeshProUGUI>();
+        ResetStats();
+        UpdateStatsText();
+    }
 
+    private void ResetStats()
+    {
         score = 0;
         streak = 0;
         notesHit = 0;
         totalNotes = 0;
         multiplier = 1;
         accuracy = 100.0;
-
-        UpdateStatsText();
     }
 
     public void NoteMissUpdate()

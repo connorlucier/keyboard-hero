@@ -15,6 +15,7 @@ public class SongSelectMenuController : MonoBehaviour {
 
     void Start()
     {
+        SetSongsDirectory();
         var songsDirectory = PlayerPrefs.GetString("songsDirectory");
         var songDirs = Directory.GetDirectories(songsDirectory).ToList();
         var songPrefab = Resources.Load<GameObject>("UI/Song");
@@ -43,9 +44,31 @@ public class SongSelectMenuController : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
+    private static void SetSongsDirectory()
+    {
+        if (PlayerPrefs.GetString("songsDirectory", "") == "")
+        {
+            Debug.Log("Songs directory not set.");
+            string defaultSongsDir = Application.dataPath + "/Songs";
+            if (!Directory.Exists(defaultSongsDir))
+            {
+                Debug.Log("Songs directory not found. Creating default at " + defaultSongsDir);
+                Directory.CreateDirectory(defaultSongsDir);
+            }
+
+            PlayerPrefs.SetString("songsDirectory", defaultSongsDir);
+        }
+    }
+
     private static void PopulateFields(GameObject song, string songDir)
     {
         var parser = new FileIniDataParser();
+
+        if (!File.Exists(songDir + "/song.ini"))
+        {
+            File.Create(songDir + "/song.ini");
+        }
+
         var songData = parser.ReadFile(songDir + "/song.ini");
 
         for (int i = 0; i < song.transform.childCount; i++)

@@ -117,6 +117,6 @@ public class MidiKeyController : MonoBehaviour {
         var hitWindow = noteSpeed * hitWindowBeats * (60 / clock.bpm) * (isWhiteKey ? 1 : noteScaleRatio);
 
         collider.center = new Vector3(0, 0.5f, 0);
-        collider.size = new Vector3(0.25f, hitWindow, 1);
+        collider.size = new Vector3(0, hitWindow, 1);
     }
 }

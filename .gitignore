@@ -39,7 +39,10 @@ sysinfo.txt
 KeyboardHero/Assets/TextMesh\ Pro/
 
 # Third-Party Assets
-KeyboardHero/Assets/ThirdParty/
+KeyboardHero/Assets/AudioHelm
+KeyboardHero/Assets/MidiJack
+KeyboardHero/Assets/AudioHelm.meta
+KeyboardHero/Assets/MidiJack.meta
 
 # Songs
 KeyboardHero/Assets/Resources/Songs/

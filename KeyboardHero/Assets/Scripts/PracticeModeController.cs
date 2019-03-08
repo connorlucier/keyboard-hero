@@ -8,7 +8,7 @@ public class PracticeModeController : MonoBehaviour {
     public AudioHelmClock clock;
 
 	void Start () {
-        if (PlayerPrefs.GetInt("practiceMode") != 0)
+        if (PlayerPrefs.GetInt("practiceMode") == 1)
         {
             practiceModeUI.SetActive(true);
             stats.SetActive(false);
@@ -16,7 +16,7 @@ public class PracticeModeController : MonoBehaviour {
         else
         {
             practiceModeUI.SetActive(false);
-            stats.SetActive(false);
+            stats.SetActive(true);
         }
 	}
 

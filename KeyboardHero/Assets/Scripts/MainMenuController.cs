@@ -1,26 +1,15 @@
-﻿using System.IO;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour {
 
     void Start()
     {
-        if (PlayerPrefs.GetInt("firstRun", 0) == 0)
+        if (PlayerPrefs.GetInt("gameInitDone") == 0)
         {
             PlayerPrefs.DeleteAll();
-            PlayerPrefs.SetInt("firstRun", 1);
-        }
-
-        if (PlayerPrefs.GetString("songsDirectory", "") == "")
-        {
-            string defaultSongsDir = Application.dataPath + "/Songs";
-            if (!Directory.Exists(defaultSongsDir))
-            {
-                Directory.CreateDirectory(defaultSongsDir);
-            }
-
-            PlayerPrefs.SetString("songsDirectory", defaultSongsDir);
+            Debug.Log("Starting for the first time. Removing player prefs.");
+            PlayerPrefs.SetInt("gameInitDone", 1);
         }
     }
 

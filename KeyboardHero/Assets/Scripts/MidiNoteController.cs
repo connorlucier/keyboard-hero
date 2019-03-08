@@ -61,7 +61,7 @@ public class MidiNoteController : MonoBehaviour {
 
         var keyOffset = 0.5f * gameObject.transform.localScale.y;
 
-        noteObject.transform.localScale = new Vector3(0.95f * gameObject.transform.localScale.x, noteScale, gameObject.transform.localScale.z);
+        noteObject.transform.localScale = new Vector3(0.95f * gameObject.transform.localScale.x, 0.99f * noteScale - 0.025f, gameObject.transform.localScale.z);
         noteObject.transform.position = gameObject.transform.position + new Vector3(-0.475f * gameObject.transform.localScale.x, spawnHeight + keyOffset, 0);
 
         cube.tag = note.ToString();
@@ -79,15 +79,14 @@ public class MidiNoteController : MonoBehaviour {
 
     private void HandleInput()
     {
-        if (!noteHit && MidiMaster.GetKey(note) > 0.0f) // TODO how to balance?
+        if (MidiMaster.GetKey(note) > 0.0f)
         {
-            statsController.NoteHitUpdate();
-            noteHit = true;
-        }
-
-        else if (noteHit && MidiMaster.GetKey(note) > 0.0f)
-        {
-            statsController.NoteContinueUpdate();
+            if (!noteHit)
+            {
+                statsController.NoteHitUpdate();
+                noteHit = true;
+            }
+            else statsController.NoteContinueUpdate();
         }
     }
 

@@ -1,0 +1,621 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Mixer 7
+  m_OutputGroup: {fileID: 0}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 24500006}
+  m_StartSnapshot: {fileID: 24500006}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_UpdateMode: 0
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews: []
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 24500006}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 9bad62b841bd2cd42b906fe6c72ddc82
+  m_Children: []
+  m_Volume: 3414655e9045ab64cbc853366a7be8e1
+  m_Pitch: ce6aee4d3caed434ba1f5ca6c54ca980
+  m_Effects:
+  - {fileID: 244301787682378816}
+  - {fileID: 24400004}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 734b6d73edb390c46b8729f19b2fa8e7
+  m_EffectName: Attenuation
+  m_MixLevel: c7b19d4de072529439a1b34e5bcf2f01
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Snapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: e0bcfea8743e52c4eaf5053ae4938abd
+  m_FloatValues:
+    dec9ef006b2ed184481095808f90f276: 0.76783013
+    60bda840185020c4fb0a045c7edb702f: 0
+    d4ef0780d10a24b4ebf07dc78461f54f: 0.9
+    41fdb4b01dbf660469720dfa92fd2d7e: 0
+    df6901e0a7520034083fd26642c9c19c: 0
+    db3f4bf0c057dcd409db1c337e7f9dc7: 6
+    148741012a21bff43bbbafd40f897783: 0
+    12940d01052cbb040bce930cbc67e593: 1
+    e41b6a119e6a90f4c9854fe56cdde378: 2
+    a4dbe6215f9bf364f8d260c5ecf61bc4: 0
+    0647c821df5e89249a7b18dfe8e2746a: 0.5
+    7bceb031217734b4bb45821decbc9061: 0.3
+    00a96f31572e88743973f2f3c651a151: 0
+    62be7941924d834448d769b5d55f02ed: 0
+    69ea3551c68c8394094321b208c3453f: 13
+    cf70b851e8bf70b418472287bafe2921: 0
+    ee77b85101d21b1489b7ac77c15bbb3a: 0
+    f029f991c72f5674e844e61586d0e948: 1
+    552b7db17b1b0ec479c62d388e1a1847: 0
+    62c56cc1dc0b57243a821b4cc4b51050: 0.5
+    7c8787d14442607439c37800431f8207: 12
+    c6bdcae13c78443469e302303d1f8985: 0
+    2a0575f11cd4bbf42a4ff4ac0a4c847a: 1.5
+    b9b6fbf1269ae1c43ba9b122ea51d142: 0
+    ea3f672258810604e878e79d5ef183a4: 0
+    08b5c0328272c7248b3e351c72751410: 0.19663066
+    d1334f42e20d029438707f2814d81a42: 1.5
+    9d61f75248f2908409d2fda62cc5cfcc: 46
+    e0c276723b82a2544aca3183a1276a65: 0
+    6aecf303bd31fa64381b92e796fbe621: 0
+    9b6cf503f4609094485c001292577180: 1
+    39d57823ddc642b46b60607ca0cb3eca: 0
+    98e7a44356d199c4f9d1c7781f7e91dc: 0
+    3a48c763ade35404dbf94197439111fa: 0
+    0fc1bfa3fc7e97945b7e1096a1e4f362: 0
+    7eedaeb3dd9616f4f8662dd7d640f4e8: 0
+    5fb8f5c33e99c67459abe0f512f27bc9: 0
+    b79d83e39d5aa1441a40215228950e06: 0.3576085
+    0f5ccb149ef8cf24cbd5281ef3cd48a4: 8
+    e5b89974f81f89541aee1566cf26a799: 1
+    57ee1384e8b31fa468196fe8b129dc7d: 0
+    e21788a47efa43d4c968d33a80b07225: 0.99547005
+    7715dbb41e736134b9ec9bf12b6171e6: 0
+    a13472e408928da4ba06b04be866cf73: 0
+    662a3be4655187f4f97797c4a688f86c: 0
+    cc0708056819e9a489d6ebc6d21ea97c: 7
+    a33e6915531fcae4bba20db5890ddb4a: 0
+    bacc5d5502af99e4da40c87c7acfa9cb: 1.5
+    d0e3136514e43ac46b5772fe963472a8: 0
+    0eccc8758b0562b47a675fc3e10371bb: 1
+    b9973295ca15dcd42aa252de8e8e2a90: 1
+    c2f5ada5031c68f469d2a1d46984866c: 1
+    ee894ec5d1ea96240a2202b3932992d5: 0
+    11cc02d52d52bf74382cc6aca625fc61: 0
+    e4b286d59b82ef646ac86276d8d9c675: 0.86196667
+    224e4ed5d0a268847b21067a6b0f706f: 0
+    e45225f587e3d7c419632b69d1695ee8: 1
+    95415306ef860934791ff1d95fcb7676: 0
+    18df693653ea86c46923d6d1e1f710f3: 1
+    65c9e946eb3e53845854ff446f04d920: 0
+    b9f2056610831b44c99ee942b8ebc1a6: 1
+    76b392b622aa9634081898b812780c0e: 3
+    cb7445b6f024e2f47b7027118e64cf47: 0
+    43c049b616d27794d865e78a6c63cb30: 0
+    bd4475c66c69c1a4390445b75665d97e: 0
+    98b6efd67b6b61a4e92bd4cd118c709c: 0.4
+    d91ec3e619691394f8626a552063d9c7: 0
+    ec4e2c071f8bb6c41ab8f753d28cccb7: 2
+    6b18bd07b746c4648b7cb54cc7157248: 0
+    2161d1175585a3c4296fa9a44c612062: 2
+    894239175f63cde46b82ed6d1e3297d7: 1
+    7cc389370d1d20249b1656376e11deed: 9
+    b9bf6047e14ad3d4fbf2baba1a734438: 2.6742904
+    079d1157bbcf89941b53b3d892cdb540: 8
+    18442e776ce686e4cb76985c3160ccc4: 36
+    6fd2278779a61e84d967d6cae82f8a97: 10
+    f4ee88878c1816342b3c6efa83e51ff6: 0
+    dc4f1ba773191da44a282ebcf9d46272: 0
+    657f8ab7889109f44bb8cb9d6cb36b05: 0
+    12ba73e72a2060840973c630ed16bc0c: 121.849625
+    eb75ad08c7559954ca32249469eac9b3: 0
+    fdfcdd188261a2f48b072c230a363b0e: 1
+    f243ef18653e91b42a015eccfbd0cde9: -0.020246506
+    4ed1b838be9eb104eab16e76ec73ea53: 0
+    dfd52248f7c1e594aa7d633dd7382e6a: 1
+    47c666480c00c9a42b8680cb72d4b63c: 2
+    22230b581a2e012479b6516f517a9cb3: 0
+    4c633968be10e69409bc373926fb4d4a: 13
+    4fd617888ae251d4cbb48ecbd03a5c35: 0
+    dc842b8858c68dc4b95432e0d6658176: 0
+    3f124c984ac1f7f44a40dd974f5b32c1: 1
+    9fc99709c00c92346b2b09ff9bb4c87e: 0
+    8c7337596f1023849a6ffa1a9c27addb: 0
+    84bb3499be5d8344d865a93ff2c72ce3: 1
+    ec8d4c99c9f563544b4c7c0ff02e5fd0: 0
+    62495a2a0848a344db0ded77b9bc8dc1: 0.5
+    80d1f16a065ba1343a2d4a19be300e93: 0
+    3aeb2a6a84e05d24491f301686e89625: 0
+    ec35377ad723d1642b7fd1396f1540d7: 0.60941225
+    fb09698acb4fc8e43b5114b9b6f8149b: 0
+    c9a54bba24bb944499e8b1c0acf26882: 2.3940306
+    ee6937dafa0033e4882d2396ca3ca1d8: 0
+    abb73adad9ef29743a222f6ca2b33eba: 0
+    b51845eaf71b2b340a393d098d2f2f3b: 0
+    c4f5b60bb5345094592f07278f0b4b86: 1
+    175e041bf783e124b8f4d08e9113df90: 0
+    1349df2b579420a4880c3bcaeafc0c39: 0
+    d7250b3b4eaedd146974378f87f70721: 7
+    2668654bf3833974f85684af9906a777: 0
+    2e22cc5bb2fbbef40a0f0e02579e50fd: 6
+    45e9c06bb4ff182478be45e359f921d4: -9
+    50304f6b5a595f6468d8b53273b0d15f: 10
+    7f861f7b22050d7478a0f339f326a0c8: 0
+    c8826f8b2bece124fa54a3941a408daa: 0
+    22ce1a9b84bd91740a6dfc1833a03d13: 0
+    1287aafb1b1314743ba79163dd35f8a3: 0
+    5258d82cdc5e3084aacfccaf1d300833: 0.49456146
+    cac1d93cbdccd454bad6ac9b2e6bab97: 0.5
+    a6eecd3cbdf08624fa770719c2794209: 7
+    b0d7b48c29ff8d44595126c435d44d1b: 4
+    13d4f98c5129e7b428de81bfb9564256: 43
+    54796f8c800a34743851677e4a3cd2b5: 0
+    c18fcb9ca0bfd184bac2cea878fed603: 0
+    ebbcb0bc00c919145a96e323e7b86e32: 0
+    6f7fbdbc18b5ab042a76b4975ab68ff9: 2
+    7d1fe0cc8a4c9bb42855b7cefcc7a1ec: 0
+    4864b9dc92fb8e741ae223f5dafa4b70: 0
+    71a28cdc2914c9c498e1dbc3545e3d43: 0
+    f17f741dc1f279548b06ad04352d5fdd: 1
+    c619fa3d5ab244c4d90186527d331505: 0
+    1fe4c24dbc4fa4941acaf16e82808104: 9
+    34d6d85dbefc4db43acf987d1c116802: 0
+    f514046dc3aa5ff4c839fac8f0ba28f1: 2
+    7b7ea5cdcabbd0644b10381333db2bce: 0
+    84281ecdcc9f375439dbf8970b2471b5: 1
+    3aeea1ddc39eddb4981a5ba2f6f41dd0: 0.5
+    a573e0edf8f10424f87f2499d6fcf6c5: 1
+    e0d28aed960cc4c4a9d39a2231926629: 0
+    dbc1c80ef02f84548b124f6df3cdc83d: 0
+    1d3d6c0e523c01f41a221fe8d683bb54: 0
+    4a1eaf1e2f2a02f4dab089cb82d903aa: 0
+    b6cef23e49e71cf49b147a7bb35b7c65: 0
+    e1331b3e5e9724942bf65625b0dae7c2: 0.5
+    71148f4eaf2f84545ae2c1dc5d601da2: 7
+    5da8d05e7a9a37c46b14f0fac2579b4f: 0
+    7d1c287edd7f2b34fbad590657d7b8e9: -0.065629005
+    35fbeb8eaeee4eb44a950b8d27478150: 0
+    dcad5c8e84eaf5d4cb4f49753b1f11e1: 0.3703351
+    710aec8ec900f1344b4fd2535035d3ba: 0
+    b956e99edea32b848b7439c6f802c702: 0.2
+    31fc8b9ed073dee48a30b2da4de4d855: 0
+    36a3fbcea7d5ff746bb03bbf0c297880: 78.31767
+    2f3717fedc0689740af8cf2bbffc1a27: 0
+    090beafe88487044f809a81847384a0f: -4.308
+    97ebaffe7019ffd49a8d0ef9f8fed391: 0.5
+    9806486f73b6a2345af76580d670bcb1: 0
+    57528c7f9baeed5478aded5133cf3750: 1
+    90a5a28f88c64f9468d19f574b3fedaa: 0
+    683cb58f915315f46b1d12c67eaa13c7: 1
+    c607c7bf600ccb9458046d65e8db0727: 13
+    e897eecf236c5f34fb927e09538e1928: 0
+    55e969df5173d6c4388588e23a53c3da: 0
+    45270fdfb5dc3054bbb873b0567b7080: 0
+    7b2a20ffcce571b4a97eb89f88f00d64: 0
+    c6f7dcff6ecfecb46b6a57dba4a478b5: 0
+  m_TransitionOverrides: {}
+--- !u!244 &244301787682378816
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 22e800b48a898674e935677126bfcb52
+  m_EffectName: Helm
+  m_MixLevel: c041a2caac1c48c48a2af24528341a39
+  m_Parameters:
+  - m_ParameterName: Channel
+    m_GUID: 71148f4eaf2f84545ae2c1dc5d601da2
+  - m_ParameterName: ampattack
+    m_GUID: 8c7337596f1023849a6ffa1a9c27addb
+  - m_ParameterName: ampdecay
+    m_GUID: bacc5d5502af99e4da40c87c7acfa9cb
+  - m_ParameterName: amprelease
+    m_GUID: 7bceb031217734b4bb45821decbc9061
+  - m_ParameterName: ampsustain
+    m_GUID: 08b5c0328272c7248b3e351c72751410
+  - m_ParameterName: arpfrequency
+    m_GUID: 6f7fbdbc18b5ab042a76b4975ab68ff9
+  - m_ParameterName: arpgate
+    m_GUID: 62c56cc1dc0b57243a821b4cc4b51050
+  - m_ParameterName: arpoctaves
+    m_GUID: 9b6cf503f4609094485c001292577180
+  - m_ParameterName: arpon
+    m_GUID: d0e3136514e43ac46b5772fe963472a8
+  - m_ParameterName: arppattern
+    m_GUID: 5da8d05e7a9a37c46b14f0fac2579b4f
+  - m_ParameterName: arpsync
+    m_GUID: b9973295ca15dcd42aa252de8e8e2a90
+  - m_ParameterName: arptempo
+    m_GUID: 7cc389370d1d20249b1656376e11deed
+  - m_ParameterName: beatsperminute
+    m_GUID: 47c666480c00c9a42b8680cb72d4b63c
+  - m_ParameterName: crossmodulation
+    m_GUID: 4ed1b838be9eb104eab16e76ec73ea53
+  - m_ParameterName: cutoff
+    m_GUID: 36a3fbcea7d5ff746bb03bbf0c297880
+  - m_ParameterName: delaydrywet
+    m_GUID: e1331b3e5e9724942bf65625b0dae7c2
+  - m_ParameterName: delayfeedback
+    m_GUID: 98b6efd67b6b61a4e92bd4cd118c709c
+  - m_ParameterName: delayfrequency
+    m_GUID: 2161d1175585a3c4296fa9a44c612062
+  - m_ParameterName: delayon
+    m_GUID: ea3f672258810604e878e79d5ef183a4
+  - m_ParameterName: delaysync
+    m_GUID: e5b89974f81f89541aee1566cf26a799
+  - m_ParameterName: delaytempo
+    m_GUID: 1fe4c24dbc4fa4941acaf16e82808104
+  - m_ParameterName: distortiondrive
+    m_GUID: 7c8787d14442607439c37800431f8207
+  - m_ParameterName: distortionmix
+    m_GUID: f17f741dc1f279548b06ad04352d5fdd
+  - m_ParameterName: distortionon
+    m_GUID: dbc1c80ef02f84548b124f6df3cdc83d
+  - m_ParameterName: distortiontype
+    m_GUID: eb75ad08c7559954ca32249469eac9b3
+  - m_ParameterName: filattack
+    m_GUID: 1287aafb1b1314743ba79163dd35f8a3
+  - m_ParameterName: fildecay
+    m_GUID: b9bf6047e14ad3d4fbf2baba1a734438
+  - m_ParameterName: filenvdepth
+    m_GUID: 12ba73e72a2060840973c630ed16bc0c
+  - m_ParameterName: filrelease
+    m_GUID: dcad5c8e84eaf5d4cb4f49753b1f11e1
+  - m_ParameterName: filsustain
+    m_GUID: b79d83e39d5aa1441a40215228950e06
+  - m_ParameterName: filterblend
+    m_GUID: 148741012a21bff43bbbafd40f897783
+  - m_ParameterName: filterdrive
+    m_GUID: 090beafe88487044f809a81847384a0f
+  - m_ParameterName: filteron
+    m_GUID: a573e0edf8f10424f87f2499d6fcf6c5
+  - m_ParameterName: filtersaturatio
+    m_GUID: 31fc8b9ed073dee48a30b2da4de4d855
+  - m_ParameterName: filtershelf
+    m_GUID: df6901e0a7520034083fd26642c9c19c
+  - m_ParameterName: filterstyle
+    m_GUID: ee6937dafa0033e4882d2396ca3ca1d8
+  - m_ParameterName: filtertype
+    m_GUID: ebbcb0bc00c919145a96e323e7b86e32
+  - m_ParameterName: formanton
+    m_GUID: 55e969df5173d6c4388588e23a53c3da
+  - m_ParameterName: formantx
+    m_GUID: 0647c821df5e89249a7b18dfe8e2746a
+  - m_ParameterName: formanty
+    m_GUID: 97ebaffe7019ffd49a8d0ef9f8fed391
+  - m_ParameterName: keytrack
+    m_GUID: 80d1f16a065ba1343a2d4a19be300e93
+  - m_ParameterName: legato
+    m_GUID: 11cc02d52d52bf74382cc6aca625fc61
+  - m_ParameterName: modattack
+    m_GUID: a4dbe6215f9bf364f8d260c5ecf61bc4
+  - m_ParameterName: moddecay
+    m_GUID: 2a0575f11cd4bbf42a4ff4ac0a4c847a
+  - m_ParameterName: modrelease
+    m_GUID: d1334f42e20d029438707f2814d81a42
+  - m_ParameterName: modsustain
+    m_GUID: cac1d93cbdccd454bad6ac9b2e6bab97
+  - m_ParameterName: monolfo1amplitu
+    m_GUID: c4f5b60bb5345094592f07278f0b4b86
+  - m_ParameterName: monolfo1frequen
+    m_GUID: e45225f587e3d7c419632b69d1695ee8
+  - m_ParameterName: monolfo1retrigg
+    m_GUID: 0fc1bfa3fc7e97945b7e1096a1e4f362
+  - m_ParameterName: monolfo1sync
+    m_GUID: 12940d01052cbb040bce930cbc67e593
+  - m_ParameterName: monolfo1tempo
+    m_GUID: 2e22cc5bb2fbbef40a0f0e02579e50fd
+  - m_ParameterName: monolfo1wavefor
+    m_GUID: 6b18bd07b746c4648b7cb54cc7157248
+  - m_ParameterName: monolfo2amplitu
+    m_GUID: f243ef18653e91b42a015eccfbd0cde9
+  - m_ParameterName: monolfo2frequen
+    m_GUID: c9a54bba24bb944499e8b1c0acf26882
+  - m_ParameterName: monolfo2retrigg
+    m_GUID: dfd52248f7c1e594aa7d633dd7382e6a
+  - m_ParameterName: monolfo2sync
+    m_GUID: 2f3717fedc0689740af8cf2bbffc1a27
+  - m_ParameterName: monolfo2tempo
+    m_GUID: a6eecd3cbdf08624fa770719c2794209
+  - m_ParameterName: monolfo2wavefor
+    m_GUID: 552b7db17b1b0ec479c62d388e1a1847
+  - m_ParameterName: noisevolume
+    m_GUID: abb73adad9ef29743a222f6ca2b33eba
+  - m_ParameterName: numsteps
+    m_GUID: 079d1157bbcf89941b53b3d892cdb540
+  - m_ParameterName: osc1transpose
+    m_GUID: ec8d4c99c9f563544b4c7c0ff02e5fd0
+  - m_ParameterName: osc1tune
+    m_GUID: 7d1fe0cc8a4c9bb42855b7cefcc7a1ec
+  - m_ParameterName: osc1unisondetun
+    m_GUID: 6fd2278779a61e84d967d6cae82f8a97
+  - m_ParameterName: osc1unisonvoice
+    m_GUID: 683cb58f915315f46b1d12c67eaa13c7
+  - m_ParameterName: osc1volume
+    m_GUID: dec9ef006b2ed184481095808f90f276
+  - m_ParameterName: osc1waveform
+    m_GUID: 0eccc8758b0562b47a675fc3e10371bb
+  - m_ParameterName: osc2transpose
+    m_GUID: 4864b9dc92fb8e741ae223f5dafa4b70
+  - m_ParameterName: osc2tune
+    m_GUID: 35fbeb8eaeee4eb44a950b8d27478150
+  - m_ParameterName: osc2unisondetun
+    m_GUID: 50304f6b5a595f6468d8b53273b0d15f
+  - m_ParameterName: osc2unisonvoice
+    m_GUID: 894239175f63cde46b82ed6d1e3297d7
+  - m_ParameterName: osc2volume
+    m_GUID: 60bda840185020c4fb0a045c7edb702f
+  - m_ParameterName: osc2waveform
+    m_GUID: 5fb8f5c33e99c67459abe0f512f27bc9
+  - m_ParameterName: oscfeedbackamou
+    m_GUID: 2668654bf3833974f85684af9906a777
+  - m_ParameterName: oscfeedbacktran
+    m_GUID: 43c049b616d27794d865e78a6c63cb30
+  - m_ParameterName: oscfeedbacktune
+    m_GUID: 54796f8c800a34743851677e4a3cd2b5
+  - m_ParameterName: oscmix
+    m_GUID: 71a28cdc2914c9c498e1dbc3545e3d43
+  - m_ParameterName: pitchbendrange
+    m_GUID: e41b6a119e6a90f4c9854fe56cdde378
+  - m_ParameterName: polylfoamplitud
+    m_GUID: 57528c7f9baeed5478aded5133cf3750
+  - m_ParameterName: polylfofrequenc
+    m_GUID: f029f991c72f5674e844e61586d0e948
+  - m_ParameterName: polylfosync
+    m_GUID: 84bb3499be5d8344d865a93ff2c72ce3
+  - m_ParameterName: polylfotempo
+    m_GUID: cc0708056819e9a489d6ebc6d21ea97c
+  - m_ParameterName: polylfowaveform
+    m_GUID: 4a1eaf1e2f2a02f4dab089cb82d903aa
+  - m_ParameterName: polyphony
+    m_GUID: b0d7b48c29ff8d44595126c435d44d1b
+  - m_ParameterName: portamento
+    m_GUID: 45e9c06bb4ff182478be45e359f921d4
+  - m_ParameterName: portamentotype
+    m_GUID: a33e6915531fcae4bba20db5890ddb4a
+  - m_ParameterName: resonance
+    m_GUID: e4b286d59b82ef646ac86276d8d9c675
+  - m_ParameterName: reverbdamping
+    m_GUID: 62495a2a0848a344db0ded77b9bc8dc1
+  - m_ParameterName: reverbdrywet
+    m_GUID: 3aeea1ddc39eddb4981a5ba2f6f41dd0
+  - m_ParameterName: reverbfeedback
+    m_GUID: d4ef0780d10a24b4ebf07dc78461f54f
+  - m_ParameterName: reverbon
+    m_GUID: 84281ecdcc9f375439dbf8970b2471b5
+  - m_ParameterName: stepfrequency
+    m_GUID: f514046dc3aa5ff4c839fac8f0ba28f1
+  - m_ParameterName: stepseq00
+    m_GUID: a13472e408928da4ba06b04be866cf73
+  - m_ParameterName: stepseq01
+    m_GUID: c619fa3d5ab244c4d90186527d331505
+  - m_ParameterName: stepseq02
+    m_GUID: c18fcb9ca0bfd184bac2cea878fed603
+  - m_ParameterName: stepseq03
+    m_GUID: 3aeb2a6a84e05d24491f301686e89625
+  - m_ParameterName: stepseq04
+    m_GUID: b9b6fbf1269ae1c43ba9b122ea51d142
+  - m_ParameterName: stepseq05
+    m_GUID: dc4f1ba773191da44a282ebcf9d46272
+  - m_ParameterName: stepseq06
+    m_GUID: cb7445b6f024e2f47b7027118e64cf47
+  - m_ParameterName: stepseq07
+    m_GUID: cf70b851e8bf70b418472287bafe2921
+  - m_ParameterName: stepseq08
+    m_GUID: 9fc99709c00c92346b2b09ff9bb4c87e
+  - m_ParameterName: stepseq09
+    m_GUID: e0c276723b82a2544aca3183a1276a65
+  - m_ParameterName: stepseq10
+    m_GUID: 4fd617888ae251d4cbb48ecbd03a5c35
+  - m_ParameterName: stepseq11
+    m_GUID: 00a96f31572e88743973f2f3c651a151
+  - m_ParameterName: stepseq12
+    m_GUID: 95415306ef860934791ff1d95fcb7676
+  - m_ParameterName: stepseq13
+    m_GUID: 34d6d85dbefc4db43acf987d1c116802
+  - m_ParameterName: stepseq14
+    m_GUID: c6f7dcff6ecfecb46b6a57dba4a478b5
+  - m_ParameterName: stepseq15
+    m_GUID: e897eecf236c5f34fb927e09538e1928
+  - m_ParameterName: stepseq16
+    m_GUID: 7b7ea5cdcabbd0644b10381333db2bce
+  - m_ParameterName: stepseq17
+    m_GUID: 662a3be4655187f4f97797c4a688f86c
+  - m_ParameterName: stepseq18
+    m_GUID: ee894ec5d1ea96240a2202b3932992d5
+  - m_ParameterName: stepseq19
+    m_GUID: ee77b85101d21b1489b7ac77c15bbb3a
+  - m_ParameterName: stepseq20
+    m_GUID: 7715dbb41e736134b9ec9bf12b6171e6
+  - m_ParameterName: stepseq21
+    m_GUID: 1d3d6c0e523c01f41a221fe8d683bb54
+  - m_ParameterName: stepseq22
+    m_GUID: 39d57823ddc642b46b60607ca0cb3eca
+  - m_ParameterName: stepseq23
+    m_GUID: c6bdcae13c78443469e302303d1f8985
+  - m_ParameterName: stepseq24
+    m_GUID: c8826f8b2bece124fa54a3941a408daa
+  - m_ParameterName: stepseq25
+    m_GUID: 57ee1384e8b31fa468196fe8b129dc7d
+  - m_ParameterName: stepseq26
+    m_GUID: 1349df2b579420a4880c3bcaeafc0c39
+  - m_ParameterName: stepseq27
+    m_GUID: b6cef23e49e71cf49b147a7bb35b7c65
+  - m_ParameterName: stepseq28
+    m_GUID: 62be7941924d834448d769b5d55f02ed
+  - m_ParameterName: stepseq29
+    m_GUID: 7b2a20ffcce571b4a97eb89f88f00d64
+  - m_ParameterName: stepseq30
+    m_GUID: 175e041bf783e124b8f4d08e9113df90
+  - m_ParameterName: stepseq31
+    m_GUID: 7eedaeb3dd9616f4f8662dd7d640f4e8
+  - m_ParameterName: stepsequencerre
+    m_GUID: dc842b8858c68dc4b95432e0d6658176
+  - m_ParameterName: stepsequencersy
+    m_GUID: 18df693653ea86c46923d6d1e1f710f3
+  - m_ParameterName: stepsequencerte
+    m_GUID: d7250b3b4eaedd146974378f87f70721
+  - m_ParameterName: stepsmoothing
+    m_GUID: 90a5a28f88c64f9468d19f574b3fedaa
+  - m_ParameterName: stutterfrequenc
+    m_GUID: 76b392b622aa9634081898b812780c0e
+  - m_ParameterName: stutteron
+    m_GUID: 22230b581a2e012479b6516f517a9cb3
+  - m_ParameterName: stutterresampfr
+    m_GUID: 3f124c984ac1f7f44a40dd974f5b32c1
+  - m_ParameterName: stutterresampsy
+    m_GUID: fdfcdd188261a2f48b072c230a363b0e
+  - m_ParameterName: stutterresampte
+    m_GUID: db3f4bf0c057dcd409db1c337e7f9dc7
+  - m_ParameterName: stuttersoftness
+    m_GUID: b956e99edea32b848b7439c6f802c702
+  - m_ParameterName: stuttersync
+    m_GUID: c2f5ada5031c68f469d2a1d46984866c
+  - m_ParameterName: stuttertempo
+    m_GUID: 0f5ccb149ef8cf24cbd5281ef3cd48a4
+  - m_ParameterName: suboctave
+    m_GUID: e0d28aed960cc4c4a9d39a2231926629
+  - m_ParameterName: subshuffle
+    m_GUID: 3a48c763ade35404dbf94197439111fa
+  - m_ParameterName: subvolume
+    m_GUID: 22ce1a9b84bd91740a6dfc1833a03d13
+  - m_ParameterName: subwaveform
+    m_GUID: ec4e2c071f8bb6c41ab8f753d28cccb7
+  - m_ParameterName: unison1harmoniz
+    m_GUID: 98e7a44356d199c4f9d1c7781f7e91dc
+  - m_ParameterName: unison2harmoniz
+    m_GUID: 45270fdfb5dc3054bbb873b0567b7080
+  - m_ParameterName: velocitytrack
+    m_GUID: b9f2056610831b44c99ee942b8ebc1a6
+  - m_ParameterName: volume
+    m_GUID: e21788a47efa43d4c968d33a80b07225
+  - m_ParameterName: mod0source
+    m_GUID: 4c633968be10e69409bc373926fb4d4a
+  - m_ParameterName: mod0dest
+    m_GUID: 13d4f98c5129e7b428de81bfb9564256
+  - m_ParameterName: mod0value
+    m_GUID: ec35377ad723d1642b7fd1396f1540d7
+  - m_ParameterName: mod1source
+    m_GUID: c607c7bf600ccb9458046d65e8db0727
+  - m_ParameterName: mod1dest
+    m_GUID: 9d61f75248f2908409d2fda62cc5cfcc
+  - m_ParameterName: mod1value
+    m_GUID: 7d1c287edd7f2b34fbad590657d7b8e9
+  - m_ParameterName: mod2source
+    m_GUID: 69ea3551c68c8394094321b208c3453f
+  - m_ParameterName: mod2dest
+    m_GUID: 18442e776ce686e4cb76985c3160ccc4
+  - m_ParameterName: mod2value
+    m_GUID: 5258d82cdc5e3084aacfccaf1d300833
+  - m_ParameterName: mod3source
+    m_GUID: c62b368254a9ef142a33dd1b0e578c7b
+  - m_ParameterName: mod3dest
+    m_GUID: 0822b491f78d5ea46b5f953525b8c834
+  - m_ParameterName: mod3value
+    m_GUID: 6aecf303bd31fa64381b92e796fbe621
+  - m_ParameterName: mod4source
+    m_GUID: 5869417215adde545aecd24041d1bca1
+  - m_ParameterName: mod4dest
+    m_GUID: b21f15fcd7c3ac445ac8807dd18daab5
+  - m_ParameterName: mod4value
+    m_GUID: 710aec8ec900f1344b4fd2535035d3ba
+  - m_ParameterName: mod5source
+    m_GUID: 82aa4a03b750f6f479dc1751966bf104
+  - m_ParameterName: mod5dest
+    m_GUID: eb05d0cc986a52b409ce9c1987ccaa29
+  - m_ParameterName: mod5value
+    m_GUID: 224e4ed5d0a268847b21067a6b0f706f
+  - m_ParameterName: mod6source
+    m_GUID: 83d98652410d0e2429b1100ef42113d4
+  - m_ParameterName: mod6dest
+    m_GUID: 8ab14739385245d4383e5b43d593e4bd
+  - m_ParameterName: mod6value
+    m_GUID: 9806486f73b6a2345af76580d670bcb1
+  - m_ParameterName: mod7source
+    m_GUID: 150c04a4f7cf9fa4497bb16e26f98dfa
+  - m_ParameterName: mod7dest
+    m_GUID: 4dc114212e457b14bbbc58be8551b965
+  - m_ParameterName: mod7value
+    m_GUID: 65c9e946eb3e53845854ff446f04d920
+  - m_ParameterName: mod8source
+    m_GUID: b800d4a2cc95cd448aa2f483f595d409
+  - m_ParameterName: mod8dest
+    m_GUID: bda8819a61f5958458d05f7c0a04e9f0
+  - m_ParameterName: mod8value
+    m_GUID: f4ee88878c1816342b3c6efa83e51ff6
+  - m_ParameterName: mod9source
+    m_GUID: 9438e895f0eaa45429cec220ec4bf4ff
+  - m_ParameterName: mod9dest
+    m_GUID: 02c0eaf37b5400344a3a02973565441f
+  - m_ParameterName: mod9value
+    m_GUID: fb09698acb4fc8e43b5114b9b6f8149b
+  - m_ParameterName: mod10source
+    m_GUID: 1c2606fc433262247b86f16943df53b8
+  - m_ParameterName: mod10dest
+    m_GUID: fbdf0e715cb741549a48056f9683dd2d
+  - m_ParameterName: mod10value
+    m_GUID: d91ec3e619691394f8626a552063d9c7
+  - m_ParameterName: mod11source
+    m_GUID: 1577c87c3a844ec49be6ccf430e60c7b
+  - m_ParameterName: mod11dest
+    m_GUID: 32b92466594e311438ffd83a9d799ba4
+  - m_ParameterName: mod11value
+    m_GUID: bd4475c66c69c1a4390445b75665d97e
+  - m_ParameterName: mod12source
+    m_GUID: d7b7bca18017fe54ea98cce8ea75b7c1
+  - m_ParameterName: mod12dest
+    m_GUID: 1cc07f18f3b7fbf4cb6c9d77003e9ecb
+  - m_ParameterName: mod12value
+    m_GUID: 41fdb4b01dbf660469720dfa92fd2d7e
+  - m_ParameterName: mod13source
+    m_GUID: 7b99d5bb25cc23a4f99b8edc57d90cdb
+  - m_ParameterName: mod13dest
+    m_GUID: 79246b8febfdb954b88bfe433a67e9a2
+  - m_ParameterName: mod13value
+    m_GUID: b51845eaf71b2b340a393d098d2f2f3b
+  - m_ParameterName: mod14source
+    m_GUID: a4e9e15ef9cc5aa409a21beeafc603cc
+  - m_ParameterName: mod14dest
+    m_GUID: 56c52433b01d631449ee0fd8be6cf6fc
+  - m_ParameterName: mod14value
+    m_GUID: 657f8ab7889109f44bb8cb9d6cb36b05
+  - m_ParameterName: mod15source
+    m_GUID: 86f5f6d3cabb33f4b861e1a8b5252e0d
+  - m_ParameterName: mod15dest
+    m_GUID: 6b7607481ccc02848a53ff5ed3c53b7f
+  - m_ParameterName: mod15value
+    m_GUID: 7f861f7b22050d7478a0f339f326a0c8
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
