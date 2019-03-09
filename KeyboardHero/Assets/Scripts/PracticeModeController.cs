@@ -15,6 +15,7 @@ public class PracticeModeController : MonoBehaviour {
         if (PlayerPrefs.GetInt("practiceMode") == 1)
         {
             practiceModeUI.SetActive(true);
+            practiceModeUI.transform.SetAsLastSibling();
             statsController.scoreDensity = 0;
         }
 

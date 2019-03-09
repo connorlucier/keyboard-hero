@@ -27,6 +27,7 @@ public class PauseMenuController : MonoBehaviour {
         Time.timeScale = 0;
         clock.pause = true;
         pauseMenuUI.SetActive(true);
+        pauseMenuUI.transform.SetAsLastSibling();
     }
 
     public void Resume()
@@ -34,6 +35,7 @@ public class PauseMenuController : MonoBehaviour {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         clock.pause = false;
+        pauseMenuUI.transform.SetAsFirstSibling();
     }
 
     public void LoadMenu()

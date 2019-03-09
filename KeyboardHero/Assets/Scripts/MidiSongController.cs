@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using AudioHelm;
 using IniParser;
 using IniParser.Model;
@@ -15,6 +14,8 @@ public class MidiSongController : MonoBehaviour {
 
     public AudioHelmClock clock;
     public MidiStatsController statsController;
+    public GameObject statsUI;
+    public GameObject songCompleteUI;
     public List<HelmSequencer> sequencers;
 
     private List<MidiNoteController> noteControllers;
@@ -23,7 +24,7 @@ public class MidiSongController : MonoBehaviour {
 
     private int adjustment;
     private int songDelay;
-
+    
     private string iniFile;
     private FileIniDataParser parser;
     private IniData songData;
@@ -56,8 +57,6 @@ public class MidiSongController : MonoBehaviour {
         clock.pause = true;
         SetUpSequencers();
 
-        notes = sequencers[0].GetAllNotes();
-
         statsController.scoreDensity /= adjustment;
         StartCoroutine(StartSong());
     }
@@ -80,20 +79,26 @@ public class MidiSongController : MonoBehaviour {
             }
         }
 
-        else if (GameObject.FindGameObjectsWithTag("Note").Length == 0)
-        {
-            StartCoroutine(ReturnToMenu());
-        }
+        else if (!clock.pause && GameObject.FindGameObjectsWithTag("Note").Length == 0)
+            StartCoroutine(EndSong());
 	}
+
+    public void ResetSong()
+    {
+        statsController.ResetStats();
+
+        songCompleteUI.SetActive(false);
+        songCompleteUI.transform.SetAsFirstSibling();
+        statsUI.SetActive(true);
+        notes = sequencers[0].GetAllNotes();
+        StartCoroutine(StartSong());
+    }
 
     private void SpawnNote(Note next)
     {
         var controller = noteControllers.Where(c => c.Note() == next.note).FirstOrDefault();
-
         if (controller != null)
-        {
             controller.CreateNote(next, noteSpawnHeight);
-        }
     }
 
     private int FindSmallestSubdivision()
@@ -134,10 +139,12 @@ public class MidiSongController : MonoBehaviour {
 
     private void SetUpSequencers()
     {
+        sequencers[0].ReadMidiFile(midiFile);
+        notes = sequencers[0].GetAllNotes();
+
         foreach (var seq in sequencers)
         {
-            seq.length = midiFile.midiData.length + songDelay;
-            seq.currentIndex = 0;
+            seq.length = midiFile.midiData.length + songDelay + 1;
         }
 
         foreach (var note in midiFile.midiData.notes)
@@ -172,7 +179,6 @@ public class MidiSongController : MonoBehaviour {
             }
         }
 
-        sequencers[0].ReadMidiFile(midiFile);
     }
 
     private void SaveSongStats()
@@ -204,12 +210,17 @@ public class MidiSongController : MonoBehaviour {
         clock.pause = false;
     }
 
-    private IEnumerator ReturnToMenu()
+    private IEnumerator EndSong()
     {
+        clock.pause = true;
+        statsController.SetFinalStats();
+
         if (PlayerPrefs.GetInt("practiceMode") == 0)
             SaveSongStats();
 
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        yield return new WaitForSeconds(2);
+        statsUI.SetActive(false);
+        songCompleteUI.transform.SetAsLastSibling();
+        songCompleteUI.SetActive(true);
     }
 }

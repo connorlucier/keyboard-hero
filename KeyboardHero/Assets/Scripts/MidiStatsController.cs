@@ -9,6 +9,10 @@ public class MidiStatsController : MonoBehaviour {
     public TextMeshProUGUI streakText;
     public TextMeshProUGUI accuracyText;
 
+    public TextMeshProUGUI finalScoreText;
+    public TextMeshProUGUI highStreakText;
+    public TextMeshProUGUI totalAccuracyText;
+
     public AudioHelmClock clock;
 
     [Range(4, 10)]
@@ -20,7 +24,8 @@ public class MidiStatsController : MonoBehaviour {
     private long notesHit;
     private long totalNotes;
     private long score;
-    private long streak;
+    private long currentStreak;
+    private long highStreak;
 
     private double accuracy;
     private float bpm;
@@ -30,37 +35,29 @@ public class MidiStatsController : MonoBehaviour {
     void Start()
     {
         ResetStats();
-        UpdateStatsText();
         bpm = clock.bpm;
     }
 
-    private void ResetStats()
+    public void ResetStats()
     {
         score = 0;
-        streak = 0;
+        currentStreak = 0;
+        highStreak = 0;
         notesHit = 0;
         totalNotes = 0;
         multiplier = 1;
         accuracy = 100.0;
-    }
-
-    public void NoteMissUpdate()
-    {
-        totalNotes++;
-        streak = 0;
-        multiplier = 1;
-        accuracy = Math.Round(notesHit * 100.0 / totalNotes, 2);
 
         UpdateStatsText();
-    }    
+    }
 
     public void NoteHitUpdate()
     {
         score += (int) (multiplier * scoreDensity * Time.deltaTime / (60 / bpm));
         notesHit++;
         totalNotes++;
-        streak++;
-        multiplier = (int) Math.Min(1 + streak / 10, maxMultiplier);
+        currentStreak++;
+        multiplier = (int) Math.Min(1 + currentStreak / 10, maxMultiplier);
         accuracy = Math.Round(notesHit * 100.0 / totalNotes, 2);
 
         UpdateStatsText();
@@ -72,13 +69,33 @@ public class MidiStatsController : MonoBehaviour {
         UpdateStatsText();
     }
 
+    public void NoteMissUpdate()
+    {
+        if (currentStreak > highStreak)
+            highStreak = currentStreak;
+
+        totalNotes++;
+        currentStreak = 0;
+        multiplier = 1;
+        accuracy = Math.Round(notesHit * 100.0 / totalNotes, 2);
+
+        UpdateStatsText();
+    }
+
+    public void SetFinalStats()
+    {
+        finalScoreText.text = score.ToString();
+        highStreakText.text = highStreak.ToString();
+        totalAccuracyText.text = accuracy.ToString() + "%";
+    }
+
     public long Score() { return score; }
     public double Accuracy() { return accuracy; }
 
     private void UpdateStatsText()
     {
         scoreText.text = score.ToString();
-        streakText.text = streak.ToString();
+        streakText.text = currentStreak.ToString();
         accuracyText.text = accuracy.ToString() + "%";
     }
 }
