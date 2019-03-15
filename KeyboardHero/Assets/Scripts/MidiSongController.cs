@@ -31,6 +31,8 @@ public class MidiSongController : MonoBehaviour {
 
 	void Start()
     {
+        clock.pause = true;
+
         string songDir = PlayerPrefs.GetString("songDir");
         iniFile = songDir + "/song.ini";
 
@@ -45,17 +47,13 @@ public class MidiSongController : MonoBehaviour {
         midiFile.LoadMidiData(songFile);
 
         adjustment = FindSmallestSubdivision();
-
         clock.bpm = float.Parse(songData["song"]["bpm"]) * adjustment;
-
         songDelay = Mathf.RoundToInt(noteSpawnHeight / PlayerPrefs.GetFloat("noteSpeed", 3.25f) * (4 * clock.bpm / 60));
 
         AdjustMidiFile();
+        SetUpSequencers();
 
         noteControllers = FindObjectsOfType<MidiNoteController>().ToList();
-
-        clock.pause = true;
-        SetUpSequencers();
 
         statsController.scoreDensity /= adjustment;
         StartCoroutine(StartSong());
@@ -125,6 +123,7 @@ public class MidiSongController : MonoBehaviour {
 
     private void AdjustMidiFile()
     {
+        midiFile.midiData.length = midiFile.midiData.length * adjustment + songDelay + 1;
         foreach (var note in midiFile.midiData.notes)
         {
             note.start = note.start * adjustment + songDelay;
@@ -142,10 +141,8 @@ public class MidiSongController : MonoBehaviour {
         sequencers[0].ReadMidiFile(midiFile);
         notes = sequencers[0].GetAllNotes();
 
-        foreach (var seq in sequencers)
-        {
-            seq.length = midiFile.midiData.length + songDelay + 1;
-        }
+        foreach (var seq in sequencers.GetRange(1, sequencers.Count - 1))
+            seq.length = sequencers[0].length;
 
         foreach (var note in midiFile.midiData.notes)
         {
@@ -218,7 +215,7 @@ public class MidiSongController : MonoBehaviour {
         if (PlayerPrefs.GetInt("practiceMode") == 0)
             SaveSongStats();
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         statsUI.SetActive(false);
         songCompleteUI.transform.SetAsLastSibling();
         songCompleteUI.SetActive(true);

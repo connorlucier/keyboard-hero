@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuController : MonoBehaviour {
 
-    public static bool gamePaused = false;
-
     public GameObject pauseMenuUI;
     public AudioHelmClock clock;
+
+    private bool gamePaused = false;
 
     void Update ()
     {
@@ -17,13 +17,12 @@ public class PauseMenuController : MonoBehaviour {
                 Resume();
             else
                 Pause();
-
-            gamePaused = !gamePaused;
         }
 	}
 
     public void Pause()
     {
+        gamePaused = true;
         Time.timeScale = 0;
         clock.pause = true;
         pauseMenuUI.SetActive(true);
@@ -32,6 +31,7 @@ public class PauseMenuController : MonoBehaviour {
 
     public void Resume()
     {
+        gamePaused = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         clock.pause = false;

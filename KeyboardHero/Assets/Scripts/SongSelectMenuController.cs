@@ -8,7 +8,7 @@ using TMPro;
 
 public class SongSelectMenuController : MonoBehaviour {
 
-    public GameObject menu;
+    public GameObject listArea;
 
     [Range(100,200)]
     public int spacing = 100;
@@ -20,15 +20,11 @@ public class SongSelectMenuController : MonoBehaviour {
         var songDirs = Directory.GetDirectories(songsDirectory).ToList();
         var songPrefab = Resources.Load<GameObject>("UI/Song");
 
-        int i = 0;
         foreach (var songDir in songDirs)
         {
             var song = Instantiate(songPrefab);
-            song.transform.SetParent(menu.transform, false);
-            song.transform.position += i++ * Vector3.down * spacing;
-
+            song.transform.SetParent(listArea.transform, false);
             PopulateFields(song, songDir);
-
             song.GetComponent<Button>().onClick.AddListener(delegate () { PlaySong(songDir); });
         }
     }

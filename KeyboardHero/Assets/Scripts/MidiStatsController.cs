@@ -84,6 +84,9 @@ public class MidiStatsController : MonoBehaviour {
 
     public void SetFinalStats()
     {
+        if (currentStreak > highStreak)
+            highStreak = currentStreak;
+
         finalScoreText.text = score.ToString();
         highStreakText.text = highStreak.ToString();
         totalAccuracyText.text = accuracy.ToString() + "%";

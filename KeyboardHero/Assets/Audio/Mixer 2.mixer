@@ -4,7 +4,8 @@
 AudioMixerController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Mixer 2
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
@@ -14,7 +15,9 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 3945469191d8ed742943c20375b6ca27
+    name: volume
   m_AudioMixerGroupViews:
   - guids:
     - d301a022e01262b43a2e7a52ce9fe306
@@ -25,7 +28,8 @@ AudioMixerController:
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: d301a022e01262b43a2e7a52ce9fe306
@@ -43,7 +47,8 @@ AudioMixerGroupController:
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_EffectID: ac34f29625850d34bb295b4f130cee5b
   m_EffectName: Attenuation
@@ -56,7 +61,8 @@ AudioMixerEffectController:
 AudioMixerSnapshotController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: d01db1708124c9946b8b4c9122dcd4bd
@@ -231,7 +237,8 @@ AudioMixerSnapshotController:
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_EffectID: 9d54e926641e6734f8d70a25f3799d9b
   m_EffectName: Helm
