@@ -15,7 +15,7 @@ public class MainMenuController : MonoBehaviour {
 
 	public void PlayGame(bool practiceModeEnabled)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         PlayerPrefs.SetInt("practiceMode", practiceModeEnabled ? 1 : 0);
     }
 

@@ -14,8 +14,7 @@ public class MidiSongController : MonoBehaviour {
 
     public AudioHelmClock clock;
     public MidiStatsController statsController;
-    public GameObject statsUI;
-    public GameObject songCompleteUI;
+    public UIController uIController;
     public List<HelmSequencer> sequencers;
 
     private List<MidiNoteController> noteControllers;
@@ -39,16 +38,14 @@ public class MidiSongController : MonoBehaviour {
         parser = new FileIniDataParser();
         songData = parser.ReadFile(iniFile);
 
-        // TODO figure out if song has already been adjusted. If an adjusted MIDI exists, use it.
         string songFile = Directory.GetFiles(songDir).Where(x => x.EndsWith(".mid") || x.EndsWith(".MID")).FirstOrDefault();
 
-        // TODO if not, make adjustments and save adjusted copy.
         midiFile = gameObject.AddComponent<MidiFile>();
         midiFile.LoadMidiData(songFile);
 
         adjustment = FindSmallestSubdivision();
         clock.bpm = float.Parse(songData["song"]["bpm"]) * adjustment;
-        songDelay = Mathf.RoundToInt(noteSpawnHeight / PlayerPrefs.GetFloat("noteSpeed", 3.25f) * (4 * clock.bpm / 60));
+        songDelay = Mathf.FloorToInt(noteSpawnHeight / PlayerPrefs.GetFloat("noteSpeed", 3.25f) * (4.0f * clock.bpm / 60.0f));
 
         AdjustMidiFile();
         SetUpSequencers();
@@ -63,7 +60,7 @@ public class MidiSongController : MonoBehaviour {
     {
         if (PlayerPrefs.GetInt("practiceMode") == 1)
         {
-            songDelay = Mathf.RoundToInt(noteSpawnHeight / PlayerPrefs.GetFloat("noteSpeed", 3.25f) * (4 * clock.bpm / 60));
+            songDelay = Mathf.FloorToInt(noteSpawnHeight / PlayerPrefs.GetFloat("noteSpeed", 3.25f) * (4.0f * clock.bpm / 60.0f));
         }
 
         if (notes.Count > 0)
@@ -77,20 +74,8 @@ public class MidiSongController : MonoBehaviour {
             }
         }
 
-        else if (!clock.pause && GameObject.FindGameObjectsWithTag("Note").Length == 0)
-            StartCoroutine(EndSong());
+        else if (!clock.pause && GameObject.FindGameObjectsWithTag("Note").Length == 0) EndSong();
 	}
-
-    public void ResetSong()
-    {
-        statsController.ResetStats();
-
-        songCompleteUI.SetActive(false);
-        songCompleteUI.transform.SetAsFirstSibling();
-        statsUI.SetActive(true);
-        notes = sequencers[0].GetAllNotes();
-        StartCoroutine(StartSong());
-    }
 
     private void SpawnNote(Note next)
     {
@@ -123,7 +108,7 @@ public class MidiSongController : MonoBehaviour {
 
     private void AdjustMidiFile()
     {
-        midiFile.midiData.length = midiFile.midiData.length * adjustment + songDelay + 1;
+        midiFile.midiData.length = midiFile.midiData.length * adjustment + songDelay;
         foreach (var note in midiFile.midiData.notes)
         {
             note.start = note.start * adjustment + songDelay;
@@ -180,7 +165,6 @@ public class MidiSongController : MonoBehaviour {
 
     private void SaveSongStats()
     {
-        var statsController = GameObject.FindGameObjectWithTag("Stats Controller").GetComponent<MidiStatsController>();
         var highScore = long.Parse(songData["score"]["highscore"]);
 
         if (statsController.Score() > highScore)
@@ -207,17 +191,9 @@ public class MidiSongController : MonoBehaviour {
         clock.pause = false;
     }
 
-    private IEnumerator EndSong()
+    private void EndSong()
     {
-        clock.pause = true;
-        statsController.SetFinalStats();
-
-        if (PlayerPrefs.GetInt("practiceMode") == 0)
-            SaveSongStats();
-
-        yield return new WaitForSeconds(3);
-        statsUI.SetActive(false);
-        songCompleteUI.transform.SetAsLastSibling();
-        songCompleteUI.SetActive(true);
+        if (PlayerPrefs.GetInt("practiceMode") == 0) SaveSongStats();
+        uIController.EndSong();
     }
 }

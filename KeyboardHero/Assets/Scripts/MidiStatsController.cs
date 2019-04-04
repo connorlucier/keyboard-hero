@@ -34,11 +34,11 @@ public class MidiStatsController : MonoBehaviour {
     
     void Start()
     {
-        ResetStats();
+        InitializeStats();
         bpm = clock.bpm;
     }
 
-    public void ResetStats()
+    public void InitializeStats()
     {
         score = 0;
         currentStreak = 0;

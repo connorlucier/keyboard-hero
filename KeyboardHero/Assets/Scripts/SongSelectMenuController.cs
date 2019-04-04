@@ -10,9 +10,6 @@ public class SongSelectMenuController : MonoBehaviour {
 
     public GameObject listArea;
 
-    [Range(100,200)]
-    public int spacing = 100;
-
     void Start()
     {
         SetSongsDirectory();
@@ -23,15 +20,17 @@ public class SongSelectMenuController : MonoBehaviour {
         foreach (var songDir in songDirs)
         {
             var song = Instantiate(songPrefab);
+            string songName = PopulateFields(song, songDir);
             song.transform.SetParent(listArea.transform, false);
-            PopulateFields(song, songDir);
-            song.GetComponent<Button>().onClick.AddListener(delegate () { PlaySong(songDir); });
+
+            song.GetComponent<Button>().onClick.AddListener(delegate () { PlaySong(songDir, songName); });
         }
     }
 
-    public void PlaySong(string songDir)
+    public void PlaySong(string songDir, string songName)
     {
         PlayerPrefs.SetString("songDir", songDir);
+        PlayerPrefs.SetString("songName", songName);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);          
     }
 
@@ -40,7 +39,7 @@ public class SongSelectMenuController : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
-    private static void SetSongsDirectory()
+    private void SetSongsDirectory()
     {
         if (PlayerPrefs.GetString("songsDirectory", "") == "")
         {
@@ -56,9 +55,10 @@ public class SongSelectMenuController : MonoBehaviour {
         }
     }
 
-    private static void PopulateFields(GameObject song, string songDir)
+    private string PopulateFields(GameObject song, string songDir)
     {
         var parser = new FileIniDataParser();
+        string result = "Keyboard Hero";
 
         if (!File.Exists(songDir + "/song.ini"))
         {
@@ -67,13 +67,13 @@ public class SongSelectMenuController : MonoBehaviour {
 
         var songData = parser.ReadFile(songDir + "/song.ini");
 
-        for (int i = 0; i < song.transform.childCount; i++)
+        foreach (Transform field in song.transform)
         {
-            var field = song.transform.GetChild(i);
             switch (field.name)
             {
                 case "Title":
                     field.GetComponent<TextMeshProUGUI>().text = songData["song"]["name"];
+                    result = songData["song"]["name"];
                     break;
 
                 case "Artist":
@@ -85,7 +85,8 @@ public class SongSelectMenuController : MonoBehaviour {
                     break;
 
                 case "Score":
-                    field.GetComponent<TextMeshProUGUI>().text = songData["score"]["highscore"];
+                    string score = songData["score"]["highscore"];
+                    field.GetComponent<TextMeshProUGUI>().text = int.Parse(score) > 0 ? score : "";
                     break;
 
                 case "Stars":
@@ -103,5 +104,7 @@ public class SongSelectMenuController : MonoBehaviour {
                     break;
             }
         }
+
+        return result;
     }
 }

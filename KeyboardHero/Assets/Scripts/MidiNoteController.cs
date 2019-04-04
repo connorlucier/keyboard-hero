@@ -12,36 +12,45 @@ public class MidiNoteController : MonoBehaviour {
     private int note;
 
     private GameObject notePrefab;
-    private Material noteMaterial;
+    private GameObject noteHeadPrefab;
+
+    private Material defaultMaterial;
+    private Material glowingMaterial;
+    private Material missedMaterial;
 
     void Start()
     {
         note = gameObject.GetComponent<MidiKeyController>().note;
         notePrefab = Resources.Load<GameObject>("Physical/Note");
-        SetNoteMaterial();
+        noteHeadPrefab = Resources.Load<GameObject>("Physical/Notehead");
+        SetNoteMaterials();
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (note == int.Parse(other.tag))
+        if (other.tag == note.ToString() || other.tag == "Notehead")
             HandleInput(other.gameObject);
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (note == int.Parse(other.tag))
+        if (other.tag == note.ToString() || other.tag == "Notehead")
             HandleInput(other.gameObject);
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (note == int.Parse(other.tag))
+        if (other.tag == "Notehead")
         {
-            if (!other.gameObject.GetComponent<NoteHitController>().noteHit)
+            var attachedNote = other.GetComponent<NoteHeadController>().attachedNote;
+            if (attachedNote.tag == note.ToString() && !attachedNote.GetComponent<NoteHitController>().noteHit)
+            {
                 statsController.NoteMissUpdate();
-
-            Destroy(other.gameObject.transform.parent.gameObject);
+                attachedNote.GetComponent<Renderer>().material = missedMaterial;
+            }
         }
+        else if (other.tag == note.ToString())
+            Destroy(other.transform.parent.gameObject);
     }
 
     public int Note() { return note; }
@@ -49,7 +58,7 @@ public class MidiNoteController : MonoBehaviour {
     public void CreateNote(Note n, float spawnHeight)
     {
         var noteObject = Instantiate(notePrefab);
-        var cube = noteObject.transform.GetChild(0).gameObject;
+        var noteCube = noteObject.transform.GetChild(0).gameObject;
 
         var noteDuration = 60 * (n.end - n.start) / (4 * clock.bpm);
         var noteSpeed = PlayerPrefs.GetFloat("noteSpeed", 3.25f);
@@ -60,131 +69,196 @@ public class MidiNoteController : MonoBehaviour {
         noteObject.transform.localScale = new Vector3(0.95f * gameObject.transform.localScale.x, 0.99f * noteScale - 0.025f, gameObject.transform.localScale.z);
         noteObject.transform.position = gameObject.transform.position + new Vector3(-0.475f * gameObject.transform.localScale.x, spawnHeight + keyOffset, 0);
 
-        cube.tag = note.ToString();
-        cube.GetComponent<Renderer>().material = noteMaterial;
+        noteCube.tag = note.ToString();
+        noteCube.GetComponent<Renderer>().material = defaultMaterial;
 
-        var noteRigidBody = noteObject.AddComponent<Rigidbody>();
-        noteRigidBody.useGravity = false;
-        noteRigidBody.constraints =
-            RigidbodyConstraints.FreezeRotation
-            | RigidbodyConstraints.FreezePositionZ
-            | RigidbodyConstraints.FreezePositionX;
+        var noteHead = Instantiate(noteHeadPrefab);
+        var noteHeadCube = noteHead.transform.GetChild(0).gameObject;
 
-        noteRigidBody.velocity = Vector3.down * noteSpeed;
+        noteHead.transform.position = noteObject.transform.position;
+        noteHead.transform.SetParent(noteObject.transform);
+        noteHead.transform.localScale = new Vector3(1, noteHead.transform.localScale.y, noteHead.transform.localScale.z);
+
+        noteHeadCube.GetComponent<Renderer>().material = defaultMaterial;
+        noteHeadCube.GetComponent<NoteHeadController>().attachedNote = noteCube;
+
+        noteObject.GetComponent<Rigidbody>().velocity = Vector3.down * noteSpeed;
     }
 
     private void HandleInput(GameObject obj)
     {
         if (MidiMaster.GetKey(note) > 0.0f)
         {
-            if (!obj.GetComponent<NoteHitController>().noteHit)
+            if (obj.tag == "Notehead")
             {
-                statsController.NoteHitUpdate();
-                obj.GetComponent<NoteHitController>().noteHit = true;
+                var attachedNote = obj.GetComponent<NoteHeadController>().attachedNote;
+                if (attachedNote.tag == note.ToString() && !attachedNote.GetComponent<NoteHitController>().noteHit)
+                {
+                    statsController.NoteHitUpdate();
+                    attachedNote.GetComponent<NoteHitController>().noteHit = true;
+                    attachedNote.GetComponent<Renderer>().material = glowingMaterial;
+                }
             }
-            else statsController.NoteContinueUpdate();
+            else if (obj.tag == note.ToString() && obj.GetComponent<NoteHitController>().noteHit && !obj.GetComponent<NoteHitController>().noteReleased)
+                statsController.NoteContinueUpdate();
+        }
+        else if (obj.tag == note.ToString() && obj.GetComponent<NoteHitController>().noteHit)
+        {
+            obj.GetComponent<NoteHitController>().noteReleased = true;
+            obj.GetComponent<Renderer>().material = missedMaterial;
         }
     }
 
-    private void SetNoteMaterial()
+    private void SetNoteMaterials()
     {
         List<Material> materials = Resources.LoadAll<Material>("Materials/Note Colors/").ToList();
-        Material mat;
+        Material def, glow, miss;
 
         if (PlayerPrefs.GetInt("multicolorNotes") == 1)
         {
             switch (note % 12)
             {
                 case 0: // C
-                    mat = materials.Where(m => m.name == "Red").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Red").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Red Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Red Miss").FirstOrDefault();
                     break;
                 case 1: // C# / Db
-                    mat = materials.Where(m => m.name == "Red Orange").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Red Orange").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Red Orange Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Red Orange Miss").FirstOrDefault();
                     break;
                 case 2: // D
-                    mat = materials.Where(m => m.name == "Orange").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Orange").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Orange Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Orange Miss").FirstOrDefault();
                     break;
                 case 3: // D# / Eb
-                    mat = materials.Where(m => m.name == "Gold").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Gold").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Gold Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Gold Miss").FirstOrDefault();
                     break;
                 case 4: // E
-                    mat = materials.Where(m => m.name == "Yellow").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Yellow").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Yellow Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Yellow Miss").FirstOrDefault();
                     break;
                 case 5: // F
-                    mat = materials.Where(m => m.name == "Light Green").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Light Green").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Light Green Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Light Green Miss").FirstOrDefault();
                     break;
                 case 6: // F# / Gb
-                    mat = materials.Where(m => m.name == "Green").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Green").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Green Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Green Miss").FirstOrDefault();
                     break;
                 case 7: // G
-                    mat = materials.Where(m => m.name == "Light Blue").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Light Blue").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Light Blue Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Light Blue Miss").FirstOrDefault();
                     break;
                 case 8: // G# / Ab
-                    mat = materials.Where(m => m.name == "Blue").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Blue").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Blue Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Blue Miss").FirstOrDefault();
                     break;
                 case 9: // A
-                    mat = materials.Where(m => m.name == "Indigo").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Indigo").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Indigo Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Indigo Miss").FirstOrDefault();
                     break;
                 case 10: // A# / Bb
-                    mat = materials.Where(m => m.name == "Purple").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Purple").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Purple Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Purple Miss").FirstOrDefault();
                     break;
                 case 11: // B
-                    mat = materials.Where(m => m.name == "Pink").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Pink").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Pink Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Pink Miss").FirstOrDefault();
                     break;
                 default:
-                    mat = materials.Where(m => m.name == "White").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Grey").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "White").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Black").FirstOrDefault();
                     break;
             }
-
-            noteMaterial = mat;
         }
-
         else
         {
             switch (PlayerPrefs.GetInt("noteColor"))
             {
                 case 1:
-                    mat = materials.Where(m => m.name == "Red").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Red").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Red Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Red Miss").FirstOrDefault();
                     break;
                 case 2:
-                    mat = materials.Where(m => m.name == "Red Orange").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Red Orange").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Red Orange Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Red Orange Miss").FirstOrDefault();
                     break;
                 case 3:
-                    mat = materials.Where(m => m.name == "Orange").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Orange").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Orange Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Orange Miss").FirstOrDefault();
                     break;
                 case 4:
-                    mat = materials.Where(m => m.name == "Gold").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Gold").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Gold Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Gold Miss").FirstOrDefault();
                     break;
                 case 5:
-                    mat = materials.Where(m => m.name == "Yellow").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Yellow").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Yellow Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Yellow Miss").FirstOrDefault();
                     break;
                 case 6:
-                    mat = materials.Where(m => m.name == "Light Green").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Light Green").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Light Green Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Light Green Miss").FirstOrDefault();
                     break;
                 case 7:
-                    mat = materials.Where(m => m.name == "Green").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Green").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Green Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Green Miss").FirstOrDefault();
                     break;
                 case 8:
-                    mat = materials.Where(m => m.name == "Light Blue").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Light Blue").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Light Blue Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Light Blue Miss").FirstOrDefault();
                     break;
                 case 9:
-                    mat = materials.Where(m => m.name == "Blue").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Blue").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Blue Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Blue Miss").FirstOrDefault();
                     break;
                 case 10:
-                    mat = materials.Where(m => m.name == "Indigo").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Indigo").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Indigo Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Indigo Miss").FirstOrDefault();
                     break;
                 case 11:
-                    mat = materials.Where(m => m.name == "Purple").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Purple").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Purple Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Purple Miss").FirstOrDefault();
                     break;
                 case 12:
-                    mat = materials.Where(m => m.name == "Pink").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Pink").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "Pink Glow").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Pink Miss").FirstOrDefault();
                     break;
                 default:
-                    mat = materials.Where(m => m.name == "White").FirstOrDefault();
+                    def = materials.Where(m => m.name == "Grey").FirstOrDefault();
+                    glow = materials.Where(m => m.name == "White").FirstOrDefault();
+                    miss = materials.Where(m => m.name == "Black").FirstOrDefault();
                     break;
             }
-
-            noteMaterial = mat;
         }
+
+        defaultMaterial = def;
+        glowingMaterial = glow;
+        missedMaterial = miss;
     }
 }
