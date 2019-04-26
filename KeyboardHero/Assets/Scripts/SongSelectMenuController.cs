@@ -9,6 +9,7 @@ using TMPro;
 public class SongSelectMenuController : MonoBehaviour {
 
     public GameObject listArea;
+    public TextMeshProUGUI noSongsText;
 
     void Start()
     {
@@ -17,7 +18,10 @@ public class SongSelectMenuController : MonoBehaviour {
         var songDirs = Directory.GetDirectories(songsDirectory).ToList();
         var songPrefab = Resources.Load<GameObject>("UI/Song");
 
-        foreach (var songDir in songDirs)
+        if (songDirs.Count == 0)
+            noSongsText.gameObject.SetActive(true);
+
+        else foreach (var songDir in songDirs)
         {
             var song = Instantiate(songPrefab);
             string songName = PopulateFields(song, songDir);

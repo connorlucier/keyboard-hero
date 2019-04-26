@@ -83,8 +83,8 @@ public class UIController : MonoBehaviour
 
     private void UpdateProgress()
     {
-        float progress = (float)songController.sequencers[0].currentIndex / songController.sequencers[0].length;
-        progressSlider.value = progress;
+        float progress = (float) songController.sequencers[0].currentIndex / songController.sequencers[0].length;
+        progressSlider.value = Mathf.Clamp(progress, 0, 1);
     }
 
     public void EndSong()
