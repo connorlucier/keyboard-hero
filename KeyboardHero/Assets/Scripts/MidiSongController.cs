@@ -31,6 +31,7 @@ public class MidiSongController : MonoBehaviour {
 	void Start()
     {
         clock.pause = true;
+        notes = new List<Note>();
 
         string songDir = PlayerPrefs.GetString("songDir");
         iniFile = songDir + "/song.ini";
@@ -45,6 +46,10 @@ public class MidiSongController : MonoBehaviour {
 
         adjustment = FindSmallestSubdivision();
         clock.bpm = float.Parse(songData["song"]["bpm"]) * adjustment;
+
+        if (PlayerPrefs.GetInt("practiceMode") == 1)
+            clock.bpm *= PlayerPrefs.GetFloat("practiceSpeed");
+
         songDelay = Mathf.FloorToInt(noteSpawnHeight / PlayerPrefs.GetFloat("noteSpeed", 3.25f) * (4.0f * clock.bpm / 60.0f));
 
         AdjustMidiFile();
@@ -58,12 +63,7 @@ public class MidiSongController : MonoBehaviour {
 
     void Update()
     {
-        if (PlayerPrefs.GetInt("practiceMode") == 1)
-        {
-            songDelay = Mathf.FloorToInt(noteSpawnHeight / PlayerPrefs.GetFloat("noteSpeed", 3.25f) * (4.0f * clock.bpm / 60.0f));
-        }
-
-        if (notes.Count > 0)
+        if (!clock.pause && notes.Count > 0)
         {
             var sequencer = sequencers[0];
             var nextNotesToSpawn = notes.Where(n => sequencer.currentIndex + songDelay > n.start).ToList();
@@ -108,6 +108,23 @@ public class MidiSongController : MonoBehaviour {
 
     private void AdjustMidiFile()
     {
+        if (PlayerPrefs.GetInt("practiceMode") == 1)
+        {
+            int startPos = (int) (midiFile.midiData.length * PlayerPrefs.GetFloat("practiceStartPosition"));
+            var notesToRemove = midiFile.midiData.notes.Where(n => n.start < startPos).ToList();
+
+            foreach (var note in notesToRemove)
+                midiFile.midiData.notes.Remove(note);
+
+            foreach (var note in midiFile.midiData.notes)
+            {
+                note.start -= startPos;
+                note.end -= startPos;
+            }
+
+            midiFile.midiData.length -= startPos;
+        }
+
         midiFile.midiData.length = midiFile.midiData.length * adjustment + songDelay;
         foreach (var note in midiFile.midiData.notes)
         {
@@ -186,8 +203,7 @@ public class MidiSongController : MonoBehaviour {
 
     private IEnumerator StartSong()
     {
-        int seconds = PlayerPrefs.GetInt("practiceMode") + 1;
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(1);
         clock.pause = false;
     }
 

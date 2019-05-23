@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    public GameObject practiceModeUI;
     public GameObject pauseMenuUI;
     public GameObject standardUI;
     public GameObject songCompleteUI;
@@ -25,9 +24,8 @@ public class UIController : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("practiceMode") == 1)
         {
-            practiceModeUI.SetActive(true);
-            practiceModeUI.transform.SetAsLastSibling();
             statsController.scoreDensity = 0;
+            progressSlider.gameObject.SetActive(false);
         }
 
         bpm = songController.clock.bpm;

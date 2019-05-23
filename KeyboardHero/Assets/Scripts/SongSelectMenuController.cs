@@ -10,6 +10,7 @@ public class SongSelectMenuController : MonoBehaviour {
 
     public GameObject listArea;
     public TextMeshProUGUI noSongsText;
+    public GameObject practiceModeUI;
 
     void Start()
     {
@@ -28,6 +29,9 @@ public class SongSelectMenuController : MonoBehaviour {
             song.transform.SetParent(listArea.transform, false);
 
             song.GetComponent<Button>().onClick.AddListener(delegate () { PlaySong(songDir, songName); });
+
+            if (PlayerPrefs.GetInt("practiceMode") == 1)
+                song.GetComponent<Button>().onClick.AddListener(delegate () { SetPracticeSettings(); });
         }
     }
 
@@ -35,12 +39,35 @@ public class SongSelectMenuController : MonoBehaviour {
     {
         PlayerPrefs.SetString("songDir", songDir);
         PlayerPrefs.SetString("songName", songName);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);          
+
+        if (PlayerPrefs.GetInt("practiceMode") != 1)
+            LoadPlayer();
     }
 
     public void GoBack()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void LoadPlayer()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void SetPracticeSpeed(float speed)
+    {
+        PlayerPrefs.SetFloat("practiceSpeed", speed);
+    }
+
+    public void SetStartPosition(float pos)
+    {
+        PlayerPrefs.SetFloat("practiceStartPosition", pos);
+    }
+
+    private void SetPracticeSettings()
+    {
+        gameObject.SetActive(false);
+        practiceModeUI.SetActive(true);
     }
 
     private void SetSongsDirectory()
