@@ -1,12 +1,12 @@
 ﻿using AudioHelm;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor;
 using System.IO;
 using TMPro;
 using IniParser;
 using System;
 using UnityEngine.SceneManagement;
+using Crosstales.FB;
 
 public class SongImporter : MonoBehaviour
 {
@@ -27,8 +27,9 @@ public class SongImporter : MonoBehaviour
 
     public void SetFile()
     {
-        file = EditorUtility.OpenFilePanel("Choose Song File", Application.dataPath, "MID");
-        selectedFile.text = file.Substring(file.LastIndexOf("/") + 1);
+        //file = EditorUtility.OpenFilePanel("Choose Song File", Application.dataPath, "MID");
+        file = FileBrowser.OpenSingleFile("MID");
+        selectedFile.text = Path.GetFileName(file);
 
         if (!string.IsNullOrEmpty(file))
             fileRequired.SetActive(false);
@@ -59,6 +60,12 @@ public class SongImporter : MonoBehaviour
         }
         else
             Debug.LogWarning("BPM was set to a nonpositive value.");
+    }
+
+    public void OpenFile(string pathToFile)
+    {
+        file = pathToFile;
+        selectedFile.text = Path.GetFileName(pathToFile);
     }
 
     public void ClearAllFields()
@@ -97,20 +104,15 @@ public class SongImporter : MonoBehaviour
         if (!Directory.Exists(songsDirectory))
             Directory.CreateDirectory(songsDirectory);
 
-        int start = file.LastIndexOf("/") + 1;
-        int len = file.LastIndexOf(".") - file.LastIndexOf("/") - 1;
-        string fileName = file.Substring(start);
-        string folderName = file.Substring(start, len) + "/";
-        string songFolder = songsDirectory + "/" + folderName;
-        string destFile = songFolder + fileName;
+        string songFolder = songsDirectory + "/" + Path.GetFileNameWithoutExtension(file);
+        string destFile = songFolder + "/" + Path.GetFileName(file);
 
 
-        if (!Directory.Exists(songsDirectory + "/" + folderName))
-            Directory.CreateDirectory(songsDirectory + "/" + folderName);
+        if (!Directory.Exists(songFolder))
+            Directory.CreateDirectory(songFolder);
 
         File.Copy(file, destFile, true);
-
-        string iniFile = songFolder + "song.ini";
+        string iniFile = songFolder + "/song.ini";
 
         if (!File.Exists(iniFile))
             File.Create(iniFile).Dispose();
