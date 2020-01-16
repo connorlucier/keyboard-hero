@@ -1,4 +1,4 @@
-# Keyboard Hero (title pending)
+# Keyboard Hero
 A fun, competitive desktop game built in Unity to help players learn piano songs using a MIDI keyboard.
 
 ## Current State
