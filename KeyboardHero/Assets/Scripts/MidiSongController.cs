@@ -9,7 +9,7 @@ using System.IO;
 
 public class MidiSongController : MonoBehaviour {
 
-    [Range(1,3)]
+    [Range(1, 3)]
     public float noteSpawnHeight = 2.5f;
 
     public AudioHelmClock clock;
@@ -55,6 +55,7 @@ public class MidiSongController : MonoBehaviour {
         AdjustMidiFile();
         SetUpSequencers();
 
+        notes = sequencers[0].GetAllNotes();
         noteControllers = FindObjectsOfType<MidiNoteController>().ToList();
 
         statsController.scoreDensity /= adjustment;
@@ -73,8 +74,9 @@ public class MidiSongController : MonoBehaviour {
                 notes.Remove(next);
             }
         }
-
-        else if (!clock.pause && GameObject.FindGameObjectsWithTag("Note").Length == 0) EndSong();
+        
+        else if (!clock.pause && GameObject.FindGameObjectsWithTag("Note").Length == 0)
+            EndSong();
 	}
 
     private void SpawnNote(Note next)
@@ -92,56 +94,42 @@ public class MidiSongController : MonoBehaviour {
         int result = 1;
         float div = 1.0f;
 
-        foreach (Note note in midiFile.midiData.notes)
+        float minDuration = midiFile.midiData.notes.Select(n => n.end - n.start).Min();
+        while (minDuration < div)
         {
-            float duration = note.end - note.start;
-
-            while (duration < div)
-            {
-                div /= 2;
-                result *= 2;
-            }
+            div /= 2.0f;
+            result *= 2;
         }
+
+        songData["song"]["isAdjusted"] = "true";
+        songData["song"]["adjustment"] = result.ToString();
+
+        parser.WriteFile(iniFile, songData);
 
         return result;
     }
 
     private void AdjustMidiFile()
     {
-        if (PlayerPrefs.GetInt("practiceMode") == 1)
-        {
-            int startPos = (int) (midiFile.midiData.length * PlayerPrefs.GetFloat("practiceStartPosition"));
-            var notesToRemove = midiFile.midiData.notes.Where(n => n.start < startPos).ToList();
+        int startPos = PlayerPrefs.GetInt("practiceMode", 0) == 1 ? (int)(midiFile.midiData.length * PlayerPrefs.GetFloat("practiceStartPosition", 0)) : 0;
 
-            foreach (var note in notesToRemove)
-                midiFile.midiData.notes.Remove(note);
-
-            foreach (var note in midiFile.midiData.notes)
+        midiFile.midiData.notes = midiFile.midiData.notes
+            .Where(n => n.start >= startPos)
+            .Select(n => new Note
             {
-                note.start -= startPos;
-                note.end -= startPos;
-            }
+                note = n.note,
+                velocity = n.velocity,
+                start = (n.start - startPos) * adjustment + songDelay,
+                end = (n.end - startPos) * adjustment + songDelay
+            })
+            .ToList();
 
-            midiFile.midiData.length -= startPos;
-        }
-
-        midiFile.midiData.length = midiFile.midiData.length * adjustment + songDelay;
-        foreach (var note in midiFile.midiData.notes)
-        {
-            note.start = note.start * adjustment + songDelay;
-            note.end = note.end * adjustment + songDelay;
-        }
-
-        songData["song"]["isAdjusted"] = "true";
-        songData["song"]["adjustment"] = adjustment.ToString();
-
-        parser.WriteFile(iniFile, songData);
+        midiFile.midiData.length = (midiFile.midiData.length - startPos) * adjustment + songDelay;
     }
 
     private void SetUpSequencers()
     {
         sequencers[0].ReadMidiFile(midiFile);
-        notes = sequencers[0].GetAllNotes();
 
         foreach (var seq in sequencers.GetRange(1, sequencers.Count - 1))
             seq.length = sequencers[0].length;
@@ -209,7 +197,9 @@ public class MidiSongController : MonoBehaviour {
 
     private void EndSong()
     {
-        if (PlayerPrefs.GetInt("practiceMode") == 0) SaveSongStats();
+        if (PlayerPrefs.GetInt("practiceMode") == 0)
+            SaveSongStats();
+
         uIController.EndSong();
     }
 }

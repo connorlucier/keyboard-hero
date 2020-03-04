@@ -28,28 +28,28 @@ public class MidiNoteController : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == note.ToString() || other.tag == "Notehead")
+        if (other.CompareTag(note.ToString()) || other.CompareTag("Notehead"))
             HandleInput(other.gameObject);
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.tag == note.ToString() || other.tag == "Notehead")
+        if (other.CompareTag(note.ToString()) || other.CompareTag("Notehead"))
             HandleInput(other.gameObject);
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Notehead")
+        if (other.CompareTag("Notehead"))
         {
             var attachedNote = other.GetComponent<NoteHeadController>().attachedNote;
-            if (attachedNote.tag == note.ToString() && !attachedNote.GetComponent<NoteHitController>().noteHit)
+            if (attachedNote.CompareTag(note.ToString()) && !attachedNote.GetComponent<NoteHitController>().noteHit)
             {
                 statsController.NoteMissUpdate();
                 attachedNote.GetComponent<Renderer>().material = missedMaterial;
             }
         }
-        else if (other.tag == note.ToString())
+        else if (other.CompareTag(note.ToString()))
             Destroy(other.transform.parent.gameObject);
     }
 
@@ -60,11 +60,11 @@ public class MidiNoteController : MonoBehaviour {
         var noteObject = Instantiate(notePrefab);
         var noteCube = noteObject.transform.GetChild(0).gameObject;
 
-        var noteDuration = 60 * (n.end - n.start) / (4 * clock.bpm);
-        var noteSpeed = PlayerPrefs.GetFloat("noteSpeed", 3.25f);
-        var noteScale = noteDuration * noteSpeed;
+        float noteDuration = 60 * (n.end - n.start) / (4 * clock.bpm);
+        float noteSpeed = PlayerPrefs.GetFloat("noteSpeed", 3.25f);
+        float noteScale = noteDuration * noteSpeed;
 
-        var keyOffset = 0.5f * gameObject.transform.localScale.y;
+        float keyOffset = 0.5f * gameObject.transform.localScale.y;
 
         noteObject.transform.localScale = new Vector3(0.95f * gameObject.transform.localScale.x, 0.99f * noteScale - 0.025f, gameObject.transform.localScale.z);
         noteObject.transform.position = gameObject.transform.position + new Vector3(-0.475f * gameObject.transform.localScale.x, spawnHeight + keyOffset, 0);
@@ -89,20 +89,20 @@ public class MidiNoteController : MonoBehaviour {
     {
         if (MidiMaster.GetKey(note) > 0.0f)
         {
-            if (obj.tag == "Notehead")
+            if (obj.CompareTag("Notehead"))
             {
                 var attachedNote = obj.GetComponent<NoteHeadController>().attachedNote;
-                if (attachedNote.tag == note.ToString() && !attachedNote.GetComponent<NoteHitController>().noteHit)
+                if (attachedNote.CompareTag(note.ToString()) && !attachedNote.GetComponent<NoteHitController>().noteHit)
                 {
                     statsController.NoteHitUpdate();
                     attachedNote.GetComponent<NoteHitController>().noteHit = true;
                     attachedNote.GetComponent<Renderer>().material = glowingMaterial;
                 }
             }
-            else if (obj.tag == note.ToString() && obj.GetComponent<NoteHitController>().noteHit && !obj.GetComponent<NoteHitController>().noteReleased)
+            else if (obj.CompareTag(note.ToString()) && obj.GetComponent<NoteHitController>().noteHit && !obj.GetComponent<NoteHitController>().noteReleased)
                 statsController.NoteContinueUpdate();
         }
-        else if (obj.tag == note.ToString() && obj.GetComponent<NoteHitController>().noteHit)
+        else if (obj.CompareTag(note.ToString()) && obj.GetComponent<NoteHitController>().noteHit)
         {
             obj.GetComponent<NoteHitController>().noteReleased = true;
             obj.GetComponent<Renderer>().material = missedMaterial;

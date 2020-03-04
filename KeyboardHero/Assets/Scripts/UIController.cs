@@ -90,7 +90,7 @@ public class UIController : MonoBehaviour
         songComplete = true;
         songController.clock.pause = true;
         statsController.SetFinalStats();
-        StartCoroutine("FinishSong");
+        StartCoroutine(FinishSong());
     }
 
     private IEnumerator FinishSong()
