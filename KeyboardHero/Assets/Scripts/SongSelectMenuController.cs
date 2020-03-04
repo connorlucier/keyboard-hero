@@ -12,6 +12,9 @@ public class SongSelectMenuController : MonoBehaviour {
     public TextMeshProUGUI noSongsText;
     public GameObject practiceModeUI;
 
+    public Slider SongSpeedSlider;
+    public Slider StartingPositionSlider;
+
     void Start()
     {
         SetSongsDirectory();
@@ -54,14 +57,14 @@ public class SongSelectMenuController : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void SetPracticeSpeed(float speed)
+    public void SetPracticeSpeed()
     {
-        PlayerPrefs.SetFloat("practiceSpeed", speed);
+        PlayerPrefs.SetFloat("practiceSpeed", SongSpeedSlider.value);
     }
 
-    public void SetStartPosition(float pos)
+    public void SetStartPosition()
     {
-        PlayerPrefs.SetFloat("practiceStartPosition", pos);
+        PlayerPrefs.SetFloat("practiceStartPosition", StartingPositionSlider.value);
     }
 
     private void SetPracticeSettings()
