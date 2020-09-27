@@ -14,7 +14,7 @@ public class MidiKeyController : MonoBehaviour {
 
     public bool isWhiteKey;
 
-    private float noteScaleRatio = 1.75f;
+    private const float noteScaleRatio = 1.75f;
 
     private Material defaultMaterial;
     private Material pressedMaterial;
@@ -27,7 +27,7 @@ public class MidiKeyController : MonoBehaviour {
 
     void Update()
     {
-        if (MidiMaster.GetKey(note) > 0.0f)
+        if (MidiMaster.GetKey(note) > 0f)
         {
             gameObject.GetComponent<Renderer>().material = pressedMaterial;
         }

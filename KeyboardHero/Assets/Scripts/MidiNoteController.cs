@@ -119,69 +119,69 @@ public class MidiNoteController : MonoBehaviour {
             switch (note % 12)
             {
                 case 0: // C
-                    def = materials.Where(m => m.name == "Red").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Red Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Red Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Red");
+                    glow = materials.FirstOrDefault(m => m.name == "Red Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Red Miss");
                     break;
                 case 1: // C# / Db
-                    def = materials.Where(m => m.name == "Red Orange").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Red Orange Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Red Orange Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Red Orange");
+                    glow = materials.FirstOrDefault(m => m.name == "Red Orange Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Red Orange Miss");
                     break;
                 case 2: // D
-                    def = materials.Where(m => m.name == "Orange").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Orange Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Orange Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Orange");
+                    glow = materials.FirstOrDefault(m => m.name == "Orange Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Orange Miss");
                     break;
                 case 3: // D# / Eb
-                    def = materials.Where(m => m.name == "Gold").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Gold Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Gold Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Gold");
+                    glow = materials.FirstOrDefault(m => m.name == "Gold Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Gold Miss");
                     break;
                 case 4: // E
-                    def = materials.Where(m => m.name == "Yellow").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Yellow Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Yellow Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Yellow");
+                    glow = materials.FirstOrDefault(m => m.name == "Yellow Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Yellow Miss");
                     break;
                 case 5: // F
-                    def = materials.Where(m => m.name == "Light Green").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Light Green Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Light Green Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Light Green");
+                    glow = materials.FirstOrDefault(m => m.name == "Light Green Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Light Green Miss");
                     break;
                 case 6: // F# / Gb
-                    def = materials.Where(m => m.name == "Green").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Green Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Green Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Green");
+                    glow = materials.FirstOrDefault(m => m.name == "Green Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Green Miss");
                     break;
                 case 7: // G
-                    def = materials.Where(m => m.name == "Light Blue").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Light Blue Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Light Blue Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Light Blue");
+                    glow = materials.FirstOrDefault(m => m.name == "Light Blue Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Light Blue Miss");
                     break;
                 case 8: // G# / Ab
-                    def = materials.Where(m => m.name == "Blue").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Blue Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Blue Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Blue");
+                    glow = materials.FirstOrDefault(m => m.name == "Blue Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Blue Miss");
                     break;
                 case 9: // A
-                    def = materials.Where(m => m.name == "Indigo").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Indigo Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Indigo Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Indigo");
+                    glow = materials.FirstOrDefault(m => m.name == "Indigo Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Indigo Miss");
                     break;
                 case 10: // A# / Bb
-                    def = materials.Where(m => m.name == "Purple").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Purple Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Purple Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Purple");
+                    glow = materials.FirstOrDefault(m => m.name == "Purple Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Purple Miss");
                     break;
                 case 11: // B
-                    def = materials.Where(m => m.name == "Pink").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Pink Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Pink Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Pink");
+                    glow = materials.FirstOrDefault(m => m.name == "Pink Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Pink Miss");
                     break;
                 default:
-                    def = materials.Where(m => m.name == "Grey").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "White").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Black").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Grey");
+                    glow = materials.FirstOrDefault(m => m.name == "White");
+                    miss = materials.FirstOrDefault(m => m.name == "Black");
                     break;
             }
         }
@@ -190,69 +190,69 @@ public class MidiNoteController : MonoBehaviour {
             switch (PlayerPrefs.GetInt("noteColor"))
             {
                 case 1:
-                    def = materials.Where(m => m.name == "Red").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Red Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Red Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Red");
+                    glow = materials.FirstOrDefault(m => m.name == "Red Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Red Miss");
                     break;
                 case 2:
-                    def = materials.Where(m => m.name == "Red Orange").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Red Orange Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Red Orange Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Red Orange");
+                    glow = materials.FirstOrDefault(m => m.name == "Red Orange Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Red Orange Miss");
                     break;
                 case 3:
-                    def = materials.Where(m => m.name == "Orange").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Orange Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Orange Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Orange");
+                    glow = materials.FirstOrDefault(m => m.name == "Orange Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Orange Miss");
                     break;
                 case 4:
-                    def = materials.Where(m => m.name == "Gold").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Gold Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Gold Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Gold");
+                    glow = materials.FirstOrDefault(m => m.name == "Gold Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Gold Miss");
                     break;
                 case 5:
-                    def = materials.Where(m => m.name == "Yellow").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Yellow Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Yellow Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Yellow");
+                    glow = materials.FirstOrDefault(m => m.name == "Yellow Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Yellow Miss");
                     break;
                 case 6:
-                    def = materials.Where(m => m.name == "Light Green").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Light Green Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Light Green Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Light Green");
+                    glow = materials.FirstOrDefault(m => m.name == "Light Green Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Light Green Miss");
                     break;
                 case 7:
-                    def = materials.Where(m => m.name == "Green").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Green Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Green Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Green");
+                    glow = materials.FirstOrDefault(m => m.name == "Green Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Green Miss");
                     break;
                 case 8:
-                    def = materials.Where(m => m.name == "Light Blue").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Light Blue Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Light Blue Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Light Blue");
+                    glow = materials.FirstOrDefault(m => m.name == "Light Blue Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Light Blue Miss");
                     break;
                 case 9:
-                    def = materials.Where(m => m.name == "Blue").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Blue Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Blue Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Blue");
+                    glow = materials.FirstOrDefault(m => m.name == "Blue Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Blue Miss");
                     break;
                 case 10:
-                    def = materials.Where(m => m.name == "Indigo").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Indigo Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Indigo Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Indigo");
+                    glow = materials.FirstOrDefault(m => m.name == "Indigo Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Indigo Miss");
                     break;
                 case 11:
-                    def = materials.Where(m => m.name == "Purple").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Purple Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Purple Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Purple");
+                    glow = materials.FirstOrDefault(m => m.name == "Purple Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Purple Miss");
                     break;
                 case 12:
-                    def = materials.Where(m => m.name == "Pink").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "Pink Glow").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Pink Miss").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Pink");
+                    glow = materials.FirstOrDefault(m => m.name == "Pink Glow");
+                    miss = materials.FirstOrDefault(m => m.name == "Pink Miss");
                     break;
                 default:
-                    def = materials.Where(m => m.name == "Grey").FirstOrDefault();
-                    glow = materials.Where(m => m.name == "White").FirstOrDefault();
-                    miss = materials.Where(m => m.name == "Black").FirstOrDefault();
+                    def = materials.FirstOrDefault(m => m.name == "Grey");
+                    glow = materials.FirstOrDefault(m => m.name == "White");
+                    miss = materials.FirstOrDefault(m => m.name == "Black");
                     break;
             }
         }
