@@ -558,18 +558,19 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: CT_FB
-    4: CT_FB
-    7: CT_FB
-    13: CT_FB
-    14: CT_FB
-    19: CT_FB
-    21: CT_FB
-    25: CT_FB
+    1: CT_FB;CT_FB_PRO
+    4: CT_FB;CT_FB_PRO
+    7: CT_FB;CT_FB_PRO
+    13: CT_FB;CT_FB_PRO
+    14: CT_FB;CT_FB_PRO
+    19: CT_FB;CT_FB_PRO
+    21: CT_FB;CT_FB_PRO
+    25: CT_FB;CT_FB_PRO
     26: CT_FB
-    27: CT_FB
-    28: CT_FB
-    29: CT_FB
+    27: CT_FB;CT_FB_PRO
+    28: CT_FB;CT_FB_PRO
+    29: CT_FB;CT_FB_PRO
+    30: CT_FB;CT_FB_PRO
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}

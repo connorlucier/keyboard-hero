@@ -6,6 +6,7 @@ using AudioHelm;
 using IniParser;
 using IniParser.Model;
 using System.IO;
+using System;
 
 public class MidiSongController : MonoBehaviour {
 
@@ -34,12 +35,13 @@ public class MidiSongController : MonoBehaviour {
         notes = new List<Note>();
 
         string songDir = PlayerPrefs.GetString("songDir");
-        iniFile = songDir + "/song.ini";
+        string[] files = Directory.GetFiles(songDir);
+        iniFile = files.FirstOrDefault(x => x.EndsWith(".ini", StringComparison.OrdinalIgnoreCase));
 
         parser = new FileIniDataParser();
         songData = parser.ReadFile(iniFile);
 
-        string songFile = Directory.GetFiles(songDir).Where(x => x.EndsWith(".mid") || x.EndsWith(".MID")).FirstOrDefault();
+        string songFile = files.FirstOrDefault(x => x.EndsWith(".mid", StringComparison.OrdinalIgnoreCase));
 
         midiFile = gameObject.AddComponent<MidiFile>();
         midiFile.LoadMidiData(songFile);
@@ -81,7 +83,7 @@ public class MidiSongController : MonoBehaviour {
 
     private void SpawnNote(Note next)
     {
-        var controller = noteControllers.Where(c => c.Note() == next.note).FirstOrDefault();
+        var controller = noteControllers.FirstOrDefault(c => c.Note() == next.note);
         if (controller != null)
             controller.CreateNote(next, noteSpawnHeight);
     }

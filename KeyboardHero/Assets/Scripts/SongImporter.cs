@@ -12,7 +12,7 @@ public class SongImporter : MonoBehaviour
 {
     public GameObject titleRequired;
     public GameObject artistRequired;
-    public GameObject BPMRequired;
+    public GameObject bpmRequired;
     public GameObject fileRequired;
 
     public InputField titleInput;
@@ -27,60 +27,49 @@ public class SongImporter : MonoBehaviour
 
     public void SetFile()
     {
-        //file = EditorUtility.OpenFilePanel("Choose Song File", Application.dataPath, "MID");
-        file = FileBrowser.OpenSingleFile("MID");
-        selectedFile.text = Path.GetFileName(file);
+        string newFile = FileBrowser.OpenSingleFile("*", "*", "MID", "mid");
+        bool invalidFile = string.IsNullOrEmpty(newFile);
 
-        if (!string.IsNullOrEmpty(file))
-            fileRequired.SetActive(false);
+        file = newFile;
+        selectedFile.text = Path.GetFileName(file);
+        fileRequired.SetActive(invalidFile);
     }
 
     public void SetTitle(string newTitle)
     {
+        bool invalidTitle = string.IsNullOrEmpty(newTitle);
+
         title = newTitle;
-        if (!string.IsNullOrEmpty(title))
-            titleRequired.SetActive(false);
+        titleRequired.SetActive(invalidTitle);
     }
 
     public void SetArtist(string newArtist)
     {
+        bool invalidArtist = string.IsNullOrEmpty(newArtist);
+
         artist = newArtist;
-        if (!string.IsNullOrEmpty(artist))
-            artistRequired.SetActive(false);
+        artistRequired.SetActive(invalidArtist);
     }
 
     public void SetBPM(string newBpm)
     {
-        if (string.IsNullOrEmpty(newBpm)) return;
-        if (int.Parse(newBpm) > 0)
-        {
-            bpm = newBpm;
-            if (!string.IsNullOrEmpty(bpm))
-                BPMRequired.SetActive(false);
-        }
-        else
-            Debug.LogWarning("BPM was set to a nonpositive value.");
-    }
+        bool invalidBpm = string.IsNullOrEmpty(newBpm);
+        int.TryParse(newBpm, out int bpmValue);
 
-    public void OpenFile(string pathToFile)
-    {
-        file = pathToFile;
-        selectedFile.text = Path.GetFileName(pathToFile);
+        bpm = newBpm;
+        bpmRequired.SetActive(invalidBpm || bpmValue <= 0);
     }
 
     public void ClearAllFields()
     {
         titleRequired.SetActive(false);
         artistRequired.SetActive(false);
-        BPMRequired.SetActive(false);
+        bpmRequired.SetActive(false);
         fileRequired.SetActive(false);
+        
         selectedFile.text = "";
-
-        bpmInput.Select();
         bpmInput.text = "";
-        artistInput.Select();
         artistInput.text = "";
-        titleInput.Select();
         titleInput.text = "";
 
         title = "";
@@ -91,14 +80,8 @@ public class SongImporter : MonoBehaviour
 
     public void ImportSong()
     {
-        if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(artist) || string.IsNullOrEmpty(bpm) || string.IsNullOrEmpty(file))
-        {
-            if (string.IsNullOrEmpty(title)) titleRequired.SetActive(true);
-            if (string.IsNullOrEmpty(artist)) artistRequired.SetActive(true);
-            if (string.IsNullOrEmpty(bpm)) BPMRequired.SetActive(true);
-            if (string.IsNullOrEmpty(file)) fileRequired.SetActive(true);
+        if (AnyInvalidFields())
             return;
-        }
 
         string songsDirectory = Application.dataPath + "/Songs";
         if (!Directory.Exists(songsDirectory))
@@ -141,5 +124,36 @@ public class SongImporter : MonoBehaviour
         ClearAllFields();
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private bool AnyInvalidFields()
+    {
+        bool result = false;
+
+        if (string.IsNullOrEmpty(title))
+        {
+            result = true;
+            titleRequired.SetActive(true);
+        }
+
+        if (string.IsNullOrEmpty(artist))
+        {
+            result = true;
+            artistRequired.SetActive(true);
+        }
+
+        if (string.IsNullOrEmpty(bpm))
+        {
+            result = true;
+            bpmRequired.SetActive(true);
+        }
+
+        if (string.IsNullOrEmpty(file))
+        {
+            result = true;
+            fileRequired.SetActive(true);
+        }
+
+        return result;
     }
 }
