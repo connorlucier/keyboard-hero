@@ -48,5 +48,8 @@ KeyboardHero/Assets/Editor\ Default\ Resources.meta
 KeyboardHero/Assets/Plugins.meta
 KeyboardHero/Assets/Plugins
 
-# All Songs
-KeyboardHero/Assets/Songs/
+# Song + config files
+KeyboardHero/Assets/Resources/Songs/*
+
+# macOS
+*.DS_Store
